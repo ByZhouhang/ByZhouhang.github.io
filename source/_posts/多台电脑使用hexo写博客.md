@@ -5,6 +5,7 @@ tags:
     - hexo
     - github
     - 博客
+categories: 博客搭建
 ---
 
 ## 场景需求

@@ -2,7 +2,7 @@
 title: 右键添加-用VsCode打开
 date: 2019-02-11 22:13:48
 tags:
-  - VsCode
+  - vscode
   - 右键    
 categories: 注册表操作
 ---
