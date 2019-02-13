@@ -5,6 +5,7 @@ tags:
   - cmd
   - 右键   
 categories: 注册表操作
+comments: false
 ---
 
 ## 操作说明

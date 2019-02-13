@@ -5,6 +5,7 @@ tags:
   - vscode
   - 右键    
 categories: 注册表操作
+comments: false
 ---
 
 ##  鼠标右键添加用VsCode打开

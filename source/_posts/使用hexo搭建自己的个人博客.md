@@ -6,6 +6,7 @@ tags:
     - hexo
     - github
 categories: 博客搭建
+comments: true
 ---
 
 ## 背景

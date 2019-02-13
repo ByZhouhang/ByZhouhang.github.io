@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 欢迎访问我的个人博客
-subtitle: 记录自己的生活
-description:
+title: My Blog
+subtitle: Record work and life.
+description: stay hungry stay foolish
 keywords:
-author: zhou hang
-language:
+author:  hang
+language: zh-Hans
 timezone:
 
 # URL

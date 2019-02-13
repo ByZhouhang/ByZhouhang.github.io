@@ -1,6 +1,7 @@
 ---
 title: 关于我
 date: 2019-02-11 21:00:54
+comments: false
 ---
 
 ## 个人简介

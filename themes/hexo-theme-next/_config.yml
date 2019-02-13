@@ -92,12 +92,12 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  主页: / || home
-  关于我: /about/ || user
+  主页: / || home 
   标签: /tags/ || tags
   分类: /categories/ || th
   归档: /archives/ || archive
-#   home: / || home
+  关于我: /about/ || user
+# home: / || home
 # about: /about/ || user
 #  tags: /tags/ || tags
 # categories: /categories/ || th
@@ -133,7 +133,7 @@ scheme: Pisces
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/ByZhouhang || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  E-Mail: mailto:872297557@qq.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -159,7 +159,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/picture.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -222,7 +222,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 150
+  length: 50
 
 # Post meta display settings
 post_meta:
@@ -384,12 +384,12 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true
+  appid:  5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz # your leancloud application appid
+  appkey: a9pbYNcKIorl8pKT2nGWPxJP # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: ヾﾉ≧∀≦)o 来呀！ # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
@@ -401,7 +401,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC80MjYxNC8xOTE2MQ
+#livere_uid: MTAyMC80MjYxNC8xOTE2MQ
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -537,9 +537,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz #<app_id>
+  app_key: 3sM2mbuM2K8hFScVC815vTee #<app_key>
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -610,7 +610,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -710,7 +710,7 @@ three_waves: false
 canvas_lines: false
 
 # canvas_sphere
-canvas_sphere: false
+canvas_sphere: true
 
 # Only fit scheme Pisces
 # Canvas-ribbon
