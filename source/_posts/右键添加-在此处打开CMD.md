@@ -7,6 +7,8 @@ tags:
 categories: 注册表操作
 comments: false
 ---
+{% centerquote %}召唤右键菜单 Open CMD in Here~{% endcenterquote %}
+<!-- more -->
 
 ## 操作说明
     新建文本文件，将后缀改为reg  然后点击运行  确认修改注册表

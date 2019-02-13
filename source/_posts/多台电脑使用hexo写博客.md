@@ -8,7 +8,8 @@ tags:
 categories: 博客搭建
 comments: true
 ---
-
+{% centerquote %}任意电脑都可以写自己的博客~{% endcenterquote %}
+<!-- more -->
 ## 场景需求
 
 工作以后大部分时间都是在用办公室里的电脑，现在想在笔记本和办公室的电脑上都能用hexo写博客。

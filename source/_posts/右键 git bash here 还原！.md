@@ -8,6 +8,8 @@ tags:
 categories: 注册表操作
 comments: false
 ---
+{% centerquote %}召唤右键菜单git bash here{% endcenterquote %}
+<!-- more -->
 
 ## ​问题场景	
 

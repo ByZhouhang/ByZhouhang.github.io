@@ -7,6 +7,8 @@ tags:
 categories: 注册表操作
 comments: false
 ---
+{% centerquote %}召唤右键菜单 用VsCode打开~{% endcenterquote %}
+<!-- more -->
 
 ##  鼠标右键添加用VsCode打开
 
