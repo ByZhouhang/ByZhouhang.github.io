@@ -6,6 +6,7 @@ tags:
     - github
     - 博客
 categories: 博客搭建
+comments: true
 ---
 
 ## 场景需求
