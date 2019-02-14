@@ -97,29 +97,48 @@ toc:
 
 [参考博客](https://hoxis.github.io/hexo-next-daovoice.html)
 
-## 12.添加共享按钮
+## 12.网站底部字数统计
 
-- 安装
+- 安装hexo插件，切换到根目录：
 
-  ```
-  npm install --save hexo-helper-qrcode
-  ```
+```
+npm install hexo-wordcount --save
+```
 
-配置：
+- 在`Blog/themes/next/layout/_partials/footer.swig`末尾添加代码：
 
-```yaml
-shareto: true
+```javascript
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共{{ totalcount(site) }}字</span>
+</div>
 ```
 
 ## 13. 坑点1--全局语言配置
 
 全局配置文件  中关于站点语言配置  language: zh-Hans（我的配置为zh-CN会出问题）
 
-## 14. 坑点2 --分享功能实现
+## 14. 坑点2 --百度分享功能实现
 
 ```yaml
 baidushare:
-type: button
+type: slide
 baidushare: true
 ```
 
+[解决百度分享https无法使用](https://hoxis.github.io/hexo-next-daovoice.html)
+
+## 15.NexT Pisces主题内容区宽度更改
+
+直接在`source/css/_variables/custom.styl`中使用Scheme `Gemini` 的参数即可
+
+```javascript
+$main-desktop                   = 75%
+$content-desktop                = calc(100% - 252px)
+```
+
+## 16 hexo页脚添加访客人数和总访问量
+
+[参考博客](https://www.jianshu.com/p/c311d31265e0)
+
+[不蒜子访问统计官网](http://busuanzi.ibruce.info/)
