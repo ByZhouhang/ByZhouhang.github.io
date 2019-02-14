@@ -89,6 +89,37 @@ toc:
   wrap: false
 ```
 
-## 10. 坑点
+## 10.博客添加点击爱心效果
+
+[参考博客](https://asdfv1929.github.io/2018/01/26/click-love/)
+
+## 11.hexo next 配置 DaoVoice 实现在线聊天功能
+
+[参考博客](https://hoxis.github.io/hexo-next-daovoice.html)
+
+## 12.添加共享按钮
+
+- 安装
+
+  ```
+  npm install --save hexo-helper-qrcode
+  ```
+
+配置：
+
+```yaml
+shareto: true
+```
+
+## 13. 坑点1--全局语言配置
 
 全局配置文件  中关于站点语言配置  language: zh-Hans（我的配置为zh-CN会出问题）
+
+## 14. 坑点2 --分享功能实现
+
+```yaml
+baidushare:
+type: button
+baidushare: true
+```
+
