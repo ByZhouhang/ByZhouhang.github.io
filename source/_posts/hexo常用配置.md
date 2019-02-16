@@ -1,6 +1,7 @@
 ---
 title: 丰富你的 hexo博客
 date: 2019-02-13 16:06:37
+top: 1
 tags:
     - 博客
     - hexo
@@ -142,3 +143,36 @@ $content-desktop                = calc(100% - 252px)
 [参考博客](https://www.jianshu.com/p/c311d31265e0)
 
 [不蒜子访问统计官网](http://busuanzi.ibruce.info/)
+
+## 17 hexo 代码高亮问题
+
+在站点的配置文件中，搜索`hightlight`:
+
+```yaml
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+```
+
+文字自动检测默认不启动，所以改成true使其起作用。
+
+再到主题的配置文件：
+
+`highlight_theme: normal`，注释显示有五种显示主题可用，分别是：
+
+- normal
+- night
+- night eighties
+- night blue
+- night bright
+
+包裹代码块方式 
+
+> \`\`\`java      代码块      \`\`\`      注意C# 是无效的的  一定要 csharp
+
+## 18 代码拷贝功能实现
+
+[代码块复制功能](https://www.jianshu.com/p/3e9d614c1e77)
+
