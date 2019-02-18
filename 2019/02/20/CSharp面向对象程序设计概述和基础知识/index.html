@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="了解C#语言历史、编程工具、运行原理、基础语法……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#面向对象程序设计概述和基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="了解C#语言历史、编程工具、运行原理、基础语法……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389559869.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389592746.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389619546.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389660112.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389722280.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389773167.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389812808.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389835536.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389857713.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389876625.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389909745.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389954416.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389975257.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389999575.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390079092.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390093063.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390116929.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390170071.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390201105.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390271330.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390296152.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390318417.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390345556.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390446608.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390506031.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390540624.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390575009.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390591624.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390635721.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390672353.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390714321.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390731616.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390749731.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390825936.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390838719.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390853519.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390994768.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391086946.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391124229.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391207809.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391234762.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391252960.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391268358.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391325695.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391351641.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391371283.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391393778.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391426272.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391474068.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391510979.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391535130.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391550847.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391589697.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391612321.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391628640.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391893409.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391916319.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391930542.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391940964.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391999855.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392044977.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392062497.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392079601.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392125218.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392154640.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392169557.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392233561.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392259505.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392275155.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392314334.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392347122.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392371120.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392965221.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392980946.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392991943.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393085820.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393110146.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393172514.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393296312.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393331011.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393364837.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393399122.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393428036.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393448400.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393483377.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393504047.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393556235.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393595506.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393618993.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393700826.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393717205.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393738129.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393767186.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393902498.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394106770.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394127862.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394144689.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394199546.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394215946.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394245953.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394259400.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394319458.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394350049.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394393921.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394407494.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394557472.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394599622.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394619201.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394677410.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394692484.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394712306.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394729970.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394750339.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394771080.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394800546.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394817328.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394842722.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394889418.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394901409.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394914049.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395012225.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395031586.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395043666.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395057109.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397463155.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397488532.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397518449.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397529417.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397541894.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397588627.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397601156.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397618210.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397655907.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397672452.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397688658.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397703011.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397713944.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398770187.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398790146.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398810002.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398825173.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398854502.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398890935.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398921218.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398939874.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398967507.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398977594.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399025219.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399056898.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399105890.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399120954.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399139078.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399156486.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399166900.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399177410.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399192195.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399212099.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399225714.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399254579.png">
+<meta property="og:updated_time" content="2019-02-18T03:57:34.773Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C#面向对象程序设计概述和基础知识">
+<meta name="twitter:description" content="了解C#语言历史、编程工具、运行原理、基础语法……">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389559869.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>C#面向对象程序设计概述和基础知识 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C#面向对象程序设计概述和基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T15:43:02+08:00">
+                2019-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/20/CSharp面向对象程序设计概述和基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/20/CSharp面向对象程序设计概述和基础知识/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/20/CSharp面向对象程序设计概述和基础知识/" class="leancloud_visitors" data-flag-title="C#面向对象程序设计概述和基础知识">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.8k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>了解C#语言历史、编程工具、运行原理、基础语法…… </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="C-与-NET来世今生"><a href="#C-与-NET来世今生" class="headerlink" title="C#与.NET来世今生"></a>C#与.NET来世今生</h1><h2 id="C-语言编程史"><a href="#C-语言编程史" class="headerlink" title="C#语言编程史"></a>C#语言编程史</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389559869.png" alt="1546389559869"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389592746.png" alt="1546389592746"></p>
+<h2 id="Windows与-NET技术发展的历程及趋势"><a href="#Windows与-NET技术发展的历程及趋势" class="headerlink" title="Windows与.NET技术发展的历程及趋势"></a>Windows与.NET技术发展的历程及趋势</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389619546.png" alt="1546389619546"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389660112.png" alt="1546389660112"></p>
+<h2 id="什么是-NET"><a href="#什么是-NET" class="headerlink" title="什么是.NET"></a>什么是.NET</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389722280.png" alt="1546389722280"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389773167.png" alt="1546389773167"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389812808.png" alt="1546389812808"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389835536.png" alt="1546389835536"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389857713.png" alt="1546389857713"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389876625.png" alt="1546389876625"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389909745.png" alt="1546389909745"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389954416.png" alt="1546389954416"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389975257.png" alt="1546389975257"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546389999575.png" alt="1546389999575"></p>
+<h1 id="使用VisualStudio编程工具"><a href="#使用VisualStudio编程工具" class="headerlink" title="使用VisualStudio编程工具"></a>使用VisualStudio编程工具</h1><h2 id="认识Visual-Studio"><a href="#认识Visual-Studio" class="headerlink" title="认识Visual Studio"></a>认识Visual Studio</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390079092.png" alt="1546390079092"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390093063.png" alt="1546390093063"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390116929.png" alt="1546390116929"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390170071.png" alt="1546390170071"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390201105.png" alt="1546390201105"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390271330.png" alt="1546390271330"></p>
+<h2 id="Console的重要属性"><a href="#Console的重要属性" class="headerlink" title="Console的重要属性"></a>Console的重要属性</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390296152.png" alt="1546390296152"></p>
+<h2 id="控制台窗口的输入与输出"><a href="#控制台窗口的输入与输出" class="headerlink" title="控制台窗口的输入与输出"></a>控制台窗口的输入与输出</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390318417.png" alt="1546390318417"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390345556.png" alt="1546390345556"></p>
+<h2 id="ReadKey和Beep"><a href="#ReadKey和Beep" class="headerlink" title="ReadKey和Beep"></a>ReadKey和Beep</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390446608.png" alt="1546390446608"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390506031.png" alt="1546390506031"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390540624.png" alt="1546390540624"></p>
+<h2 id="程序调试基本技巧"><a href="#程序调试基本技巧" class="headerlink" title="程序调试基本技巧"></a>程序调试基本技巧</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390575009.png" alt="1546390575009"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390591624.png" alt="1546390591624"></p>
+<h2 id="C-与Visual-Studio编程须知"><a href="#C-与Visual-Studio编程须知" class="headerlink" title="C#与Visual Studio编程须知"></a>C#与Visual Studio编程须知</h2><h3 id="基本编程规则"><a href="#基本编程规则" class="headerlink" title="基本编程规则"></a>基本编程规则</h3><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390635721.png" alt="1546390635721"></p>
+<h3 id="文件组织方式"><a href="#文件组织方式" class="headerlink" title="文件组织方式"></a>文件组织方式</h3><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390672353.png" alt="1546390672353"></p>
+<h3 id="行号、颜色、字体大小"><a href="#行号、颜色、字体大小" class="headerlink" title="行号、颜色、字体大小"></a>行号、颜色、字体大小</h3><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390714321.png" alt="1546390714321"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390731616.png" alt="1546390731616"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390749731.png" alt="1546390749731"></p>
+<h1 id="面向对象概述与-NET运行原理"><a href="#面向对象概述与-NET运行原理" class="headerlink" title="面向对象概述与.NET运行原理"></a>面向对象概述与.NET运行原理</h1><h2 id="面向对象编程概述"><a href="#面向对象编程概述" class="headerlink" title="面向对象编程概述"></a>面向对象编程概述</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390825936.png" alt="1546390825936"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390838719.png" alt="1546390838719"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390853519.png" alt="1546390853519"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546390994768.png" alt="1546390994768"></p>
+<h2 id="程序是如何被计算机执行的？"><a href="#程序是如何被计算机执行的？" class="headerlink" title="程序是如何被计算机执行的？"></a>程序是如何被计算机执行的？</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391086946.png" alt="1546391086946"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391124229.png" alt="1546391124229"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391207809.png" alt="1546391207809"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391234762.png" alt="1546391234762"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391252960.png" alt="1546391252960"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391268358.png" alt="1546391268358"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391325695.png" alt="1546391325695"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391351641.png" alt="1546391351641"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391371283.png" alt="1546391371283"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391393778.png" alt="1546391393778"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391426272.png" alt="1546391426272"></p>
+<h2 id="如何编写计算机可以执行的程序？"><a href="#如何编写计算机可以执行的程序？" class="headerlink" title="如何编写计算机可以执行的程序？"></a>如何编写计算机可以执行的程序？</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391474068.png" alt="1546391474068"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391510979.png" alt="1546391510979"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391535130.png" alt="1546391535130"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391550847.png" alt="1546391550847"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391589697.png" alt="1546391589697"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391612321.png" alt="1546391612321"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391628640.png" alt="1546391628640"></p>
+<h2 id="怎样构造求解问题的算法？"><a href="#怎样构造求解问题的算法？" class="headerlink" title="怎样构造求解问题的算法？"></a>怎样构造求解问题的算法？</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391893409.png" alt="1546391893409"></p>
+<h2 id="日期计算结构化编程的实现"><a href="#日期计算结构化编程的实现" class="headerlink" title="日期计算结构化编程的实现"></a>日期计算结构化编程的实现</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391916319.png" alt="1546391916319"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391930542.png" alt="1546391930542"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391940964.png" alt="1546391940964"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546391999855.png" alt="1546391999855"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392044977.png" alt="1546392044977"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392062497.png" alt="1546392062497"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392079601.png" alt="1546392079601"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392125218.png" alt="1546392125218"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392154640.png" alt="1546392154640"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392169557.png" alt="1546392169557"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392233561.png" alt="1546392233561"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392259505.png" alt="1546392259505"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392275155.png" alt="1546392275155"></p>
+<h2 id="日期计算面向对象编程的实现"><a href="#日期计算面向对象编程的实现" class="headerlink" title="日期计算面向对象编程的实现"></a>日期计算面向对象编程的实现</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392314334.png" alt="1546392314334"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392347122.png" alt="1546392347122"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392371120.png" alt="1546392371120"></p>
+<h1 id="变量、数据类型与表达式"><a href="#变量、数据类型与表达式" class="headerlink" title="变量、数据类型与表达式"></a>变量、数据类型与表达式</h1><h2 id="理解变量"><a href="#理解变量" class="headerlink" title="理解变量"></a>理解变量</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392965221.png" alt="1546392965221"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392980946.png" alt="1546392980946"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546392991943.png" alt="1546392991943"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393085820.png" alt="1546393085820"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393110146.png" alt="1546393110146"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393172514.png" alt="1546393172514"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393296312.png" alt="1546393296312"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393331011.png" alt="1546393331011"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393364837.png" alt="1546393364837"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393399122.png" alt="1546393399122"></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393428036.png" alt="1546393428036"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393448400.png" alt="1546393448400"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393483377.png" alt="1546393483377"></p>
+<h2 id="String和Var"><a href="#String和Var" class="headerlink" title="String和Var"></a>String和Var</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393504047.png" alt="1546393504047"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393556235.png" alt="1546393556235"></p>
+<h2 id="变量与内存"><a href="#变量与内存" class="headerlink" title="变量与内存"></a>变量与内存</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393595506.png" alt="1546393595506"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393618993.png" alt="1546393618993"></p>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393700826.png" alt="1546393700826"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393717205.png" alt="1546393717205"></p>
+<h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393738129.png" alt="1546393738129"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393767186.png" alt="1546393767186"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546393902498.png" alt="1546393902498"></p>
+<h1 id="选择结构与逻辑表达式"><a href="#选择结构与逻辑表达式" class="headerlink" title="选择结构与逻辑表达式"></a>选择结构与逻辑表达式</h1><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394106770.png" alt="1546394106770"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394127862.png" alt="1546394127862"></p>
+<h2 id="if-else-选择结构"><a href="#if-else-选择结构" class="headerlink" title="if/else 选择结构"></a>if/else 选择结构</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394144689.png" alt="1546394144689"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394199546.png" alt="1546394199546"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394215946.png" alt="1546394215946"></p>
+<h2 id="选择结构的嵌套"><a href="#选择结构的嵌套" class="headerlink" title="选择结构的嵌套"></a>选择结构的嵌套</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394245953.png" alt="1546394245953"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394259400.png" alt="1546394259400"></p>
+<h2 id="逻辑表达式的组合"><a href="#逻辑表达式的组合" class="headerlink" title="逻辑表达式的组合"></a>逻辑表达式的组合</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394319458.png" alt="1546394319458"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394350049.png" alt="1546394350049"></p>
+<h2 id="多分支结构"><a href="#多分支结构" class="headerlink" title="多分支结构"></a>多分支结构</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394393921.png" alt="1546394393921"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394407494.png" alt="1546394407494"></p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394557472.png" alt="1546394557472"></p>
+<h2 id="while-do-循环"><a href="#while-do-循环" class="headerlink" title="while/do 循环"></a>while/do 循环</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394599622.png" alt="1546394599622"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394619201.png" alt="1546394619201"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394677410.png" alt="1546394677410"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">InputQuitToStop</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>   &#123;</span><br><span class="line">       <span class="keyword">string</span> userInput = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> (userInput.ToLower() != <span class="string">"quit"</span>)</span><br><span class="line">       &#123;</span><br><span class="line">           Console.WriteLine(<span class="string">"\n不断输入字符串，回车结束一次输入。不想再运行程序时，输入quit。"</span>);</span><br><span class="line">           userInput = Console.ReadLine();</span><br><span class="line">           <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrEmpty(userInput) == <span class="literal">false</span>)</span><br><span class="line">           &#123;</span><br><span class="line">               Console.WriteLine(<span class="string">"您输入了：&#123;0&#125;"</span>, userInput);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       Console.WriteLine(<span class="string">"\n---------------------------------------------"</span>);</span><br><span class="line">       Console.WriteLine(<span class="string">"\n检测到quit命令，循环中止，敲任意键退出……"</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394692484.png" alt="1546394692484"></p>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394712306.png" alt="1546394712306"></p>
+<h2 id="Break和Continue"><a href="#Break和Continue" class="headerlink" title="Break和Continue"></a>Break和Continue</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394729970.png" alt="1546394729970"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 理解Break和Continue的不同作用</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">BreakAndContinue</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//切换以下两句的注释，体会它们的不同作用</span></span><br><span class="line">            <span class="comment">//continue;</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        Console.WriteLine(<span class="string">"第&#123;0&#125;轮循环"</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394750339.png" alt="1546394750339"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394771080.png" alt="1546394771080"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394800546.png" alt="1546394800546"></p>
+<h2 id="foreach循环"><a href="#foreach循环" class="headerlink" title="foreach循环"></a>foreach循环</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394817328.png" alt="1546394817328"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394842722.png" alt="1546394842722"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394889418.png" alt="1546394889418"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394901409.png" alt="1546394901409"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546394914049.png" alt="1546394914049"></p>
+<h2 id="控制台程序编程小技巧"><a href="#控制台程序编程小技巧" class="headerlink" title="控制台程序编程小技巧"></a>控制台程序编程小技巧</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395012225.png" alt="1546395012225"></p>
+  <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试如何检测按键</span></span><br><span class="line">      <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testKey</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>      &#123;</span><br><span class="line">          Console.WriteLine(<span class="string">"随意敲任意键查看其键值，压ESC退出"</span>);</span><br><span class="line">          ConsoleKeyInfo key;</span><br><span class="line">          <span class="keyword">do</span></span><br><span class="line">          &#123;</span><br><span class="line">              <span class="comment">//用户敲了按键了吗？</span></span><br><span class="line">              <span class="keyword">while</span> (!Console.KeyAvailable)</span><br><span class="line">              &#123;</span><br><span class="line">                  <span class="comment">//啥也不干，等待……</span></span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//等待用户击键</span></span><br><span class="line">              key = Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">              Console.WriteLine();<span class="comment">//输出一个空行</span></span><br><span class="line">              Console.WriteLine(<span class="string">"Modifiers值=&#123;0&#125;"</span>, key.Modifiers);</span><br><span class="line">              Console.WriteLine(<span class="string">"KeyChar值=&#123;0&#125;"</span>, (<span class="keyword">int</span>)(key.KeyChar));</span><br><span class="line">              Console.WriteLine(<span class="string">"Key值=&#123;0&#125;"</span>, key.Key);</span><br><span class="line">              <span class="comment">//CapsLock这个键是不能被捕获的，但我们可以检测出键盘的状态</span></span><br><span class="line">              <span class="keyword">if</span> (Console.CapsLock)</span><br><span class="line">              &#123;</span><br><span class="line">                  Console.WriteLine(<span class="string">"处于大写状态"</span>);</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//NumberLock这个键是不能被捕获的，但我们可以检测出键盘的状态</span></span><br><span class="line">              <span class="keyword">if</span> (Console.NumberLock)</span><br><span class="line">              &#123;</span><br><span class="line">                  Console.WriteLine(<span class="string">"小键盘上的Num Lock键被按下"</span>);</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//检测控制键</span></span><br><span class="line">              <span class="keyword">if</span> (key.Modifiers != <span class="number">0</span>)</span><br><span class="line">              &#123;</span><br><span class="line">                  <span class="keyword">if</span> ((key.Modifiers &amp; ConsoleModifiers.Alt) != <span class="number">0</span>)</span><br><span class="line">                  &#123;</span><br><span class="line">                      Console.WriteLine(<span class="string">"Alt键被按下"</span>);</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span> ((key.Modifiers &amp; ConsoleModifiers.Control) != <span class="number">0</span>)</span><br><span class="line">                  &#123;</span><br><span class="line">                      Console.WriteLine(<span class="string">"Ctrl键被按下"</span>);</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span> ((key.Modifiers &amp; ConsoleModifiers.Shift) != <span class="number">0</span>)</span><br><span class="line">                  &#123;</span><br><span class="line">                      Console.WriteLine(<span class="string">"Shift键被按下"</span>);</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125; <span class="keyword">while</span> (key.Key != ConsoleKey.Escape);</span><br><span class="line">          Console.WriteLine(<span class="string">"\n检测到ESC键，敲任意键退出……\n"</span>);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395031586.png" alt="1546395031586"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395043666.png" alt="1546395043666"></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 展示系统内置的强制中止控制台程序的功能</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">QuitConsoleApp</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"死循环：请使用Ctrl+C或Ctrl+Break强制中止本程序"</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">"当前时间："</span> + DateTime.Now.ToLocalTime());</span><br><span class="line">        Thread.Sleep(<span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 禁用Ctrl+C</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DisableControlC</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"本程序只能通过ESC键结束，无法通过Ctrl+C而中止"</span>);</span><br><span class="line">    Console.TreatControlCAsInput = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> key = Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (key.Key == ConsoleKey.Escape)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"检测到ESC键，敲任意键退出……"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">while</span> (<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546395057109.png" alt="1546395057109"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"> <span class="comment"><span class="doctag">///</span> 响应UseCancelKeyPress事件，屏蔽掉Ctrl+C和Ctrl+Break</span></span><br><span class="line"> <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"> <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UseCancelKeyPress</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span> &#123;</span><br><span class="line">     Console.WriteLine(<span class="string">"本程序只能通过ESC键结束"</span>);</span><br><span class="line">     <span class="comment">//响应CancelKeyPress事件（即Ctrl+C和Ctrl+Break被按下）</span></span><br><span class="line">     Console.CancelKeyPress += Console_CancelKeyPress;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">do</span></span><br><span class="line">     &#123;</span><br><span class="line">         <span class="keyword">var</span> key = Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (key.Key == ConsoleKey.Escape)</span><br><span class="line">         &#123;</span><br><span class="line">             Console.WriteLine(<span class="string">"\n检测到ESC键，敲任意键退出……"</span>);</span><br><span class="line">             <span class="keyword">break</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span> (key.KeyChar != <span class="string">'\0'</span>)</span><br><span class="line">         &#123;</span><br><span class="line">             <span class="keyword">if</span> (key.Key == ConsoleKey.Enter)</span><br><span class="line">             &#123;</span><br><span class="line">                 Console.WriteLine();</span><br><span class="line">             &#125;</span><br><span class="line">             <span class="keyword">else</span></span><br><span class="line">             &#123;</span><br><span class="line">                 Console.Write(key.KeyChar);</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125; <span class="keyword">while</span> (<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Console_CancelKeyPress</span>(<span class="params"><span class="keyword">object</span> sender, ConsoleCancelEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span> &#123;</span><br><span class="line">     <span class="keyword">var</span> isCtrlC = e.SpecialKey == ConsoleSpecialKey.ControlC;</span><br><span class="line">     <span class="keyword">var</span> isCtrlBreak = e.SpecialKey == ConsoleSpecialKey.ControlBreak;</span><br><span class="line">     <span class="comment">//如果是Ctrl+C和Ctrl+Break</span></span><br><span class="line">     <span class="keyword">if</span> (isCtrlC || isCtrlBreak)</span><br><span class="line">     &#123;</span><br><span class="line">         <span class="comment">//屏蔽掉它们，让它们不起作用</span></span><br><span class="line">         e.Cancel = <span class="literal">true</span>;</span><br><span class="line">         <span class="comment">//通知用户，Ctrl+C和Ctrl+Break已经不起作用了……</span></span><br><span class="line">         Console.WriteLine(isCtrlC ? <span class="string">"Ctrl+C已被屏蔽"</span> : <span class="string">"Ctrl+Break已被屏蔽"</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397463155.png" alt="1546397463155"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397488532.png" alt="1546397488532"></p>
+<h2 id="方法定义与调用"><a href="#方法定义与调用" class="headerlink" title="方法定义与调用"></a>方法定义与调用</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397518449.png" alt="1546397518449"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397529417.png" alt="1546397529417"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397541894.png" alt="1546397541894"></p>
+<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397588627.png" alt="1546397588627"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397601156.png" alt="1546397601156"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397618210.png" alt="1546397618210"></p>
+<h2 id="方法应用实例"><a href="#方法应用实例" class="headerlink" title="方法应用实例"></a>方法应用实例</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397655907.png" alt="1546397655907"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ShowPicInForm</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">LoadPicture</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (openFileDialog1.ShowDialog() == DialogResult.OK)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">string</span> FileName = openFileDialog1.FileName;</span><br><span class="line">                picImage.ImageLocation = FileName;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnLoadPic_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            LoadPicture();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397672452.png" alt="1546397672452"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397688658.png" alt="1546397688658"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Pseudorandom</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">float</span> a = <span class="number">3</span>; <span class="comment">//乘数,注意，a&gt;=2 and a&lt;m</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> m = <span class="number">100</span>;  <span class="comment">//模</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">float</span> c = <span class="number">4</span>;  <span class="comment">//增量，注意，c&gt;=0 and c&lt;m</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//依据公式计算出下一个随机数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">float</span> <span class="title">GetNextRanNumber</span>(<span class="params"><span class="keyword">int</span> m, <span class="keyword">float</span> a, <span class="keyword">float</span> c, <span class="keyword">float</span> prevNum</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> (a * prevNum + c) % m;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//按指定的种子Seed生成nums个随机数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">GenerateRandomSequence</span>(<span class="params"><span class="keyword">int</span> nums, <span class="keyword">float</span> seed</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">float</span> lastNum, nextNum;</span><br><span class="line">            lastNum = seed;</span><br><span class="line">            <span class="comment">//清空富文本框</span></span><br><span class="line">            RichTextBox1.Clear();</span><br><span class="line">            <span class="comment">//追加字符串到富文本框中</span></span><br><span class="line">            RichTextBox1.AppendText(seed.ToString());</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                nextNum = GetNextRanNumber(m, a, c, lastNum);</span><br><span class="line">                RichTextBox1.AppendText(<span class="string">" ,"</span> + nextNum);</span><br><span class="line">                lastNum = nextNum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnGenerate_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> nums = Convert.ToInt32(txtNumbers.Text);</span><br><span class="line">            <span class="keyword">float</span> seed = Convert.ToSingle(txtSeed.Text);</span><br><span class="line">            GenerateRandomSequence(nums, seed);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397703011.png" alt="1546397703011"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546397713944.png" alt="1546397713944"></p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="递归概述"><a href="#递归概述" class="headerlink" title="递归概述"></a>递归概述</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398770187.png" alt="1546398770187"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398790146.png" alt="1546398790146"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398810002.png" alt="1546398810002"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398825173.png" alt="1546398825173"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398854502.png" alt="1546398854502"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398890935.png" alt="1546398890935"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398921218.png" alt="1546398921218"></p>
+<h2 id="递归编程技巧"><a href="#递归编程技巧" class="headerlink" title="递归编程技巧"></a>递归编程技巧</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398939874.png" alt="1546398939874"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398967507.png" alt="1546398967507"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">CalculateN</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmCalculate</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmCalculate</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCalculate_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> n = Convert.ToInt32(txtN.Text);</span><br><span class="line">            lblResult.Text = n.ToString()+<span class="string">"!="</span>+Factorial(n).ToString();</span><br><span class="line">            <span class="comment">//lblResult.Text = n.ToString() + "!=" + Factorial2(n).ToString();</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//计算n!，用递归实现</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">Factorial</span>(<span class="params"><span class="keyword">int</span> n</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">               <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">long</span> ret;</span><br><span class="line">            ret = Factorial(n - <span class="number">1</span>) * n;</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//计算n!，用递推实现</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">Factorial2</span>(<span class="params"><span class="keyword">int</span> n</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">long</span> result = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                result *= i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546398977594.png" alt="1546398977594"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399025219.png" alt="1546399025219"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399056898.png" alt="1546399056898"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399105890.png" alt="1546399105890"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399120954.png" alt="1546399120954"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Recursion</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> Story = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//故事主体：</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">WriteStory</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Story = <span class="string">"从前有座山，山里有座庙。\n"</span>;</span><br><span class="line">            Story += <span class="string">"庙里有两个和尚，在讲故事。\n"</span>;</span><br><span class="line">            Story += <span class="string">"讲什么故事呢？……\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnExecute_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//清空文本</span></span><br><span class="line">            RichTextBox1.Text = <span class="string">""</span>;</span><br><span class="line">            <span class="comment">//老和尚开始没完没了地讲故事</span></span><br><span class="line">            DoRecursion((<span class="keyword">int</span>)updnTimes.Value);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//用于实现递归调用</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DoRecursion</span>(<span class="params"><span class="keyword">int</span> times</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//结束条件</span></span><br><span class="line">            <span class="keyword">if</span> (times == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//每次递归调用时要完成的工作</span></span><br><span class="line">            <span class="comment">//to do: 如果将以下这两句移到DoRecursion()一句之后，</span></span><br><span class="line">            <span class="comment">//       会发生什么？</span></span><br><span class="line">            <span class="comment">//RichTextBox1.AppendText("第 " + times + " 次\n");</span></span><br><span class="line">            <span class="comment">//RichTextBox1.AppendText(Story);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//递归调用，参数减一</span></span><br><span class="line">            DoRecursion(times - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span><span class="doctag">///</span>每次递归调用时要完成的工作</span></span><br><span class="line">            RichTextBox1.AppendText(<span class="string">"第 "</span> + times + <span class="string">" 次\n"</span>);</span><br><span class="line">            RichTextBox1.AppendText(Story);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Form1_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//把故事主体写好</span></span><br><span class="line">            WriteStory();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399139078.png" alt="1546399139078"></p>
+<h2 id="处理大整数"><a href="#处理大整数" class="headerlink" title="处理大整数"></a>处理大整数</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399156486.png" alt="1546399156486"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399166900.png" alt="1546399166900"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399177410.png" alt="1546399177410"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399192195.png" alt="1546399192195"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">GetFibonacciNumber</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            ShowCalculateResult();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">FibonacciUseLong</span>(<span class="params"><span class="keyword">int</span> NumberIndex</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">long</span> previousValue = <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">long</span> currentResult = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= NumberIndex; ++i)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">long</span>.MaxValue - currentResult &lt; previousValue)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> OverflowException(<span class="string">"超过了本计算机能计算的最大整数！"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">long</span> sum = currentResult + previousValue;</span><br><span class="line">                previousValue = currentResult;</span><br><span class="line">                currentResult = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> currentResult;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> BigInteger <span class="title">FibonacciUseBigInteger</span>(<span class="params"><span class="keyword">int</span> NumberIndex</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            BigInteger previousValue = <span class="number">-1</span>;</span><br><span class="line">            BigInteger currentResult = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= NumberIndex; ++i)</span><br><span class="line">            &#123;</span><br><span class="line">                BigInteger sum = currentResult + previousValue;</span><br><span class="line">                previousValue = currentResult;</span><br><span class="line">                currentResult = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> currentResult;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 显示计算结果</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ShowCalculateResult</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (rdoLong.Checked)</span><br><span class="line">                    lblResult.Text = FibonacciUseLong((<span class="keyword">int</span>)numericUpDown1.Value).ToString();</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    lblResult.Text = FibonacciUseBigInteger((<span class="keyword">int</span>)numericUpDown1.Value).ToString();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                lblResult.Text = ex.Message;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">numericUpDown1_ValueChanged</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ShowCalculateResult();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">radioButton1_CheckedChanged</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ShowCalculateResult();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">rdoLong_CheckedChanged</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ShowCalculateResult();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="浮点数的处理技巧"><a href="#浮点数的处理技巧" class="headerlink" title="浮点数的处理技巧"></a>浮点数的处理技巧</h2><p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399212099.png" alt="1546399212099"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399225714.png" alt="1546399225714"></p>
+<p><img src="/2019/02/20/CSharp面向对象程序设计概述和基础知识/1546399254579.png" alt="1546399254579"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/" title="C#面向对象程序设计概述和基础知识">http://yoursite.com/2019/02/20/CSharp面向对象程序设计概述和基础知识/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/javascrpit-正则表达式/" rel="next" title="javascrpit-正则表达式">
+                <i class="fa fa-chevron-left"></i> javascrpit-正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/20/finished/CSharp面向对象程序设计概述和基础知识/" rel="prev" title="C#面向对象程序设计概述和基础知识">
+                C#面向对象程序设计概述和基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-与-NET来世今生"><span class="nav-number">1.</span> <span class="nav-text">C#与.NET来世今生</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-语言编程史"><span class="nav-number">1.1.</span> <span class="nav-text">C#语言编程史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows与-NET技术发展的历程及趋势"><span class="nav-number">1.2.</span> <span class="nav-text">Windows与.NET技术发展的历程及趋势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-NET"><span class="nav-number">1.3.</span> <span class="nav-text">什么是.NET</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用VisualStudio编程工具"><span class="nav-number">2.</span> <span class="nav-text">使用VisualStudio编程工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#认识Visual-Studio"><span class="nav-number">2.1.</span> <span class="nav-text">认识Visual Studio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Console的重要属性"><span class="nav-number">2.2.</span> <span class="nav-text">Console的重要属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制台窗口的输入与输出"><span class="nav-number">2.3.</span> <span class="nav-text">控制台窗口的输入与输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReadKey和Beep"><span class="nav-number">2.4.</span> <span class="nav-text">ReadKey和Beep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序调试基本技巧"><span class="nav-number">2.5.</span> <span class="nav-text">程序调试基本技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-与Visual-Studio编程须知"><span class="nav-number">2.6.</span> <span class="nav-text">C#与Visual Studio编程须知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本编程规则"><span class="nav-number">2.6.1.</span> <span class="nav-text">基本编程规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件组织方式"><span class="nav-number">2.6.2.</span> <span class="nav-text">文件组织方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行号、颜色、字体大小"><span class="nav-number">2.6.3.</span> <span class="nav-text">行号、颜色、字体大小</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象概述与-NET运行原理"><span class="nav-number">3.</span> <span class="nav-text">面向对象概述与.NET运行原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程概述"><span class="nav-number">3.1.</span> <span class="nav-text">面向对象编程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序是如何被计算机执行的？"><span class="nav-number">3.2.</span> <span class="nav-text">程序是如何被计算机执行的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何编写计算机可以执行的程序？"><span class="nav-number">3.3.</span> <span class="nav-text">如何编写计算机可以执行的程序？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎样构造求解问题的算法？"><span class="nav-number">3.4.</span> <span class="nav-text">怎样构造求解问题的算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期计算结构化编程的实现"><span class="nav-number">3.5.</span> <span class="nav-text">日期计算结构化编程的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期计算面向对象编程的实现"><span class="nav-number">3.6.</span> <span class="nav-text">日期计算面向对象编程的实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量、数据类型与表达式"><span class="nav-number">4.</span> <span class="nav-text">变量、数据类型与表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理解变量"><span class="nav-number">4.1.</span> <span class="nav-text">理解变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">4.2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String和Var"><span class="nav-number">4.3.</span> <span class="nav-text">String和Var</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量与内存"><span class="nav-number">4.4.</span> <span class="nav-text">变量与内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转换"><span class="nav-number">4.5.</span> <span class="nav-text">数据类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符与表达式"><span class="nav-number">4.6.</span> <span class="nav-text">运算符与表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选择结构与逻辑表达式"><span class="nav-number">5.</span> <span class="nav-text">选择结构与逻辑表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-选择结构"><span class="nav-number">5.1.</span> <span class="nav-text">if/else 选择结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择结构的嵌套"><span class="nav-number">5.2.</span> <span class="nav-text">选择结构的嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑表达式的组合"><span class="nav-number">5.3.</span> <span class="nav-text">逻辑表达式的组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多分支结构"><span class="nav-number">5.4.</span> <span class="nav-text">多分支结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环结构"><span class="nav-number">6.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while-do-循环"><span class="nav-number">6.1.</span> <span class="nav-text">while/do 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环"><span class="nav-number">6.2.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Break和Continue"><span class="nav-number">6.3.</span> <span class="nav-text">Break和Continue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#foreach循环"><span class="nav-number">6.4.</span> <span class="nav-text">foreach循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制台程序编程小技巧"><span class="nav-number">6.5.</span> <span class="nav-text">控制台程序编程小技巧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法"><span class="nav-number">7.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法定义与调用"><span class="nav-number">7.1.</span> <span class="nav-text">方法定义与调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法重载"><span class="nav-number">7.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法应用实例"><span class="nav-number">7.3.</span> <span class="nav-text">方法应用实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归"><span class="nav-number">8.</span> <span class="nav-text">递归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归概述"><span class="nav-number">8.1.</span> <span class="nav-text">递归概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归编程技巧"><span class="nav-number">8.2.</span> <span class="nav-text">递归编程技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理大整数"><span class="nav-number">8.3.</span> <span class="nav-text">处理大整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数的处理技巧"><span class="nav-number">8.4.</span> <span class="nav-text">浮点数的处理技巧</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
