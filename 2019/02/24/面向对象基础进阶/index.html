@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C#,面向对象,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="理解对象组合、复制、序列化、比较">
+<meta name="keywords" content="C#,面向对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象基础进阶">
+<meta property="og:url" content="http://yoursite.com/2019/02/24/面向对象基础进阶/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="理解对象组合、复制、序列化、比较">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546140425394.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546140482430.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546140527023.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141086637.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141144946.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141271571.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141297988.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141457979.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141614202.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141643207.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141741517.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141762266.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141780771.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141824139.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546141842905.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546142118275.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546142476047.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546142515644.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546143965647.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546143987941.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144021277.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144055944.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144144111.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144186646.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144210977.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144267946.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144289136.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546144534682.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147457139.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147476313.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147522279.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147596800.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147653855.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546147788652.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150096600.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150114404.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150140637.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150185931.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150238250.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150302678.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150481876.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150504581.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150541623.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546482135340.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150592268.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150612766.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546150639597.png">
+<meta property="og:updated_time" content="2019-02-19T09:54:43.362Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象基础进阶">
+<meta name="twitter:description" content="理解对象组合、复制、序列化、比较">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/24/面向对象基础进阶/1546140425394.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/24/面向对象基础进阶/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>面向对象基础进阶 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/面向对象基础进阶/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面向对象基础进阶</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T15:34:31+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C#-学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/基础入门系列/" itemprop="url" rel="index">
+                    <span itemprop="name">基础入门系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/24/面向对象基础进阶/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/24/面向对象基础进阶/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/24/面向对象基础进阶/" class="leancloud_visitors" data-flag-title="面向对象基础进阶">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.1k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>理解对象组合、复制、序列化、比较 </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="对象组合"><a href="#对象组合" class="headerlink" title="对象组合"></a>对象组合</h1><p><img src="/2019/02/24/面向对象基础进阶/1546140425394.png" alt="1546140425394"></p>
+<h2 id="一对一对象组合"><a href="#一对一对象组合" class="headerlink" title="一对一对象组合"></a>一对一对象组合</h2><p><img src="/2019/02/24/面向对象基础进阶/1546140482430.png" alt="1546140482430"></p>
+<h3 id="一对一对象组合实现"><a href="#一对一对象组合实现" class="headerlink" title="一对一对象组合实现"></a>一对一对象组合实现</h3><p><img src="/2019/02/24/面向对象基础进阶/1546140527023.png" alt="1546140527023"></p>
+<h3 id="对象间的”关联”理解"><a href="#对象间的”关联”理解" class="headerlink" title="对象间的”关联”理解"></a>对象间的”关联”理解</h3><p><img src="/2019/02/24/面向对象基础进阶/1546141086637.png" alt="1546141086637"></p>
+<h3 id="一对一对象组合应用实例"><a href="#一对一对象组合应用实例" class="headerlink" title="一对一对象组合应用实例"></a>一对一对象组合应用实例</h3><p><img src="/2019/02/24/面向对象基础进阶/1546141144946.png" alt="1546141144946"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546141271571.png" alt="1546141271571"></p>
+<h2 id="一对多对象组合"><a href="#一对多对象组合" class="headerlink" title="一对多对象组合"></a>一对多对象组合</h2><p><img src="/2019/02/24/面向对象基础进阶/1546141297988.png" alt="1546141297988"></p>
+<h3 id="一对多编程实例"><a href="#一对多编程实例" class="headerlink" title="一对多编程实例"></a>一对多编程实例</h3><p><img src="/2019/02/24/面向对象基础进阶/1546141457979.png" alt="1546141457979"></p>
+<h3 id="认识列表框控件"><a href="#认识列表框控件" class="headerlink" title="认识列表框控件"></a>认识列表框控件</h3><p><img src="/2019/02/24/面向对象基础进阶/1546141614202.png" alt="1546141614202"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">OneToManyWinForm</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnAdd_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            AddItem();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClear_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            listBox1.Items.Clear();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnDelete_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            DeleteItem();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 添加选项</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AddItem</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//不允许加空项</span></span><br><span class="line">            <span class="keyword">if</span> (txtUserInput.Text.Trim() != <span class="string">""</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                listBox1.Items.Add(txtUserInput.Text);</span><br><span class="line">                txtUserInput.Text = <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 删除选项</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DeleteItem</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (listBox1.SelectedIndex != <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                listBox1.Items.RemoveAt(listBox1.SelectedIndex);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 显示列表框中的当前选中项</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ShowSelectedItem</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            String SelectedItem = listBox1.SelectedItem == <span class="literal">null</span> ? <span class="string">"无"</span> : listBox1.SelectedItem.ToString();</span><br><span class="line">            lblInfo.Text = String.Format(<span class="string">"当前选中项为：&#123;0&#125;"</span>, SelectedItem);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">listBox1_SelectedIndexChanged</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ShowSelectedItem();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">txtUserInput_KeyDown</span>(<span class="params"><span class="keyword">object</span> sender, KeyEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//回车时直接加入列表</span></span><br><span class="line">            <span class="keyword">if</span> (e.KeyCode == Keys.Enter)</span><br><span class="line">            &#123;</span><br><span class="line">                AddItem();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/24/面向对象基础进阶/1546141643207.png" alt="1546141643207"></p>
+<h2 id="建模实例分析"><a href="#建模实例分析" class="headerlink" title="建模实例分析"></a>建模实例分析</h2><p><img src="/2019/02/24/面向对象基础进阶/1546141741517.png" alt="1546141741517"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">CarFactory</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Car car = <span class="keyword">new</span> Car();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n敲任意键启动汽车……\n"</span>);</span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">            car.Start();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n敲任意键刹车……\n"</span>);</span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">            car.Brake();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n敲任意键退出程序……\n"</span>);</span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//代表发动机</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Engine</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"发动机启动"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Stop</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"发动机停止"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//汽车轮</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Wheel</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Car</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> Engine _engine = <span class="keyword">new</span> Engine();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> Wheel[] wheels = <span class="keyword">new</span> Wheel[<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"插入钥匙，打火，启动……"</span>);</span><br><span class="line">            _engine.Start();</span><br><span class="line">            Console.WriteLine(<span class="string">"启动成功，开始行驶"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Brake</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"刹车！"</span>);</span><br><span class="line">            Stop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Stop</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            _engine.Stop();</span><br><span class="line">            Console.WriteLine(<span class="string">"汽车停车"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/24/面向对象基础进阶/1546141762266.png" alt="1546141762266"></p>
+<h2 id="自引用类"><a href="#自引用类" class="headerlink" title="自引用类"></a>自引用类</h2><p><img src="/2019/02/24/面向对象基础进阶/1546141780771.png" alt="1546141780771"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546141824139.png" alt="1546141824139"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">LinkListExample</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//链表节点</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">LinkNode</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//保存数据</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">object</span> Data;   </span><br><span class="line">        <span class="comment">//引用下一个链接节点</span></span><br><span class="line">        <span class="keyword">public</span> LinkNode Next = <span class="literal">null</span>;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">LinkListExample</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//生成链表节点</span></span><br><span class="line">            LinkNode Head = <span class="keyword">new</span> LinkNode()&#123; Data=<span class="string">"Head"</span>&#125;;</span><br><span class="line">            LinkNode First = <span class="keyword">new</span> LinkNode() &#123; Data = <span class="string">"First"</span> &#125;;</span><br><span class="line">            LinkNode Second = <span class="keyword">new</span> LinkNode() &#123; Data = <span class="string">"Second"</span> &#125;;</span><br><span class="line">            LinkNode Tail = <span class="keyword">new</span> LinkNode() &#123; Data = <span class="string">"Tail"</span> &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//建立链表</span></span><br><span class="line">            Head.Next = First;</span><br><span class="line">            First.Next = Second;</span><br><span class="line">            Second.Next = Tail;</span><br><span class="line">            Console.WriteLine(<span class="string">"链表己创建，其内容为："</span>);</span><br><span class="line">            <span class="comment">//访问链表的全部节点</span></span><br><span class="line">            LinkNode node;</span><br><span class="line">            node = Head;</span><br><span class="line">            <span class="keyword">while</span> (node != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//从node.Data中取出节点数据，干一些事</span></span><br><span class="line">                <span class="keyword">if</span>(node.Next!=<span class="literal">null</span>)</span><br><span class="line">                    Console.Write(<span class="string">"&#123;0&#125;--&gt;"</span>, node.Data);</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    Console.Write(<span class="string">"&#123;0&#125;"</span>, node.Data);</span><br><span class="line">                node = node.Next;<span class="comment">//移往下一个节点</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/24/面向对象基础进阶/1546141842905.png" alt="1546141842905"></p>
+<h1 id="对象复制"><a href="#对象复制" class="headerlink" title="对象复制"></a>对象复制</h1><p><img src="/2019/02/24/面向对象基础进阶/1546142118275.png" alt="1546142118275"></p>
+<h2 id="对象的“浅复制”"><a href="#对象的“浅复制”" class="headerlink" title="对象的“浅复制”"></a>对象的“浅复制”</h2><p><img src="/2019/02/24/面向对象基础进阶/1546142476047.png" alt="1546142476047"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546142515644.png" alt="1546142515644"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546143965647.png" alt="1546143965647"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectCloneDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">region</span> "支持内容比对的简单对象"</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> MyClassValue = <span class="number">100</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">string</span> <span class="title">ToString</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"MyClassValue:"</span> + MyClassValue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params"><span class="keyword">object</span> obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj == <span class="literal">null</span> || obj <span class="keyword">is</span> MyClass == <span class="literal">false</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> MyClassValue == (obj <span class="keyword">as</span> MyClass).MyClassValue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">int</span> <span class="title">GetHashCode</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> MyClassValue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyClass <span class="title">CloneObject</span>(<span class="params">MyClass obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            MyClass newObj = <span class="keyword">new</span> MyClass();</span><br><span class="line">            newObj.MyClassValue = obj.MyClassValue;		<span class="comment">//字段复制</span></span><br><span class="line">            <span class="keyword">return</span> newObj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">region</span> "组合的对象"</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassB</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> BValue = <span class="number">200</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassA</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> AValue = <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">public</span> ClassB EmbedObject;    <span class="comment">//ClassA包容一个ClassB的对象</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ClassA</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            EmbedObject = <span class="keyword">new</span> ClassB();		<span class="comment">//创建被包容对象</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ClassA <span class="title">CloneObject</span>(<span class="params">ClassA obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ClassA newObj = <span class="keyword">new</span> ClassA();</span><br><span class="line">            newObj.AValue = obj.AValue;		<span class="comment">//字段复制</span></span><br><span class="line">            newObj.EmbedObject = obj.EmbedObject;	<span class="comment">//引用复制</span></span><br><span class="line">            <span class="keyword">return</span> newObj;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//ObjectCopyViaFieldCopy();</span></span><br><span class="line">            ObjectCopyViaFieldCopy2();</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 基于字段值拷贝的简单对象复制</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ObjectCopyViaFieldCopy</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            MyClass obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">            MyClass other = MyClass.CloneObject(obj);</span><br><span class="line">            Console.WriteLine(<span class="string">"原对象：&#123;0&#125;,新对象：&#123;1&#125;"</span>, obj, other);</span><br><span class="line">            Console.WriteLine(obj == other);  <span class="comment">//false</span></span><br><span class="line">            Console.WriteLine(obj.Equals(other));<span class="comment">// true</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 基于字段值拷贝的组合对象复制</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ObjectCopyViaFieldCopy2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ClassA obj = <span class="keyword">new</span> ClassA();</span><br><span class="line">            ClassA other = ClassA.CloneObject(obj);</span><br><span class="line">            Console.WriteLine(obj == other); <span class="comment">//false</span></span><br><span class="line">            Console.WriteLine(obj.AValue == other.AValue); <span class="comment">// true</span></span><br><span class="line">            Console.WriteLine(obj.EmbedObject == other.EmbedObject);<span class="comment">// true</span></span><br><span class="line">            Console.WriteLine(obj.EmbedObject.BValue == other.EmbedObject.BValue); <span class="comment">//true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对象的深复制"><a href="#对象的深复制" class="headerlink" title="对象的深复制"></a>对象的深复制</h2><p><img src="/2019/02/24/面向对象基础进阶/1546143987941.png" alt="1546143987941"></p>
+<h3 id="ICloneable接口"><a href="#ICloneable接口" class="headerlink" title="ICloneable接口"></a>ICloneable接口</h3><p><img src="/2019/02/24/面向对象基础进阶/1546144021277.png" alt="1546144021277"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">DeepCopy</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassA</span> : <span class="title">ICloneable</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> AValue = <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">public</span> ClassB EmbedObject;    <span class="comment">//ClassA包容一个ClassB的对象</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Object <span class="title">Clone</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ClassA ObjA = <span class="keyword">new</span> ClassA();</span><br><span class="line">            ObjA.AValue = <span class="keyword">this</span>.AValue;</span><br><span class="line">            ObjA.EmbedObject = </span><br><span class="line">                (<span class="keyword">this</span>.EmbedObject <span class="keyword">as</span> ICloneable).Clone() <span class="keyword">as</span> ClassB;</span><br><span class="line">            <span class="keyword">return</span> ObjA;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassB</span> : <span class="title">ICloneable</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> BValue = <span class="number">200</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> Object <span class="title">Clone</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ClassB ObjB = <span class="keyword">new</span> ClassB();</span><br><span class="line">            ObjB.BValue = <span class="keyword">this</span>.BValue;</span><br><span class="line">            <span class="keyword">return</span> ObjB;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ClassA ObjA = <span class="keyword">new</span> ClassA();</span><br><span class="line">            ObjA.EmbedObject = <span class="keyword">new</span> ClassB();</span><br><span class="line">            <span class="comment">//开始克隆</span></span><br><span class="line">            ClassA other = (ObjA <span class="keyword">as</span> ICloneable).Clone() <span class="keyword">as</span> ClassA;</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(other.EmbedObject == ObjA.EmbedObject);   <span class="comment">//false</span></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/24/面向对象基础进阶/1546144055944.png" alt="1546144055944"></p>
+<h1 id="对象序列化-保存对象状态"><a href="#对象序列化-保存对象状态" class="headerlink" title="对象序列化(保存对象状态)"></a>对象序列化(保存对象状态)</h1><p><img src="/2019/02/24/面向对象基础进阶/1546144144111.png" alt="1546144144111"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546144186646.png" alt="1546144186646"></p>
+<h2 id="什么是流？-一连串有顺序的二进制数据"><a href="#什么是流？-一连串有顺序的二进制数据" class="headerlink" title="什么是流？(一连串有顺序的二进制数据)"></a>什么是流？(一连串有顺序的二进制数据)</h2><p><img src="/2019/02/24/面向对象基础进阶/1546144210977.png" alt="1546144210977"></p>
+<h2 id="使用流实现序列化"><a href="#使用流实现序列化" class="headerlink" title="使用流实现序列化"></a>使用流实现序列化</h2><p><img src="/2019/02/24/面向对象基础进阶/1546144267946.png" alt="1546144267946"></p>
+<h2 id="NET基类库中提供的几种流对象"><a href="#NET基类库中提供的几种流对象" class="headerlink" title=".NET基类库中提供的几种流对象"></a>.NET基类库中提供的几种流对象</h2><p><img src="/2019/02/24/面向对象基础进阶/1546144289136.png" alt="1546144289136"></p>
+<h2 id="两种对象序列化方式"><a href="#两种对象序列化方式" class="headerlink" title="两种对象序列化方式"></a>两种对象序列化方式</h2><p><img src="/2019/02/24/面向对象基础进阶/1546144534682.png" alt="1546144534682"></p>
+<h3 id="XML格式序列化实例"><a href="#XML格式序列化实例" class="headerlink" title="XML格式序列化实例"></a>XML格式序列化实例</h3><p><img src="/2019/02/24/面向对象基础进阶/1546147457139.png" alt="1546147457139"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseXmlSerializer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> IntField ;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> StringField ;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">var</span> Serializer = <span class="keyword">new</span> XmlSerializer(<span class="keyword">typeof</span>(MyClass));</span><br><span class="line"></span><br><span class="line">            MyClass obj = <span class="keyword">new</span> MyClass() &#123;</span><br><span class="line">                IntField = <span class="number">100</span>,</span><br><span class="line">                StringField = <span class="string">"Hello"</span> &#125;;</span><br><span class="line">			<span class="comment">//输出流:控制台窗口</span></span><br><span class="line">            Serializer.Serialize(Console.Out, obj);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="gb2312"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">MyClass</span> <span class="attr">xmlns:xsd</span>=<span class="string">"http://www.w3.org/2001/XMLSchema"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">IntField</span>&gt;</span>100<span class="tag">&lt;/<span class="name">IntField</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">StringField</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">StringField</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">MyClass</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="二进制格式序列化实例"><a href="#二进制格式序列化实例" class="headerlink" title="二进制格式序列化实例"></a>二进制格式序列化实例</h3><p><img src="/2019/02/24/面向对象基础进阶/1546147476313.png" alt="1546147476313"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546147522279.png" alt="1546147522279"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SingleObjectSerialization</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//学生信息  </span></span><br><span class="line">    [<span class="meta">Serializable</span>]</span><br><span class="line">    <span class="keyword">class</span> <span class="title">CollegeStudent</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//姓名</span></span><br><span class="line">        <span class="keyword">public</span> String Name = <span class="string">"空"</span>;</span><br><span class="line">        <span class="comment">//性别</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">bool</span> IsMale = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">//入学考试成绩</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> ScoreForEntranceExamination = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SingleObjectSerialization</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line"></span><br><span class="line">            stu = <span class="keyword">new</span> CollegeStudent();</span><br><span class="line">            <span class="comment">//将学生默认信息显示在窗体上</span></span><br><span class="line">            <span class="keyword">this</span>.ClearInputControls();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//学生对象</span></span><br><span class="line">        <span class="keyword">private</span> CollegeStudent stu ;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将学生信息显示在窗体上</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ShowStudentInfo</span>(<span class="params">CollegeStudent obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj == <span class="literal">null</span>)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">this</span>.txtName.Text = obj.Name;</span><br><span class="line">            <span class="keyword">this</span>.txtScore.Text = Convert.ToString(obj.ScoreForEntranceExamination);</span><br><span class="line">            <span class="keyword">this</span>.rdoMale.Checked = obj.IsMale ;</span><br><span class="line">            <span class="keyword">this</span>.rdoFemale.Checked = !obj.IsMale;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//清除所有的输入控件到初始状态</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ClearInputControls</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.txtName.Text = <span class="string">"空"</span>;</span><br><span class="line">            <span class="keyword">this</span>.txtScore.Text =<span class="string">"0"</span>;</span><br><span class="line">            <span class="keyword">this</span>.rdoMale.Checked = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//更新对象信息</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">UpdateStudentObj</span>(<span class="params">CollegeStudent stu</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (stu == <span class="literal">null</span>)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            stu.IsMale = rdoMale.Checked;</span><br><span class="line">            stu.Name = txtName.Text;</span><br><span class="line">            stu.ScoreForEntranceExamination = Convert.ToInt32(txtScore.Text);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//保存对象到文件中</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SaveToFile</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            String FileName = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">this</span>.saveFileDialog1.FileName = <span class="string">"Student"</span>;</span><br><span class="line">            <span class="keyword">this</span>.UpdateStudentObj(stu);</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.saveFileDialog1.ShowDialog() == DialogResult.OK)</span><br><span class="line">            &#123;</span><br><span class="line">                FileName = saveFileDialog1.FileName;</span><br><span class="line">                SerializeObj(FileName,stu);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将CollegeStudent对象序列化到文件中</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SerializeObj</span>(<span class="params">String FileName,CollegeStudent stu</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//创建FileStream对象</span></span><br><span class="line">            <span class="keyword">using</span> (FileStream writer = <span class="keyword">new</span> FileStream(FileName, FileMode.Create))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//创建格式化器对象  using System.Runtime.Serialization;</span></span><br><span class="line">                IFormatter formatter = <span class="keyword">new</span> BinaryFormatter();</span><br><span class="line">                <span class="comment">//格式化器对象使用FileStream对象序列化对象</span></span><br><span class="line">                formatter.Serialize(writer, stu);   </span><br><span class="line">                MessageBox.Show(<span class="string">"对象成功保存到文件:"</span> + FileName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//从文件中装入对象</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">LoadFromFile</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            String FileName = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.openFileDialog1.ShowDialog() == DialogResult.OK)</span><br><span class="line">            &#123;</span><br><span class="line">                FileName = openFileDialog1.FileName;</span><br><span class="line">                <span class="keyword">this</span>.ShowStudentInfo(DeserializeObj(FileName));</span><br><span class="line">            &#125;</span><br><span class="line">  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//从文件中反序列化对象</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> CollegeStudent  <span class="title">DeserializeObj</span>(<span class="params">String FileName</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">using</span> (FileStream reader = <span class="keyword">new</span> FileStream(FileName, FileMode.Open))</span><br><span class="line">            &#123;</span><br><span class="line">               <span class="comment">//using System.Runtime.Serialization.Formatters.Binary</span></span><br><span class="line">                IFormatter formatter = <span class="keyword">new</span> BinaryFormatter();</span><br><span class="line">                <span class="keyword">return</span> (CollegeStudent)formatter.Deserialize(reader);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClear_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.ClearInputControls();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnSaveObject_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.SaveToFile();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnLoadObject_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.LoadFromFile();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h3><p><img src="/2019/02/24/面向对象基础进阶/1546147596800.png" alt="1546147596800"></p>
+<h2 id="使用内存流快速大批的复制对象"><a href="#使用内存流快速大批的复制对象" class="headerlink" title="使用内存流快速大批的复制对象"></a>使用内存流快速大批的复制对象</h2><p><img src="/2019/02/24/面向对象基础进阶/1546147653855.png" alt="1546147653855"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectCloneViaSerialization</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Serializable</span>]</span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Index = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            MyClass obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">            <span class="comment">//创建一个内存流对象</span></span><br><span class="line">            <span class="keyword">using</span> (MemoryStream ms = <span class="keyword">new</span> MemoryStream())</span><br><span class="line">            &#123;</span><br><span class="line">                IFormatter formator = <span class="keyword">new</span> BinaryFormatter();</span><br><span class="line">                <span class="comment">//将对象序列化到内存流中 </span></span><br><span class="line">                formator.Serialize(ms, obj);  </span><br><span class="line">                <span class="comment">//克隆100个对象</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//回到流的开头  偏移是0    枚举  开始 当前  结束</span></span><br><span class="line">                    ms.Seek(<span class="number">0</span>, SeekOrigin.Begin);</span><br><span class="line">                    <span class="comment">//反序列化对象</span></span><br><span class="line">                    obj = (formator.Deserialize(ms) <span class="keyword">as</span> MyClass); </span><br><span class="line">                    obj.Index += i;   <span class="comment">//设置对象字段</span></span><br><span class="line">                    Console.WriteLine(<span class="string">"对象&#123;0&#125;已创建。"</span>, obj.Index);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="程序退出保存状态"><a href="#程序退出保存状态" class="headerlink" title="程序退出保存状态"></a>程序退出保存状态</h2><p><img src="/2019/02/24/面向对象基础进阶/1546147788652.png" alt="1546147788652"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SaveFormStatus</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Serializable</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FormStatus</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> Color BackgroundColor &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Left &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Top &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Width &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Height &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SaveFormStatus</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            LoadStatus();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnChooseColor_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (colorDialog1.ShowDialog() == DialogResult.OK)</span><br><span class="line">            &#123;</span><br><span class="line">                BackColor = colorDialog1.Color;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> FormStatus status = <span class="literal">null</span>;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SaveStatus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            status=<span class="keyword">new</span> FormStatus();</span><br><span class="line">            status.BackgroundColor=<span class="keyword">this</span>.BackColor;</span><br><span class="line">            status.Left=<span class="keyword">this</span>.Left;</span><br><span class="line">            status.Top=<span class="keyword">this</span>.Top;</span><br><span class="line">            status.Width=<span class="keyword">this</span>.Width;</span><br><span class="line">            status.Height = <span class="keyword">this</span>.Height;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">using</span>(FileStream fs=<span class="keyword">new</span> FileStream(<span class="string">"FormStatus.cfg"</span>,FileMode.Create))</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                IFormatter formatter = <span class="keyword">new</span> BinaryFormatter();</span><br><span class="line">                formatter.Serialize(fs, status);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">LoadStatus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (File.Exists(<span class="string">"FormStatus.cfg"</span>))</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">using</span> (FileStream fs = <span class="keyword">new</span> FileStream(<span class="string">"FormStatus.cfg"</span>, FileMode.Open))</span><br><span class="line">                    &#123;</span><br><span class="line">                        IFormatter formatter = <span class="keyword">new</span> BinaryFormatter();</span><br><span class="line">                        status = formatter.Deserialize(fs) <span class="keyword">as</span> FormStatus;</span><br><span class="line">                        <span class="keyword">if</span> (status != <span class="literal">null</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">this</span>.BackColor = status.BackgroundColor;</span><br><span class="line">                            <span class="keyword">this</span>.Left = status.Left;</span><br><span class="line">                            <span class="keyword">this</span>.Top = status.Top;</span><br><span class="line">                            <span class="keyword">this</span>.Width = status.Width;</span><br><span class="line">                            <span class="keyword">this</span>.Height = status.Height;</span><br><span class="line"></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                MessageBox.Show(ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmMain_FormClosing</span>(<span class="params"><span class="keyword">object</span> sender, FormClosingEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            SaveStatus();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmMain_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="对象比较"><a href="#对象比较" class="headerlink" title="对象比较"></a>对象比较</h1><p><img src="/2019/02/24/面向对象基础进阶/1546150096600.png" alt="1546150096600"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150114404.png" alt="1546150114404"></p>
+<h2 id="实现IComparable接口"><a href="#实现IComparable接口" class="headerlink" title="实现IComparable接口"></a>实现IComparable接口</h2><p><img src="/2019/02/24/面向对象基础进阶/1546150140637.png" alt="1546150140637"></p>
+<h2 id="仅判断是否相等-重写Equals方法"><a href="#仅判断是否相等-重写Equals方法" class="headerlink" title="仅判断是否相等(重写Equals方法)"></a>仅判断是否相等(重写Equals方法)</h2><p><img src="/2019/02/24/面向对象基础进阶/1546150185931.png" alt="1546150185931"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150238250.png" alt="1546150238250"></p>
+<h2 id="重写GetHashCode方法"><a href="#重写GetHashCode方法" class="headerlink" title="重写GetHashCode方法"></a>重写GetHashCode方法</h2><p><img src="/2019/02/24/面向对象基础进阶/1546150302678.png" alt="1546150302678"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150481876.png" alt="1546150481876"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150504581.png" alt="1546150504581"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150541623.png" alt="1546150541623"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectCompare</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 圆心</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">struct</span> CircleCenter</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> x;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Circle : IComparable, IComparable&lt;Circle&gt;, IEquatable&lt;Circle&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Radius = <span class="number">0</span>;   <span class="comment">//半径</span></span><br><span class="line">        <span class="keyword">public</span> CircleCenter Center &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; <span class="comment">//圆心</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//实现IComparable接口定义的方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">CompareTo</span>(<span class="params"><span class="keyword">object</span> obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!(obj <span class="keyword">is</span> Circle))</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentException(<span class="string">"只能比对Cirlce对象"</span>);</span><br><span class="line">            <span class="keyword">return</span> CompareTo(obj <span class="keyword">as</span> Circle);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//实现IComparable&lt;T&gt;接口定义的方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">CompareTo</span>(<span class="params">Circle other</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">double</span> ret = Math.Abs(other.Radius - <span class="keyword">this</span>.Radius);</span><br><span class="line">            <span class="keyword">if</span> (ret &lt; <span class="number">1e-3</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (other.Radius &lt; <span class="keyword">this</span>.Radius)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//覆盖Object类的GetHashCode方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">int</span> <span class="title">GetHashCode</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//整数部分与小数点后3位相同的对象生成相同的哈希值</span></span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)(Radius * <span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//重写Object类的Equals方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params"><span class="keyword">object</span> obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.CompareTo(obj) == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//实现IEquatable&lt;Circle&gt;接口定义的方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params">Circle other</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.CompareTo(other) == <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//----------------------------------------</span></span><br><span class="line">        <span class="comment">//重载相关的运算符</span></span><br><span class="line">        <span class="comment">//----------------------------------------</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> ==(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> obj1.Equals(obj2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> !=(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> !(obj1.Equals(obj2));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &gt;(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj1.CompareTo(obj2) &gt; <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj1.CompareTo(obj2) &lt; <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;=(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> ((obj1.CompareTo(obj2) &lt; <span class="number">0</span>) || (obj1.CompareTo(obj2) == <span class="number">0</span>))</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &gt;=(Circle obj1, Circle obj2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> ((obj1.CompareTo(obj2) &gt; <span class="number">0</span>) || (obj1.CompareTo(obj2) == <span class="number">0</span>))</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectCompare</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Circle obj1 = <span class="keyword">new</span> Circle &#123; Radius = <span class="number">100.1</span> &#125;;</span><br><span class="line">            Circle obj2 = <span class="keyword">new</span> Circle &#123; Radius = <span class="number">100.9</span> &#125;;</span><br><span class="line">            <span class="comment">//测试覆盖的方法</span></span><br><span class="line">            Console.WriteLine(obj1.GetHashCode());<span class="comment">//100100</span></span><br><span class="line">            Console.WriteLine(obj2.GetHashCode());<span class="comment">//100900</span></span><br><span class="line">            Console.WriteLine(obj1.CompareTo(obj2)); <span class="comment">//-1</span></span><br><span class="line">            Console.WriteLine(obj1.Equals(obj2));<span class="comment">//false</span></span><br><span class="line">            <span class="comment">//测试重载的运算符</span></span><br><span class="line">            Console.WriteLine(obj1 == obj2);    <span class="comment">//false</span></span><br><span class="line">            Console.WriteLine(obj1 != obj2);    <span class="comment">//true</span></span><br><span class="line">            Console.WriteLine(obj1 &gt;= obj2);    <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//以下测试Circle对象数组的排序功能</span></span><br><span class="line">            Circle[] circles = <span class="keyword">new</span> Circle[<span class="number">10</span>];  <span class="comment">//创建Circle对象数组</span></span><br><span class="line">            Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                circles[i] = <span class="keyword">new</span> Circle &#123; Radius = ran.Next(<span class="number">1</span>, <span class="number">1000</span>)/<span class="number">100.0</span> &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(<span class="string">"原始数组："</span>);</span><br><span class="line">            Array.ForEach&lt;Circle&gt;(circles, (circle) =&gt; &#123; Console.WriteLine(<span class="string">"圆对象的哈希代码：&#123;0&#125;，半径：&#123;1&#125;"</span>, circle.GetHashCode(), circle.Radius); &#125;);</span><br><span class="line">            Console.WriteLine(<span class="string">"\n排序之后："</span>);</span><br><span class="line">            Array.Sort(circles);</span><br><span class="line">            Array.ForEach&lt;Circle&gt;(circles, (circle) =&gt; &#123; Console.WriteLine(<span class="string">"圆对象的哈希代码：&#123;0&#125;，半径：&#123;1&#125;"</span>, circle.GetHashCode(), circle.Radius); &#125;);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对象排序实例-实现接口，直接使用排序和查找"><a href="#对象排序实例-实现接口，直接使用排序和查找" class="headerlink" title="对象排序实例(实现接口，直接使用排序和查找)"></a>对象排序实例(实现接口，直接使用排序和查找)</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectSort</span></span><br><span class="line">&#123;</span><br><span class="line">    class MyClass : IComparable&lt;MyClass&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Value &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> String Information &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 先按照Value字段值比较，如果Value值一样，</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 就按照Information字段值比较,</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 只有两个字段值都一样，才认为这两个对象相等</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="other"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">CompareTo</span>(<span class="params">MyClass other</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (other == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">           <span class="keyword">int</span> result=<span class="keyword">this</span>.Value.CompareTo(other.Value);</span><br><span class="line">           <span class="keyword">if</span> (result == <span class="number">0</span>)</span><br><span class="line">           &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="keyword">this</span>.Information.CompareTo(other.Information);</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params"><span class="keyword">object</span> obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj == <span class="literal">null</span> || obj <span class="keyword">is</span> MyClass == <span class="literal">false</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.CompareTo(obj <span class="keyword">as</span> MyClass)==<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">int</span> <span class="title">GetHashCode</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> Value ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">string</span> <span class="title">ToString</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> String.Format(<span class="string">"Value:&#123;0&#125;\t Information:&#123;1&#125;\n"</span>, Value, Information) ;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">var</span> MyClasses = GenerateExampleCollection();</span><br><span class="line">            Console.WriteLine(<span class="string">"原始集合："</span>);</span><br><span class="line">            MyClasses.ForEach((obj) =&gt; &#123; Console.WriteLine(obj); &#125;);</span><br><span class="line">            MyClasses.Sort();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n排序之后："</span>);</span><br><span class="line">            MyClasses.ForEach((obj) =&gt; &#123; Console.WriteLine(obj); &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            MyClass objToFind = <span class="keyword">new</span> MyClass()</span><br><span class="line">            &#123;</span><br><span class="line">                Value = <span class="number">2</span>,Information = <span class="string">"ABC"</span></span><br><span class="line">            &#125;;</span><br><span class="line">            Console.WriteLine(<span class="string">"\n查找对象：&#123;0&#125;"</span>, objToFind);</span><br><span class="line">            <span class="keyword">int</span> index = MyClasses.IndexOf(objToFind);</span><br><span class="line">            Console.WriteLine(<span class="string">"对象&#123;0&#125;在集合中的索引：&#123;1&#125;"</span>,objToFind,index);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> List&lt;MyClass&gt; <span class="title">GenerateExampleCollection</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">var</span> collection = <span class="keyword">new</span> List&lt;MyClass&gt;();</span><br><span class="line">            collection.Add(<span class="keyword">new</span> MyClass()</span><br><span class="line">            &#123;</span><br><span class="line">                 Value=<span class="number">1</span>, Information=<span class="string">"Hello"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            collection.Add(<span class="keyword">new</span> MyClass()</span><br><span class="line">            &#123;</span><br><span class="line">                Value = <span class="number">2</span>,</span><br><span class="line">                Information = <span class="string">"World"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            collection.Add(<span class="keyword">new</span> MyClass()</span><br><span class="line">            &#123;</span><br><span class="line">                Value = <span class="number">2</span>,</span><br><span class="line">                Information = <span class="string">"ABC"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">return</span> collection;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/24/面向对象基础进阶/1546482135340.png" alt="1546482135340"></p>
+<h2 id="对象比较器-类是别人写好的，不好修改实现IComparable接口"><a href="#对象比较器-类是别人写好的，不好修改实现IComparable接口" class="headerlink" title="对象比较器(类是别人写好的，不好修改实现IComparable接口)"></a>对象比较器(类是别人写好的，不好修改实现IComparable接口)</h2><p><img src="/2019/02/24/面向对象基础进阶/1546150592268.png" alt=" 1546150592268"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150612766.png" alt="1546150612766"></p>
+<p><img src="/2019/02/24/面向对象基础进阶/1546150639597.png" alt="1546150639597"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectComparer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectComparer</span></span><br><span class="line">&#123;</span><br><span class="line">    class MyClassComparer : IComparer&lt;MyClass&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Compare</span>(<span class="params">MyClass x, MyClass y</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> x.Value.CompareTo(y.Value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ObjectComparer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            MyClass[] objs = <span class="keyword">new</span> MyClass[]</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">new</span> MyClass&#123;Value=<span class="number">124</span>&#125;,</span><br><span class="line">                <span class="keyword">new</span> MyClass&#123;Value=<span class="number">100</span>&#125;,</span><br><span class="line">                <span class="keyword">new</span> MyClass&#123;Value=<span class="number">1</span>&#125;,</span><br><span class="line">                <span class="keyword">new</span> MyClass&#123;Value=<span class="number">75</span>&#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            Console.WriteLine(<span class="string">"原始数组："</span>);</span><br><span class="line">            Array.ForEach&lt;MyClass&gt;(objs, obj =&gt; &#123; Console.Write(<span class="string">"Value=&#123;0&#125; ,"</span>, obj.Value); &#125;);</span><br><span class="line">			<span class="comment">//使用比较器对象  在sort集合中排序</span></span><br><span class="line">            Array.Sort&lt;MyClass&gt;(objs, <span class="keyword">new</span> MyClassComparer());</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"\n排序之后："</span>);</span><br><span class="line">            Array.ForEach&lt;MyClass&gt;(objs, obj =&gt; &#123; Console.Write(<span class="string">"Value=&#123;0&#125; ,"</span>, obj.Value); &#125;);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/02/24/面向对象基础进阶/" title="面向对象基础进阶">http://yoursite.com/2019/02/24/面向对象基础进阶/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/面向对象/" rel="tag"># 面向对象</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/面向对象基础入门/" rel="next" title="面向对象基础入门">
+                <i class="fa fa-chevron-left"></i> 面向对象基础入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对象组合"><span class="nav-number">1.</span> <span class="nav-text">对象组合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一对一对象组合"><span class="nav-number">1.1.</span> <span class="nav-text">一对一对象组合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一对一对象组合实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">一对一对象组合实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象间的”关联”理解"><span class="nav-number">1.1.2.</span> <span class="nav-text">对象间的”关联”理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一对一对象组合应用实例"><span class="nav-number">1.1.3.</span> <span class="nav-text">一对一对象组合应用实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一对多对象组合"><span class="nav-number">1.2.</span> <span class="nav-text">一对多对象组合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一对多编程实例"><span class="nav-number">1.2.1.</span> <span class="nav-text">一对多编程实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认识列表框控件"><span class="nav-number">1.2.2.</span> <span class="nav-text">认识列表框控件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建模实例分析"><span class="nav-number">1.3.</span> <span class="nav-text">建模实例分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自引用类"><span class="nav-number">1.4.</span> <span class="nav-text">自引用类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象复制"><span class="nav-number">2.</span> <span class="nav-text">对象复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的“浅复制”"><span class="nav-number">2.1.</span> <span class="nav-text">对象的“浅复制”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的深复制"><span class="nav-number">2.2.</span> <span class="nav-text">对象的深复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ICloneable接口"><span class="nav-number">2.2.1.</span> <span class="nav-text">ICloneable接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象序列化-保存对象状态"><span class="nav-number">3.</span> <span class="nav-text">对象序列化(保存对象状态)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是流？-一连串有顺序的二进制数据"><span class="nav-number">3.1.</span> <span class="nav-text">什么是流？(一连串有顺序的二进制数据)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用流实现序列化"><span class="nav-number">3.2.</span> <span class="nav-text">使用流实现序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NET基类库中提供的几种流对象"><span class="nav-number">3.3.</span> <span class="nav-text">.NET基类库中提供的几种流对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种对象序列化方式"><span class="nav-number">3.4.</span> <span class="nav-text">两种对象序列化方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XML格式序列化实例"><span class="nav-number">3.4.1.</span> <span class="nav-text">XML格式序列化实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制格式序列化实例"><span class="nav-number">3.4.2.</span> <span class="nav-text">二进制格式序列化实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反序列化"><span class="nav-number">3.4.3.</span> <span class="nav-text">反序列化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用内存流快速大批的复制对象"><span class="nav-number">3.5.</span> <span class="nav-text">使用内存流快速大批的复制对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序退出保存状态"><span class="nav-number">3.6.</span> <span class="nav-text">程序退出保存状态</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象比较"><span class="nav-number">4.</span> <span class="nav-text">对象比较</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现IComparable接口"><span class="nav-number">4.1.</span> <span class="nav-text">实现IComparable接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仅判断是否相等-重写Equals方法"><span class="nav-number">4.2.</span> <span class="nav-text">仅判断是否相等(重写Equals方法)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重写GetHashCode方法"><span class="nav-number">4.3.</span> <span class="nav-text">重写GetHashCode方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象排序实例-实现接口，直接使用排序和查找"><span class="nav-number">4.4.</span> <span class="nav-text">对象排序实例(实现接口，直接使用排序和查找)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象比较器-类是别人写好的，不好修改实现IComparable接口"><span class="nav-number">4.5.</span> <span class="nav-text">对象比较器(类是别人写好的，不好修改实现IComparable接口)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
