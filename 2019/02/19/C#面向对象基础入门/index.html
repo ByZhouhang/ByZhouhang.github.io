@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="C#面向对象基础入门一. 类和对象1. 类和对象          2. 编写类    3. 属性       4. 构造方法    5. 字段与属性的初始化    6. 分部类与分部方法    7. 命名空间   8. 程序集(组件化开发)         二. 对象和对象变量1. 对象变量与内存模型     2. 对象判等  值类型都为true     2. 引用类型都为false(都是比较对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#面向对象基础入门">
+<meta property="og:url" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="C#面向对象基础入门一. 类和对象1. 类和对象          2. 编写类    3. 属性       4. 构造方法    5. 字段与属性的初始化    6. 分部类与分部方法    7. 命名空间   8. 程序集(组件化开发)         二. 对象和对象变量1. 对象变量与内存模型     2. 对象判等  值类型都为true     2. 引用类型都为false(都是比较对">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546173899043.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546173927984.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546173957391.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546173977953.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174002905.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174022044.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174035508.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174055304.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174072531.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174194769.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174244618.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174267485.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174296997.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174318115.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174337206.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174353781.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174423514.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174445020.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174471069.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174493578.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174518947.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546174549220.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316625381.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316666479.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316708106.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316764873.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316790317.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316844875.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546316883221.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317116080.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317207240.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317247704.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317288900.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317317175.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317335113.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317401378.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317431159.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317450336.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317502147.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317524709.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317833475.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317881085.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317896976.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317912949.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317935234.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546317982885.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318032059.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318053800.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318081188.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318112051.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318202495.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318256821.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318465082.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318488716.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318519757.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318573127.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318594526.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318610733.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318648037.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546318698748.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319369006.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319399462.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319416942.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319911293.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319945751.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546319958903.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338178837.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338281279.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338382108.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338399620.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338437104.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338458635.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546338478228.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339689987.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339786003.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339808241.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339825592.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339853429.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339871630.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339892604.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339940291.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546339965456.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340010197.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340023903.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340053233.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340089935.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340118966.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340146951.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340170110.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340283983.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340300262.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340337312.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340432102.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340496902.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340520018.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340568705.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340625525.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340653454.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340676046.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340700358.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340737097.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340775676.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340788410.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340829266.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340912602.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546340934061.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341043472.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341118242.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341134839.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341167805.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341182439.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341246320.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341266401.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341351441.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341484517.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341525191.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341564445.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341626624.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341683966.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341848047.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341873559.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341894934.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341926094.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341971179.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546341991978.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342009188.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342036430.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342065087.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342082732.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342142352.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342158879.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342175619.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342199575.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342226859.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342248552.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342271509.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342294525.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342322555.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342365415.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342386766.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342412370.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342432677.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342445669.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342505117.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342525876.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342549007.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342561510.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342581136.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342711619.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342737630.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342751891.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342851057.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342865241.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342882753.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342944512.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342959194.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546342990456.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343025711.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343039371.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343064992.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343077499.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343098708.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343119933.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343131608.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546343156077.png">
+<meta property="og:updated_time" content="2019-02-19T01:21:49.064Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C#面向对象基础入门">
+<meta name="twitter:description" content="C#面向对象基础入门一. 类和对象1. 类和对象          2. 编写类    3. 属性       4. 构造方法    5. 字段与属性的初始化    6. 分部类与分部方法    7. 命名空间   8. 程序集(组件化开发)         二. 对象和对象变量1. 对象变量与内存模型     2. 对象判等  值类型都为true     2. 引用类型都为false(都是比较对">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/19/C#面向对象基础入门/1546173899043.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/19/C#面向对象基础入门/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>C#面向对象基础入门 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/C#面向对象基础入门/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C#面向对象基础入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T09:11:50+08:00">
+                2019-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/19/C#面向对象基础入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/19/C#面向对象基础入门/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/19/C#面向对象基础入门/" class="leancloud_visitors" data-flag-title="C#面向对象基础入门">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.8k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="C-面向对象基础入门"><a href="#C-面向对象基础入门" class="headerlink" title="C#面向对象基础入门"></a>C#面向对象基础入门</h1><h2 id="一-类和对象"><a href="#一-类和对象" class="headerlink" title="一. 类和对象"></a>一. 类和对象</h2><h3 id="1-类和对象"><a href="#1-类和对象" class="headerlink" title="1. 类和对象"></a>1. 类和对象</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546173899043.png" alt="1546173899043"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546173927984.png" alt="1546173927984"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546173957391.png" alt="1546173957391"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546173977953.png" alt="1546173977953"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174002905.png" alt="1546174002905"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174022044.png" alt="1546174022044"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174035508.png" alt="1546174035508"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174055304.png" alt="1546174055304"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174072531.png" alt="1546174072531"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174194769.png" alt="1546174194769"></p>
+<h3 id="2-编写类"><a href="#2-编写类" class="headerlink" title="2. 编写类"></a>2. 编写类</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546174244618.png" alt="1546174244618"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174267485.png" alt="1546174267485"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174296997.png" alt="1546174296997"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174318115.png" alt="1546174318115"></p>
+<h3 id="3-属性"><a href="#3-属性" class="headerlink" title="3. 属性"></a>3. 属性</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546174337206.png" alt="1546174337206"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174353781.png" alt="1546174353781"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174423514.png" alt="1546174423514"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174445020.png" alt="1546174445020"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174471069.png" alt="1546174471069"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174493578.png" alt="1546174493578"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546174518947.png" alt="1546174518947"></p>
+<h3 id="4-构造方法"><a href="#4-构造方法" class="headerlink" title="4. 构造方法"></a>4. 构造方法</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546174549220.png" alt="1546174549220"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316625381.png" alt="1546316625381"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316666479.png" alt="1546316666479"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316708106.png" alt="1546316708106"></p>
+<h3 id="5-字段与属性的初始化"><a href="#5-字段与属性的初始化" class="headerlink" title="5. 字段与属性的初始化"></a>5. 字段与属性的初始化</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546316764873.png" alt="1546316764873"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316790317.png" alt="1546316790317"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316844875.png" alt="1546316844875"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546316883221.png" alt="1546316883221"></p>
+<h3 id="6-分部类与分部方法"><a href="#6-分部类与分部方法" class="headerlink" title="6. 分部类与分部方法"></a>6. 分部类与分部方法</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546317116080.png" alt="1546317116080"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317207240.png" alt="1546317207240"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317247704.png" alt="1546317247704"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317288900.png" alt="1546317288900"></p>
+<h3 id="7-命名空间"><a href="#7-命名空间" class="headerlink" title="7. 命名空间"></a>7. 命名空间</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546317317175.png" alt="1546317317175"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317335113.png" alt="1546317335113"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317401378.png" alt="1546317401378"></p>
+<h3 id="8-程序集-组件化开发"><a href="#8-程序集-组件化开发" class="headerlink" title="8. 程序集(组件化开发)"></a>8. 程序集(组件化开发)</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546317431159.png" alt="1546317431159"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317450336.png" alt="1546317450336"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317502147.png" alt="1546317502147"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317524709.png" alt="1546317524709"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317833475.png" alt="1546317833475"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317881085.png" alt="1546317881085"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317896976.png" alt="1546317896976"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317912949.png" alt="1546317912949"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546317935234.png" alt="1546317935234"></p>
+<h2 id="二-对象和对象变量"><a href="#二-对象和对象变量" class="headerlink" title="二. 对象和对象变量"></a>二. 对象和对象变量</h2><h3 id="1-对象变量与内存模型"><a href="#1-对象变量与内存模型" class="headerlink" title="1. 对象变量与内存模型"></a>1. 对象变量与内存模型</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546317982885.png" alt="1546317982885"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318032059.png" alt="1546318032059"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318053800.png" alt="1546318053800"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318081188.png" alt="1546318081188"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318112051.png" alt="1546318112051"></p>
+<h3 id="2-对象判等"><a href="#2-对象判等" class="headerlink" title="2. 对象判等"></a>2. 对象判等</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546318202495.png" alt="1546318202495"></p>
+<ol>
+<li>值类型都为true     2. 引用类型都为false(都是比较对象变量的引用)    按照对象“内容”比较，需要重写基类equals方法    3. 都为true</li>
+</ol>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318256821.png" alt="1546318256821"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">EqualsDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//int i = 100;</span></span><br><span class="line">            <span class="comment">//int j = 100;</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(i==j);</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span>/int类型居然有equals方法？</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(i.Equals(j));</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//Console.WriteLine();</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//MyClass obj1 = new MyClass();</span></span><br><span class="line">            <span class="comment">//MyClass obj2 = new MyClass();</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(obj1 == obj2);</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(obj1.Equals(obj2));</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//String类型是引用类型还是值类型？</span></span><br><span class="line">            String str1 = <span class="string">"Hello"</span>;</span><br><span class="line">            String str2 = <span class="string">"Hello"</span>;</span><br><span class="line">            Console.WriteLine(str1 == str2);</span><br><span class="line">            Console.WriteLine(str1.Equals(str2));</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> <span class="keyword">value</span> = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "比较对象"</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 如何比较两个对象的“内容”</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="obj"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params"><span class="keyword">object</span> obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (obj <span class="keyword">is</span> MyClass)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">this</span>.<span class="keyword">value</span> == (obj <span class="keyword">as</span> MyClass).<span class="keyword">value</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">int</span> <span class="title">GetHashCode</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">value</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-this引用"><a href="#3-this引用" class="headerlink" title="3. this引用"></a>3. this引用</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546318465082.png" alt="1546318465082"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318488716.png" alt="1546318488716"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318519757.png" alt="1546318519757"></p>
+<h3 id="4-装箱和拆箱"><a href="#4-装箱和拆箱" class="headerlink" title="4. 装箱和拆箱"></a>4. 装箱和拆箱</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546318573127.png" alt="1546318573127"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318594526.png" alt="1546318594526"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318610733.png" alt="1546318610733"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318648037.png" alt="1546318648037"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546318698748.png" alt="1546318698748"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546319369006.png" alt="1546319369006"></p>
+<h3 id="5-方法参数"><a href="#5-方法参数" class="headerlink" title="5. 方法参数"></a>5. 方法参数</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546319399462.png" alt="1546319399462"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546319416942.png" alt="1546319416942"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546319911293.png" alt="1546319911293"></p>
+<h3 id="6-只读类"><a href="#6-只读类" class="headerlink" title="6. 只读类"></a>6. 只读类</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546319945751.png" alt="1546319945751"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546319958903.png" alt="1546319958903"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338178837.png" alt="1546338178837"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338281279.png" alt="1546338281279"></p>
+<h3 id="7-类的静态成员"><a href="#7-类的静态成员" class="headerlink" title="7. 类的静态成员"></a>7. 类的静态成员</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546338382108.png" alt="1546338382108"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338399620.png" alt="1546338399620"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338437104.png" alt="1546338437104"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338458635.png" alt="1546338458635"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546338478228.png" alt="1546338478228"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339689987.png" alt="1546339689987"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339786003.png" alt="1546339786003"></p>
+<h3 id="8-多窗体编程初步"><a href="#8-多窗体编程初步" class="headerlink" title="8. 多窗体编程初步"></a>8. 多窗体编程初步</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546339808241.png" alt="1546339808241"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339825592.png" alt="1546339825592"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339853429.png" alt="1546339853429"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339871630.png" alt="1546339871630"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339892604.png" alt="1546339892604"></p>
+<h2 id="三-数组"><a href="#三-数组" class="headerlink" title="三. 数组"></a>三. 数组</h2><h3 id="1-数组基础"><a href="#1-数组基础" class="headerlink" title="1.数组基础"></a>1.数组基础</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546339940291.png" alt="1546339940291"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546339965456.png" alt="1546339965456"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340010197.png" alt="1546340010197"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340023903.png" alt="1546340023903"></p>
+<h3 id="2-对象数组"><a href="#2-对象数组" class="headerlink" title="2. 对象数组"></a>2. 对象数组</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340053233.png" alt="1546340053233"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340089935.png" alt="1546340089935"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340118966.png" alt="1546340118966"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340146951.png" alt="1546340146951"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340170110.png" alt="1546340170110"></p>
+<h2 id="四-继承"><a href="#四-继承" class="headerlink" title="四. 继承"></a>四. 继承</h2><h3 id="1-继承概述"><a href="#1-继承概述" class="headerlink" title="1. 继承概述"></a>1. 继承概述</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340283983.png" alt="1546340283983"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340300262.png" alt="1546340300262"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340337312.png" alt="1546340337312"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340432102.png" alt="1546340432102"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340496902.png" alt="1546340496902"></p>
+<h3 id="2-方法的重载与覆盖"><a href="#2-方法的重载与覆盖" class="headerlink" title="2. 方法的重载与覆盖"></a>2. 方法的重载与覆盖</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340520018.png" alt="1546340520018"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340568705.png" alt="1546340568705"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340625525.png" alt="1546340625525"></p>
+<h3 id="3-继承与代码重用"><a href="#3-继承与代码重用" class="headerlink" title="3. 继承与代码重用"></a>3. 继承与代码重用</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340653454.png" alt="1546340653454"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340676046.png" alt="1546340676046"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340700358.png" alt="1546340700358"></p>
+<h2 id="五-抽象类与接口"><a href="#五-抽象类与接口" class="headerlink" title="五. 抽象类与接口"></a>五. 抽象类与接口</h2><h3 id="1-抽象类与抽象方法"><a href="#1-抽象类与抽象方法" class="headerlink" title="1.抽象类与抽象方法"></a>1.抽象类与抽象方法</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340737097.png" alt="1546340737097"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340775676.png" alt="1546340775676"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340788410.png" alt="1546340788410"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340829266.png" alt="1546340829266"></p>
+<h3 id="2-接口"><a href="#2-接口" class="headerlink" title="2. 接口"></a>2. 接口</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546340912602.png" alt="1546340912602"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546340934061.png" alt="1546340934061"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341043472.png" alt="1546341043472"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341118242.png" alt="1546341118242"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341134839.png" alt="1546341134839"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341167805.png" alt="1546341167805"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Duck</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Duck d = <span class="keyword">new</span> Duck();</span><br><span class="line">            <span class="comment">//Duck对象d可以使用3种方法：</span></span><br><span class="line">            <span class="comment">//1.自身定义的；</span></span><br><span class="line">            <span class="comment">//2.父类定义的</span></span><br><span class="line">            <span class="comment">//3.接口定义的</span></span><br><span class="line">            d.Fly();</span><br><span class="line">            d.Cook();</span><br><span class="line">            d.Swim();</span><br><span class="line">            <span class="comment">//将子类（Duck）对象赋给基类变量</span></span><br><span class="line">            Bird b = d;</span><br><span class="line">            <span class="comment">//现在只能使用基类定义的Fly()方法</span></span><br><span class="line">            b.Fly();</span><br><span class="line">            <span class="comment">//将Duck对象赋给ISwin接口变量</span></span><br><span class="line">            ISwim s = d;</span><br><span class="line">            <span class="comment">//现在只能使用接口定义的Swim()方法</span></span><br><span class="line">            s.Swim();</span><br><span class="line">            <span class="comment">//将Duck对象赋给另一个实现的接口IFood接口变量</span></span><br><span class="line">            IFood f = d;</span><br><span class="line">            <span class="comment">//现在只能使用接口定义的Cook()方法</span></span><br><span class="line">            f.Cook();</span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//定义两个接口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ISwim</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Swim</span>(<span class="params"></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IFood</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Cook</span>(<span class="params"></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//定义一个抽象类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Bird</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Fly</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//继承自一个抽象类，实现两个接口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Duck</span> : <span class="title">Bird</span>, <span class="title">IFood</span>, <span class="title">ISwim</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//实现ISwim接口</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Swim</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"是鸭子就会游泳"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//实现IFood接口</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Cook</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"鸭子经常被烧烤，北京烤鸭就很有名"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//实现抽象类Bird中的抽象方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"只有野鸭才会飞"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341182439.png" alt="1546341182439"></p>
+<h2 id="六-多态"><a href="#六-多态" class="headerlink" title="六. 多态"></a>六. 多态</h2><h3 id="1-继承多态"><a href="#1-继承多态" class="headerlink" title="1. 继承多态"></a>1. 继承多态</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546341246320.png" alt="1546341246320"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341266401.png" alt="1546341266401"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341351441.png" alt="1546341351441"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341484517.png" alt="1546341484517"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341525191.png" alt="1546341525191"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341564445.png" alt="1546341564445"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341626624.png" alt="1546341626624"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341683966.png" alt="1546341683966"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Fruit</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//ShowPolymorphism();</span></span><br><span class="line">            CallPolymorphismMethod();</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ShowPolymorphism</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Fruit f;</span><br><span class="line">            f = <span class="keyword">new</span> Apple();</span><br><span class="line">            <span class="comment">//这句输出什么？</span></span><br><span class="line">            f.GrowInArea();</span><br><span class="line">            f = <span class="keyword">new</span> Pineapple();</span><br><span class="line">            <span class="comment">//与前面相同的代码，输出什么？</span></span><br><span class="line">            f.GrowInArea();</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 使用了“多态”特性的方法，其代码具有稳定性，与具体子类无关</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 此方法用于显示特定水果的“适宜种植区域”信息</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="fruit"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ShowFruitGrowInAreaInfo</span>(<span class="params">Fruit fruit</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            fruit.GrowInArea();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 多态代码的典型用法：</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 在运行时动态地传递对象给它</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CallPolymorphismMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ShowFruitGrowInAreaInfo(<span class="keyword">new</span> Apple());</span><br><span class="line">            ShowFruitGrowInAreaInfo(<span class="keyword">new</span> Pineapple());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Fruit</span>    <span class="comment">//抽象类</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">GrowInArea</span>(<span class="params"></span>)</span>; <span class="comment">//抽象方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Apple</span> : <span class="title">Fruit</span> <span class="comment">//苹果</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">GrowInArea</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"我是苹果，南方北方都可以种植我。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Pineapple</span> : <span class="title">Fruit</span> <span class="comment">//菠萝</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">GrowInArea</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"我是菠萝，喜欢温暖，只能在南方看到我。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-动物园示例"><a href="#2-动物园示例" class="headerlink" title="2. 动物园示例"></a>2. 动物园示例</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546341848047.png" alt="1546341848047"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341873559.png" alt="1546341873559"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341894934.png" alt="1546341894934"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341926094.png" alt="1546341926094"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341971179.png" alt="1546341971179"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546341991978.png" alt="1546341991978"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342009188.png" alt="1546342009188"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342036430.png" alt="1546342036430"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Zoo3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Animal</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">eat</span>(<span class="params"></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//狮子</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Lion</span> : <span class="title">Animal</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">eat</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">           Console.WriteLine(<span class="string">"我是狮子，我不吃肉谁敢吃肉！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//猴子</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Monkey</span> : <span class="title">Animal</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">eat</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"我是猴子，我喜欢偷吃香蕉！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//鸽子</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Pigeon</span> : <span class="title">Animal</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">eat</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"我是一只漂亮的鸽子，为了维持优美的体形，我每餐只吃几粒大米！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Zoo3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//动物园饲养员</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Feeder</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> String Name;</span><br><span class="line">        <span class="comment">//喂养一群动物</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FeedAnimals</span>(<span class="params">IEnumerable&lt;Animal&gt; ans</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Animal an <span class="keyword">in</span> ans)</span><br><span class="line">            &#123;</span><br><span class="line">                an.eat();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Zoo3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//动物数组</span></span><br><span class="line">            <span class="keyword">var</span> ans = <span class="keyword">new</span> List&lt;Animal&gt; &#123; </span><br><span class="line">                <span class="keyword">new</span> Monkey(), <span class="keyword">new</span> Pigeon(), <span class="keyword">new</span> Lion() </span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            Feeder f = <span class="keyword">new</span> Feeder();</span><br><span class="line">            f.Name = <span class="string">"小李"</span>;</span><br><span class="line">            <span class="comment">//喂养一群动物</span></span><br><span class="line">            f.FeedAnimals(ans);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342065087.png" alt="1546342065087"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342082732.png" alt="1546342082732"></p>
+<h2 id="七-异常处理"><a href="#七-异常处理" class="headerlink" title="七. 异常处理"></a>七. 异常处理</h2><h3 id="1-什么是异常"><a href="#1-什么是异常" class="headerlink" title="1. 什么是异常"></a>1. 什么是异常</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342142352.png" alt="1546342142352"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342158879.png" alt="1546342158879"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342175619.png" alt="1546342175619"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342199575.png" alt="1546342199575"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342226859.png" alt="1546342226859"></p>
+<h3 id="2-异常处理基础"><a href="#2-异常处理基础" class="headerlink" title="2. 异常处理基础"></a>2. 异常处理基础</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342248552.png" alt="1546342248552"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342271509.png" alt="1546342271509"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342294525.png" alt="1546342294525"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ExceptionDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//WhatIsException();</span></span><br><span class="line">            InputNumber();</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">WhatIsException</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">100</span>, j = <span class="number">0</span>;</span><br><span class="line">            Console.WriteLine(i / j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">InputNumber</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.Write(<span class="string">"请输入一个正整数："</span>);</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//尝试着将用户输入的字符串转换为整数</span></span><br><span class="line">                <span class="keyword">int</span> <span class="keyword">value</span> = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">value</span> &lt;= <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//发现非法的数据，“主动”抛出一个异常</span></span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">"你输入的不是正整数！"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.WriteLine(<span class="string">"您输入的数字是：&#123;0&#125;"</span>, <span class="keyword">value</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (FormatException)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"输入的字符串无法转换为数字"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (OverflowException)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"你输入的数字太大了！"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"敲任意键退出……"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342322555.png" alt=" 1546342322555"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ExceptionInfo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span>[] values = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++)</span><br><span class="line">                    Console.WriteLine(values[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"在输出values数组值时发生数组越界错误"</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">"异常种类:"</span> + e.GetType().Name);</span><br><span class="line">                Console.WriteLine(<span class="string">"系统给出的出错信息："</span> + e.Message);</span><br><span class="line">                Console.WriteLine(<span class="string">"系统调用堆栈信息:"</span> + e.StackTrace);               </span><br><span class="line">                Console.WriteLine(<span class="string">"引发此错误的方法："</span> + e.TargetSite);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342365415.png" alt="1546342365415"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342386766.png" alt="1546342386766"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342412370.png" alt="1546342412370"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342432677.png" alt="1546342432677"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ExceptionLinkInRealWorld</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"程序从Main()方法开始运行……\n"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                throwExceptionMethod();  <span class="comment">//有可能抛出异常的方法调用</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (MyException e)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"在Main()方法中捕获到MyException异常，其Message属性值为：&#123;0&#125;"</span>,e.Message);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"在Main()方法中捕获到Exception异常，其Message属性值为：&#123;0&#125;"</span>, e.Message);</span><br><span class="line">            &#125;</span><br><span class="line">            doesNotThrowException(); <span class="comment">//不抛出异常的方法调用</span></span><br><span class="line">            Console.WriteLine(<span class="string">"\nMain()方法运行结束，敲任意键退出……"</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 自己虽然捕获了异常，但仍然希望外部进一步地处理，因此在简单地</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 捕获并处理老异常之后，再抛出一个新的异常供本方法的调用者进行捕获。</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">throwExceptionMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"throwExceptionMethod()方法开始执行"</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">"throwExceptionMethod()方法抛出了一个异常"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 模拟产生一个异常</span></span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"系统运行时引发的Exception异常"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">"throwExceptionMethod方法捕获并处理了抛出的Exception异常，并将其转换为一个自定义MyException异常再抛出"</span>, e);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//转换为一个自定义异常，再抛出</span></span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> MyException(<span class="string">"在throwExceptionMethod()方法执行时出现MyException异常"</span>,e);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"throwExceptionMethod()方法中的finally语句块执行结束\n"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 自己能完全处理异常，不需要外界参与</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doesNotThrowException</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"\ndoesNotThrowException()方法开始执行"</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">"doesNotThrowException()方法虽然包容try/catch/finally，但不会抛出任何异常"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(e.Message);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"执行doesNotThrowException()方法中的finally语句块"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(<span class="string">"doesNotThrowException()方法运行结束。\n"</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyException</span> : <span class="title">Exception</span></span><br><span class="line">    &#123;</span><br><span class="line">       <span class="comment">//重载的构造函数--调用基类构造函数</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyException</span>(<span class="params">String Message</span>) : <span class="title">base</span>(<span class="params">Message</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyException</span>(<span class="params"><span class="keyword">string</span> Message, Exception InnerException</span>) : <span class="title">base</span>(<span class="params">Message, InnerException</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-异常处理链"><a href="#3-异常处理链" class="headerlink" title="3. 异常处理链"></a>3. 异常处理链</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342445669.png" alt="1546342445669"></p>
+<h3 id="4-嵌套的异常"><a href="#4-嵌套的异常" class="headerlink" title="4. 嵌套的异常"></a>4. 嵌套的异常</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342505117.png" alt="1546342505117"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">EmbedException</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">region</span> "自定义异常类型"</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">ExceptionA</span> : <span class="title">Exception</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ExceptionB</span> : <span class="title">Exception</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ExceptionC</span> : <span class="title">Exception</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span> <span class="comment">//Level1</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"进入Level1的try语句块"</span>);</span><br><span class="line">                <span class="keyword">try</span> <span class="comment">//Level2</span></span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"进入Level2的try语句块"</span>);</span><br><span class="line">                 <span class="comment">//如果在Level3代码执行之前（和之后）出现异常，Level3的finally语句块还会执行吗？</span></span><br><span class="line">                    <span class="comment">//throw new ExceptionB();</span></span><br><span class="line">                    <span class="keyword">try</span>  <span class="comment">//Level3</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">"进入Level3的try语句块"</span>);</span><br><span class="line">                        <span class="comment">//to do:每次抛出一种异常，注释掉其余的语句，然后观察输出结果</span></span><br><span class="line">                        <span class="comment">//throw new ExceptionA();</span></span><br><span class="line">                        <span class="comment">//throw new ExceptionB();</span></span><br><span class="line">                         <span class="comment">//throw new ExceptionC();</span></span><br><span class="line">                        <span class="comment">//throw new InvalidOperationException();</span></span><br><span class="line">                        Console.WriteLine(<span class="string">"退出Level3的try语句块"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">catch</span> (ExceptionA) <span class="comment">//Level3</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">"在Level3中处理ExceptionA。"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">finally</span> <span class="comment">//Level3</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">"Level3中的finally语句块"</span>);</span><br><span class="line">                        WriteMessageToFile(<span class="string">"Level3.txt"</span>, <span class="string">"Level3中的finally语句块"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//throw new ExceptionB();</span></span><br><span class="line">                    Console.WriteLine(<span class="string">"退出Level2的try语句块"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span> (ExceptionB)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"在Level2中处理ExceptionB"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">finally</span></span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"Level2中的finally语句块"</span>);</span><br><span class="line">                    WriteMessageToFile(<span class="string">"Level2.txt"</span>, <span class="string">"Level2中的finally语句块"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.WriteLine(<span class="string">"退出Level1的try语句块"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (ExceptionC)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"在Level1中处理ExceptionC "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//当示例抛出注释InvalidOperationException时，注释掉此块，查看CLR的异常处理策略</span></span><br><span class="line">            <span class="keyword">catch</span> (Exception)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"在Level1中处理Exception "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"Level1中的finally语句块"</span>);</span><br><span class="line">                WriteMessageToFile(<span class="string">"Level1.txt"</span>, <span class="string">"Level1中的finally语句块"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.ReadKey();<span class="comment">//程序暂停</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 将异常信息写入到文件中，以备日后查询</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="FileName"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="Message"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">WriteMessageToFile</span>(<span class="params"><span class="keyword">string</span> FileName,<span class="keyword">string</span> Message</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            FileStream fs = <span class="keyword">new</span> FileStream(FileName, FileMode.Create);</span><br><span class="line">            StreamWriter sw = <span class="keyword">new</span> StreamWriter(fs);</span><br><span class="line">            sw.Write(Message);</span><br><span class="line">            sw.Close();</span><br><span class="line">            fs.Close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342525876.png" alt="1546342525876"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342549007.png" alt="1546342549007"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342561510.png" alt="1546342561510"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342581136.png" alt="1546342581136"></p>
+<h3 id="5-异常处理的建议"><a href="#5-异常处理的建议" class="headerlink" title="5.异常处理的建议"></a>5.异常处理的建议</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342711619.png" alt="1546342711619"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342737630.png" alt="1546342737630"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342751891.png" alt="1546342751891"></p>
+<h2 id="八-泛型编程"><a href="#八-泛型编程" class="headerlink" title="八. 泛型编程"></a>八. 泛型编程</h2><h3 id="1-为什么使用泛型"><a href="#1-为什么使用泛型" class="headerlink" title="1. 为什么使用泛型"></a>1. 为什么使用泛型</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342851057.png" alt="1546342851057"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342865241.png" alt="1546342865241"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342882753.png" alt="1546342882753"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span>  <span class="title">frmGPExample1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmGPExample1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmGPExample1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">region</span> "变量区"</span></span><br><span class="line">        <span class="comment">//两个将要被排序的数组</span></span><br><span class="line">        <span class="keyword">char</span>[] CharArray=<span class="keyword">new</span> Char[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">int</span>[] IntArray=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">         <span class="comment">//整数数组元素中的最大最小值</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> MaxInt, MinInt;</span><br><span class="line">         <span class="comment">//字符数组元素中的最大最小值</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">char</span> MaxChar, MinChar;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line">        <span class="comment">//用随机数据填充数组,并显示在列表框中</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">FillArray</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">            lstData.Items.Clear();</span><br><span class="line">            <span class="keyword">if</span> (rdoInteger.Checked)</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="comment">//获取指定维数最后一个元素的索引</span></span><br><span class="line">                <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= IntArray.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    IntArray[i] = ran.Next(<span class="number">0</span>, <span class="number">100</span>);</span><br><span class="line">                    lstData.Items.Add(IntArray[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (rdoChar.Checked)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= CharArray.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">int</span> charCode = ran.Next(<span class="number">0</span>, <span class="number">26</span>);</span><br><span class="line">                    CharArray[i] = (<span class="keyword">char</span>)(charCode + <span class="string">'A'</span>);</span><br><span class="line">                    lstData.Items.Add(CharArray[i] + <span class="string">" :ASC码值＝"</span> </span><br><span class="line">                        + Convert.ToString((<span class="keyword">int</span>)(CharArray[i])));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">//显示结果：</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span>  <span class="keyword">void</span>  <span class="title">ShowResult</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rdoInteger.Checked )</span><br><span class="line">        &#123;</span><br><span class="line">            lblMax.Text = <span class="string">"最大值："</span> + MaxInt;</span><br><span class="line">            lblMin.Text = <span class="string">"最小值："</span> + MinInt;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rdoChar.Checked )</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            lblMax.Text = <span class="string">"最大值："</span> + MaxChar;</span><br><span class="line">            lblMin.Text = <span class="string">"最小值："</span> + MinChar;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">region</span> "普通方法"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//在整数数组中查找最大最小值 </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">GetMaxMinValueFromIntArray</span>(<span class="params"><span class="keyword">int</span>[] datas</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        MaxInt = datas[<span class="number">0</span>];</span><br><span class="line">        MinInt = datas[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i= <span class="number">1</span> ;i&lt;= IntArray.GetUpperBound(<span class="number">0</span>);i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (MaxInt &lt; datas[i]) </span><br><span class="line">                MaxInt = datas[i];</span><br><span class="line">            <span class="keyword">if</span>( MinInt &gt; datas[i]) </span><br><span class="line">                MinInt = datas[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="comment">//在字符数组中查找最大最小值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span>  <span class="keyword">void</span> <span class="title">GetMaxMinValueFromCharArray</span>(<span class="params"><span class="keyword">char</span> [] datas  </span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        MaxChar = datas[<span class="number">0</span>];</span><br><span class="line">        MinChar = datas[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i  = <span class="number">1</span>;i&lt;= IntArray.GetUpperBound(<span class="number">0</span>);i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (MaxChar &lt; datas[i] )</span><br><span class="line">                MaxChar = datas[i];</span><br><span class="line">            <span class="keyword">if</span> (MinChar &gt; datas[i] )</span><br><span class="line">                MinChar = datas[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnButtonClick1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="comment">//填充数组</span></span><br><span class="line">        FillArray();</span><br><span class="line">        <span class="keyword">if</span> (rdoInteger.Checked )</span><br><span class="line">            GetMaxMinValueFromIntArray(IntArray);</span><br><span class="line">        <span class="keyword">if</span> (rdoChar.Checked )</span><br><span class="line">            GetMaxMinValueFromCharArray(CharArray);</span><br><span class="line">        <span class="comment">//显示数据处理结果</span></span><br><span class="line">        ShowResult();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">region</span> "泛型方法版本"</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> GetMaxMinVauleFromArray&lt;T&gt;(T[] datas  ,</span><br><span class="line">        <span class="keyword">ref</span> T Max ,<span class="keyword">ref</span> T Min) <span class="keyword">where</span> T:IComparable </span><br><span class="line">    &#123;</span><br><span class="line">        Max = datas[<span class="number">0</span>];</span><br><span class="line">        Min = datas[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i  = <span class="number">1</span> ;i&lt;=IntArray.GetUpperBound(<span class="number">0</span>);i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>( Max.CompareTo(datas[i])&lt;<span class="number">0</span>) </span><br><span class="line">                Max = datas[i];</span><br><span class="line">            <span class="keyword">if</span> (Min.CompareTo(datas[i])&gt;<span class="number">0</span>)</span><br><span class="line">                Min = datas[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnButtonClick2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//填充数组</span></span><br><span class="line">        FillArray();</span><br><span class="line">        <span class="comment">//根据用户选项填充对应的数组</span></span><br><span class="line">        <span class="keyword">if</span>( rdoInteger.Checked )</span><br><span class="line">            GetMaxMinVauleFromArray&lt;<span class="keyword">int</span>&gt;(IntArray, <span class="keyword">ref</span> MaxInt,<span class="keyword">ref</span> MinInt);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rdoChar.Checked )</span><br><span class="line">            GetMaxMinVauleFromArray&lt;<span class="keyword">char</span>&gt;(CharArray,<span class="keyword">ref</span> MaxChar, <span class="keyword">ref</span> MinChar);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//显示数据处理结果</span></span><br><span class="line">        ShowResult();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnExit_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnFillArray_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">             OnButtonClick1();<span class="comment">//普通版本 </span></span><br><span class="line">            <span class="comment">//OnButtonClick2();//泛型方法版本</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-泛型编程基础"><a href="#2-泛型编程基础" class="headerlink" title="2.泛型编程基础"></a>2.泛型编程基础</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546342944512.png" alt="1546342944512"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342959194.png" alt="1546342959194"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546342990456.png" alt="1546342990456"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343025711.png" alt="1546343025711"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343039371.png" alt="1546343039371"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MaxMinValueForGP2</span></span><br><span class="line">&#123;</span><br><span class="line">    class ComplexNum:IComparable&lt;ComplexNum&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> a;<span class="comment">//实部</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> b ;<span class="comment">//虚部</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ComplexNum</span>(<span class="params"><span class="keyword">double</span>  aValue , <span class="keyword">double</span>  bValue </span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            a = aValue;</span><br><span class="line">            b = bValue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//按复数标准形式返回a+bi形式的字串</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> String <span class="title">ToString</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> (a.ToString()  + <span class="string">"+"</span> + b.ToString() + <span class="string">"i"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//求复数的模</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">double</span>  <span class="title">GetMod</span>(<span class="params"></span>) </span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> Math.Sqrt(a * a + b * b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//按模比较两个复数的大小</span></span><br><span class="line">        <span class="keyword">int</span> IComparable&lt;ComplexNum&gt;.CompareTo(ComplexNum other  ) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Math.Abs(GetMod() - other.GetMod()) &lt; <span class="number">0.000001</span> )</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>( GetMod() &gt; other.GetMod() )</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MaxMinValueForGP2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 使用泛型类封装算法</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name="T"&gt;</span><span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    public class MaxMin&lt;T&gt; where T : IComparable&lt;T&gt;</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//处理数据，获取最大值最小值</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Pair&lt;T&gt; <span class="title">GetMaxMinVauleFromArray</span>(<span class="params">T[] arr</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Pair&lt;T&gt; ret;</span><br><span class="line">            ret.Max = arr[<span class="number">0</span>];</span><br><span class="line">            ret.Min = arr[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= arr.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (ret.Max.CompareTo(arr[i]) &lt; <span class="number">0</span>)</span><br><span class="line">                    ret.Max = arr[i];</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (ret.Min.CompareTo(arr[i]) &gt; <span class="number">0</span>)</span><br><span class="line">                    ret.Min = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 使用泛型struct封装数据处理结果</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name="T"&gt;</span><span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">struct</span> Pair&lt;T&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> T Max;</span><br><span class="line">        <span class="keyword">public</span> T Min;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MaxMinValueForGP2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmGPExample2</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmGPExample2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 三个字段，引用被处理的三种类型的数组</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">char</span>[] CharArray = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span>[] IntArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">private</span> ComplexNum[] ComplexArray = <span class="keyword">new</span> ComplexNum[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnButtonClick</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//填充数组</span></span><br><span class="line">            FillArray();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (rdoInteger.Checked)</span><br><span class="line">                ShowResult&lt;<span class="keyword">int</span>&gt;(MaxMin&lt;<span class="keyword">int</span>&gt;.GetMaxMinVauleFromArray(IntArray));</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (rdoChar.Checked)</span><br><span class="line">                ShowResult&lt;<span class="keyword">char</span>&gt;(MaxMin&lt;<span class="keyword">char</span>&gt;.GetMaxMinVauleFromArray(CharArray));</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (rdoComplex.Checked)</span><br><span class="line">                ShowResult&lt;ComplexNum&gt;(MaxMin&lt;ComplexNum&gt;.GetMaxMinVauleFromArray(ComplexArray));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 使用泛型方法显示数据处理结果</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name="T"&gt;</span><span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="ret"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">void</span> ShowResult&lt;T&gt;(Pair&lt;T&gt; ret)</span><br><span class="line">        &#123;</span><br><span class="line">            lblMax.Text = <span class="string">"最大值："</span> + ret.Max.ToString();</span><br><span class="line">            lblMin.Text = <span class="string">"最小值："</span> + ret.Min.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//用随机数据填充数组,并显示在列表框中</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">FillArray</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> i;</span><br><span class="line">            Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">            lstData.Items.Clear();</span><br><span class="line">            <span class="keyword">if</span> (rdoInteger.Checked)</span><br><span class="line">                <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= IntArray.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    IntArray[i] = ran.Next(<span class="number">0</span>, <span class="number">100</span>);</span><br><span class="line">                    lstData.Items.Add(IntArray[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            <span class="keyword">if</span> (rdoChar.Checked)</span><br><span class="line">                <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= CharArray.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">int</span> charCode;</span><br><span class="line">                    charCode = ran.Next(<span class="number">0</span>, <span class="number">26</span>);</span><br><span class="line">                    CharArray[i] = (<span class="keyword">char</span>)(<span class="string">'A'</span> + charCode);</span><br><span class="line">                    lstData.Items.Add(CharArray[i].ToString() + <span class="string">" :ASC码值＝"</span> + ((<span class="keyword">int</span>)CharArray[i]).ToString());</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> a, b;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (rdoComplex.Checked)</span><br><span class="line">                <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= ComplexArray.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    a = ran.Next(<span class="number">0</span>, <span class="number">10</span>);</span><br><span class="line">                    b = ran.Next(<span class="number">0</span>, <span class="number">10</span>);</span><br><span class="line">                    ComplexArray[i] = <span class="keyword">new</span> ComplexNum(a, b);</span><br><span class="line">                    lstData.Items.Add(ComplexArray[i].ToString() + <span class="string">" 模＝"</span> + ComplexArray[i].GetMod().ToString());</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnFillArray_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            OnButtonClick();<span class="comment">//泛型类版本</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnExit_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343064992.png" alt="1546343064992"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343077499.png" alt="1546343077499"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343098708.png" alt="1546343098708"></p>
+<h3 id="3-使用泛型的好处"><a href="#3-使用泛型的好处" class="headerlink" title="3. 使用泛型的好处"></a>3. 使用泛型的好处</h3><p><img src="/2019/02/19/C#面向对象基础入门/1546343119933.png" alt="1546343119933"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343131608.png" alt="1546343131608"></p>
+<p><img src="/2019/02/19/C#面向对象基础入门/1546343156077.png" alt="1546343156077"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseGenericExampleForCS</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> beginTime, endTime, usedTime;<span class="comment">//代码运行时间</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//用于测试的集合</span></span><br><span class="line">        ArrayList arr1 = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        List&lt;<span class="keyword">long</span>&gt; arr2 = <span class="keyword">new</span> List&lt;<span class="keyword">long</span>&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//加入集合的元素个数</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keyword">int</span> ElementCounters = <span class="number">5000000</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//提示信息</span></span><br><span class="line">        String strInfo = <span class="string">"&#123;0&#125;,运行时间：&#123;1&#125; ticks"</span> + Environment.NewLine;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AddElement</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//起始时间</span></span><br><span class="line">            beginTime = Environment.TickCount;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//清除原有数据</span></span><br><span class="line">            arr1.Clear();</span><br><span class="line">            arr2.Clear();</span><br><span class="line">            <span class="comment">//向集合中加入元素</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ElementCounters; i++)</span><br><span class="line">                <span class="keyword">if</span> (rdoArrayList.Checked)</span><br><span class="line">                    arr1.Add(i);  <span class="comment">//非泛型版本</span></span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    arr2.Add(i);</span><br><span class="line"></span><br><span class="line">            endTime = Environment.TickCount;</span><br><span class="line"></span><br><span class="line">            usedTime = endTime - beginTime;</span><br><span class="line">            <span class="keyword">if</span> (rdoArrayList.Checked)</span><br><span class="line">                txtInfo.Text += String.Format(strInfo, <span class="string">"向集合中加入元素："</span> + ElementCounters + <span class="string">"个"</span> , usedTime);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                txtInfo.Text += String.Format(strInfo, <span class="string">"向泛型集合中加入元素："</span> + ElementCounters + <span class="string">"个"</span>, usedTime);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SumElement</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">         <span class="comment">//起始时间</span></span><br><span class="line">            beginTime = Environment.TickCount;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//清除原有数据</span></span><br><span class="line">        arr1.Clear();</span><br><span class="line">        arr2.Clear();</span><br><span class="line">        <span class="comment">//向集合中加入元素</span></span><br><span class="line">         <span class="keyword">int</span> i ;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span> ;i&lt; ElementCounters;i++)</span><br><span class="line">            <span class="keyword">if</span> (rdoArrayList.Checked )</span><br><span class="line">                arr1.Add(i);  <span class="comment">//非泛型版本</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                arr2.Add(i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//求和</span></span><br><span class="line">        <span class="keyword">long</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>;i&lt; ElementCounters;i++)</span><br><span class="line">            <span class="keyword">if</span> (rdoArrayList.Checked )</span><br><span class="line">                ret += Convert.ToInt64( arr1[i]);  <span class="comment">//非泛型版本</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                ret += arr2[i];</span><br><span class="line"></span><br><span class="line">        endTime =Environment.TickCount;</span><br><span class="line"></span><br><span class="line">        usedTime = endTime - beginTime;</span><br><span class="line">        <span class="keyword">if</span> (rdoArrayList.Checked)</span><br><span class="line">            txtInfo.Text += String.Format(strInfo, <span class="string">"对集合"</span> + ElementCounters.ToString() + <span class="string">"个元素求和："</span> + ret , usedTime);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            txtInfo.Text += String.Format(strInfo, <span class="string">"对泛型集合"</span> + ElementCounters.ToString() + <span class="string">"个元素求和："</span> + ret , usedTime);</span><br><span class="line">            </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnAddElement_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            AddElement();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnSumElement_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            SumElement();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/02/19/C#面向对象基础入门/" title="C#面向对象基础入门">http://yoursite.com/2019/02/19/C#面向对象基础入门/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/javascrpit-正则表达式/" rel="next" title="javascrpit-正则表达式">
+                <i class="fa fa-chevron-left"></i> javascrpit-正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/20/CSharp面向对象程序设计概述和基础知识/" rel="prev" title="C#面向对象程序设计概述和基础知识">
+                C#面向对象程序设计概述和基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-面向对象基础入门"><span class="nav-number">1.</span> <span class="nav-text">C#面向对象基础入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-类和对象"><span class="nav-number">1.1.</span> <span class="nav-text">一. 类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-类和对象"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-编写类"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 编写类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-属性"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-构造方法"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-字段与属性的初始化"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 字段与属性的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-分部类与分部方法"><span class="nav-number">1.1.6.</span> <span class="nav-text">6. 分部类与分部方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-命名空间"><span class="nav-number">1.1.7.</span> <span class="nav-text">7. 命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-程序集-组件化开发"><span class="nav-number">1.1.8.</span> <span class="nav-text">8. 程序集(组件化开发)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-对象和对象变量"><span class="nav-number">1.2.</span> <span class="nav-text">二. 对象和对象变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-对象变量与内存模型"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 对象变量与内存模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对象判等"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 对象判等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-this引用"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. this引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-装箱和拆箱"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 装箱和拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-方法参数"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. 方法参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-只读类"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. 只读类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-类的静态成员"><span class="nav-number">1.2.7.</span> <span class="nav-text">7. 类的静态成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-多窗体编程初步"><span class="nav-number">1.2.8.</span> <span class="nav-text">8. 多窗体编程初步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-数组"><span class="nav-number">1.3.</span> <span class="nav-text">三. 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数组基础"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.数组基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对象数组"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 对象数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-继承"><span class="nav-number">1.4.</span> <span class="nav-text">四. 继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-继承概述"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 继承概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-方法的重载与覆盖"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 方法的重载与覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-继承与代码重用"><span class="nav-number">1.4.3.</span> <span class="nav-text">3. 继承与代码重用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-抽象类与接口"><span class="nav-number">1.5.</span> <span class="nav-text">五. 抽象类与接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-抽象类与抽象方法"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.抽象类与抽象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-接口"><span class="nav-number">1.5.2.</span> <span class="nav-text">2. 接口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-多态"><span class="nav-number">1.6.</span> <span class="nav-text">六. 多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-继承多态"><span class="nav-number">1.6.1.</span> <span class="nav-text">1. 继承多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-动物园示例"><span class="nav-number">1.6.2.</span> <span class="nav-text">2. 动物园示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-异常处理"><span class="nav-number">1.7.</span> <span class="nav-text">七. 异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-什么是异常"><span class="nav-number">1.7.1.</span> <span class="nav-text">1. 什么是异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-异常处理基础"><span class="nav-number">1.7.2.</span> <span class="nav-text">2. 异常处理基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-异常处理链"><span class="nav-number">1.7.3.</span> <span class="nav-text">3. 异常处理链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-嵌套的异常"><span class="nav-number">1.7.4.</span> <span class="nav-text">4. 嵌套的异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-异常处理的建议"><span class="nav-number">1.7.5.</span> <span class="nav-text">5.异常处理的建议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-泛型编程"><span class="nav-number">1.8.</span> <span class="nav-text">八. 泛型编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-为什么使用泛型"><span class="nav-number">1.8.1.</span> <span class="nav-text">1. 为什么使用泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-泛型编程基础"><span class="nav-number">1.8.2.</span> <span class="nav-text">2.泛型编程基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用泛型的好处"><span class="nav-number">1.8.3.</span> <span class="nav-text">3. 使用泛型的好处</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
