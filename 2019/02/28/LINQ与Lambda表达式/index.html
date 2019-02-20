@@ -86,13 +86,13 @@
 
 
 
-<meta name="description" content="Lambda表达式基础从匿名方法 -&amp;gt; Lambda表达式委托的典型用法 1234567891011121314151617181920212223242526272829303132namespace TypicalDelegateExample&amp;#123;    //1.定义一个委托    public delegate int AddDelegate(int i, int j);//2">
+<meta name="description" content="认识Lambda表达式、LINQ、学会使用">
 <meta name="keywords" content="C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LINQ与Lambda表达式">
 <meta property="og:url" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/index.html">
 <meta property="og:site_name" content="Hang&#39; Blog">
-<meta property="og:description" content="Lambda表达式基础从匿名方法 -&amp;gt; Lambda表达式委托的典型用法 1234567891011121314151617181920212223242526272829303132namespace TypicalDelegateExample&amp;#123;    //1.定义一个委托    public delegate int AddDelegate(int i, int j);//2">
+<meta property="og:description" content="认识Lambda表达式、LINQ、学会使用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/clip_image001.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/clip_image001-1545980048933.png">
@@ -159,10 +159,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/1546049774770.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/1546049786985.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/1546049806675.png">
-<meta property="og:updated_time" content="2019-02-20T06:18:48.981Z">
+<meta property="og:updated_time" content="2019-02-20T06:25:45.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LINQ与Lambda表达式">
-<meta name="twitter:description" content="Lambda表达式基础从匿名方法 -&amp;gt; Lambda表达式委托的典型用法 1234567891011121314151617181920212223242526272829303132namespace TypicalDelegateExample&amp;#123;    //1.定义一个委托    public delegate int AddDelegate(int i, int j);//2">
+<meta name="twitter:description" content="认识Lambda表达式、LINQ、学会使用">
 <meta name="twitter:image" content="http://yoursite.com/2019/02/28/LINQ与Lambda表达式/clip_image001.png">
 
 
@@ -517,7 +517,10 @@
       
 
       
-        <h1 id="Lambda表达式基础"><a href="#Lambda表达式基础" class="headerlink" title="Lambda表达式基础"></a>Lambda表达式基础</h1><h2 id="从匿名方法-gt-Lambda表达式"><a href="#从匿名方法-gt-Lambda表达式" class="headerlink" title="从匿名方法 -&gt; Lambda表达式"></a>从匿名方法 -&gt; Lambda表达式</h2><h3 id="委托的典型用法"><a href="#委托的典型用法" class="headerlink" title="委托的典型用法"></a>委托的典型用法</h3><p><img src="/2019/02/28/LINQ与Lambda表达式/clip_image001.png" alt="clip_image001"></p>
+        <blockquote class="blockquote-center"><p>认识Lambda表达式、LINQ、学会使用 </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Lambda表达式基础"><a href="#Lambda表达式基础" class="headerlink" title="Lambda表达式基础"></a>Lambda表达式基础</h1><h2 id="从匿名方法-gt-Lambda表达式"><a href="#从匿名方法-gt-Lambda表达式" class="headerlink" title="从匿名方法 -&gt; Lambda表达式"></a>从匿名方法 -&gt; Lambda表达式</h2><h3 id="委托的典型用法"><a href="#委托的典型用法" class="headerlink" title="委托的典型用法"></a>委托的典型用法</h3><p><img src="/2019/02/28/LINQ与Lambda表达式/clip_image001.png" alt="clip_image001"></p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">TypicalDelegateExample</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//1.定义一个委托</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">int</span> <span class="title">AddDelegate</span>(<span class="params"><span class="keyword">int</span> i, <span class="keyword">int</span> j</span>)</span>;</span><br><span class="line"><span class="comment">//2.定义一个MyClass类，放置一个满足AddDelegate委托要求的方法</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span>(<span class="params"><span class="keyword">int</span> i,<span class="keyword">int</span> j</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> i + j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//3.定义一个委托变量</span></span><br><span class="line">            AddDelegate del = <span class="literal">null</span>;</span><br><span class="line">            <span class="comment">//4.实例化一个MyClass对象，并将其Add方法引用传给委托变量del</span></span><br><span class="line">            MyClass obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">            del = obj.Add;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//5.通过委托变量调用MyClass对象的Add()方法</span></span><br><span class="line">            <span class="keyword">int</span> result=del(<span class="number">100</span>, <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"&#123;0&#125;+&#123;1&#125;=&#123;2&#125;"</span>,<span class="number">100</span>,<span class="number">200</span>,result);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="委托简化-gt-匿名方法-gt-Lambda表达式"><a href="#委托简化-gt-匿名方法-gt-Lambda表达式" class="headerlink" title="委托简化 -&gt;匿名方法-&gt;Lambda表达式"></a>委托简化 -&gt;匿名方法-&gt;Lambda表达式</h3><p><img src="/2019/02/28/LINQ与Lambda表达式/clip_image001-1545980048933.png" alt="clip_image001"></p>
 <p><img src="/2019/02/28/LINQ与Lambda表达式/clip_image001-1545980283387.png" alt="clip_image001"></p>
