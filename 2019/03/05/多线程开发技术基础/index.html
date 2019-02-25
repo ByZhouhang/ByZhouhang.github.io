@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C#,多线程,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="让程序再快一点">
+<meta name="keywords" content="C#,多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多线程开发技术基础">
+<meta property="og:url" content="http://yoursite.com/2019/03/05/多线程开发技术基础/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="让程序再快一点">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761467740.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761644308.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761663961.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761711350.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761745399.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761808358.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546762067721.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546762090132.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546762373162.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546762458278.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546762572125.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546763546017.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546763566569.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546763714312.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546763976521.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546763994403.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546764010047.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546764028467.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546764043696.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546767851199.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768056256.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768072128.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768092131.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768112759.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768032180.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768137233.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768150748.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546768164773.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772361059.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772376484.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772391820.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772407227.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772422015.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772436143.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772449814.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546772463381.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774745903.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774763832.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774784660.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774823464.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774838183.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774850238.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774867531.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774895491.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546774920336.png">
+<meta property="og:updated_time" content="2019-02-25T00:34:30.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="多线程开发技术基础">
+<meta name="twitter:description" content="让程序再快一点">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/05/多线程开发技术基础/1546761467740.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/05/多线程开发技术基础/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>多线程开发技术基础 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/多线程开发技术基础/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">多线程开发技术基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T15:34:31+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C#-学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/多线程、Socket、异步编程/" itemprop="url" rel="index">
+                    <span itemprop="name">多线程、Socket、异步编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/05/多线程开发技术基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/05/多线程开发技术基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/05/多线程开发技术基础/" class="leancloud_visitors" data-flag-title="多线程开发技术基础">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>让程序再快一点 </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="线程与线程对象"><a href="#线程与线程对象" class="headerlink" title="线程与线程对象"></a>线程与线程对象</h1><h2 id="多线程认识"><a href="#多线程认识" class="headerlink" title="多线程认识"></a>多线程认识</h2><p><img src="/2019/03/05/多线程开发技术基础/1546761467740.png" alt="1546761467740"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WhatIsThread</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//让进度条显示进度的委托，用于跨线程调用</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">ShowProgressDelegate</span>(<span class="params">ProgressBar prog, <span class="keyword">int</span> <span class="keyword">value</span></span>)</span>;</span><br><span class="line">    <span class="comment">//激活某个控件的委托，，用于跨线程调用</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">EnableControlDelegate</span> (<span class="params">Control ctl</span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmWhatIsThread</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当启动线程时，向线程函数传送的信息</span></span><br><span class="line">        <span class="keyword">class</span> <span class="title">ThreadArgu</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> ProgressBar prog; <span class="comment">//用于显示工作进度的进度条对象</span></span><br><span class="line">            <span class="keyword">public</span> Button btnStart;  <span class="comment">//用于启动多线程工作的按钮对象</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmWhatIsThread</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//一个执行比较长时间的函数(单线程)</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DoLongTaskInSingleThread</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                progressBarSingleThread.Value= i;</span><br><span class="line">                Thread.Sleep(<span class="number">100</span>);<span class="comment">//暂停，以模拟长的工作任务</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">         <span class="comment">//一个执行比较长时间的函数(多线程)</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DoLongTaskInMultiThread</span>(<span class="params">Object argu</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//通过委托跨线程设置进度条的进度值</span></span><br><span class="line">                (argu  <span class="keyword">as</span> ThreadArgu).prog.Invoke(<span class="keyword">new</span> ShowProgressDelegate(SetProgressBarValue), <span class="keyword">new</span> <span class="keyword">object</span>[] &#123; (argu  <span class="keyword">as</span> ThreadArgu).prog,i &#125;);</span><br><span class="line">                Thread.Sleep(<span class="number">100</span>);<span class="comment">//暂停，以模拟长的工作任务</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//工作结束时，回调，以激活对应的按钮</span></span><br><span class="line">            (argu <span class="keyword">as</span> ThreadArgu).btnStart.Invoke(<span class="keyword">new</span> EnableControlDelegate(EnabledControl), <span class="keyword">new</span> <span class="keyword">object</span>[] &#123;  (argu <span class="keyword">as</span> ThreadArgu).btnStart&#125;);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置进度条的进度值，用于跨线程委托调用</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetProgressBarValue</span>(<span class="params">ProgressBar prog,<span class="keyword">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            prog.Value = <span class="keyword">value</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使某个控件激活，用于跨线程委托调用</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">EnabledControl</span>(<span class="params">Control ctl</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ctl.Enabled = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnStartSingleThread_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            lblSingleThreadID.Text  = Thread.CurrentThread.ManagedThreadId.ToString();</span><br><span class="line">            lblSingleThreadID.Refresh(); <span class="comment">//不加此句，则标签无法立即显示出信息</span></span><br><span class="line">            btnStartSingleThread.Enabled = <span class="literal">false</span>;</span><br><span class="line">            DoLongTaskInSingleThread();</span><br><span class="line">            btnStartSingleThread.Enabled = <span class="literal">true</span> ;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//代表两个线程对象</span></span><br><span class="line">       Thread  th1, th2;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnStartMultiThread1_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//灰掉自身，在线程完成前不允许用户再次点击按钮启动新的线程</span></span><br><span class="line">            btnStartMultiThread1.Enabled = <span class="literal">false</span>;</span><br><span class="line">            <span class="comment">//创建线程对象</span></span><br><span class="line">            th1 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ParameterizedThreadStart(DoLongTaskInMultiThread));</span><br><span class="line"></span><br><span class="line">            <span class="comment">//显示线程ID</span></span><br><span class="line">            lblMultiThreadID1.Text = th1.ManagedThreadId.ToString();</span><br><span class="line">            <span class="comment">//封装参数</span></span><br><span class="line">            ThreadArgu argu = <span class="keyword">new</span> ThreadArgu();</span><br><span class="line">            argu.prog = progressBarMultiThread1;</span><br><span class="line">            argu.btnStart = btnStartMultiThread1;</span><br><span class="line">            <span class="comment">//启动线程</span></span><br><span class="line">            th1.Start((Object)argu);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmWhatIsThread_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            lblMainThread.Text = Thread.CurrentThread.ManagedThreadId.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnStartMultiThread2_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            btnStartMultiThread2.Enabled = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            th2 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ParameterizedThreadStart(DoLongTaskInMultiThread));</span><br><span class="line"></span><br><span class="line">            lblMultiThreadID2.Text = th2.ManagedThreadId.ToString();</span><br><span class="line">            ThreadArgu argu = <span class="keyword">new</span> ThreadArgu();</span><br><span class="line">            argu.prog = progressBarMultiThread2;</span><br><span class="line">            argu.btnStart = btnStartMultiThread2;</span><br><span class="line"></span><br><span class="line">            th2.Start((Object)argu);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmWhatIsThread_FormClosing</span>(<span class="params"><span class="keyword">object</span> sender, FormClosingEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//若关闭程序时线程还未终止，则强行中止它</span></span><br><span class="line">            <span class="comment">//也可以通过将线程设置为后台线程来自动完成这一工作</span></span><br><span class="line">            <span class="keyword">if</span> (th1 != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (th1.ThreadState != ThreadState.Stopped)</span><br><span class="line">                    th1.Abort();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (th2 != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (th2.ThreadState != ThreadState.Stopped)</span><br><span class="line">                    th2.Abort();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/05/多线程开发技术基础/1546761644308.png" alt="1546761644308"></p>
+<h2 id="线程与线程函数"><a href="#线程与线程函数" class="headerlink" title="线程与线程函数"></a>线程与线程函数</h2><p><img src="/2019/03/05/多线程开发技术基础/1546761663961.png" alt="1546761663961"></p>
+<h2 id="线程的创建与运行"><a href="#线程的创建与运行" class="headerlink" title="线程的创建与运行"></a>线程的创建与运行</h2><p><img src="/2019/03/05/多线程开发技术基础/1546761711350.png" alt="1546761711350"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546761745399.png" alt="1546761745399"></p>
+<h3 id="主线程执行完毕点不定"><a href="#主线程执行完毕点不定" class="headerlink" title="主线程执行完毕点不定"></a>主线程执行完毕点不定</h3><p><img src="/2019/03/05/多线程开发技术基础/1546761808358.png" alt="1546761808358"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadCreate</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"主线程ID：&#123;0&#125;"</span>,Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            MyClass obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">            <span class="comment">//原始写法</span></span><br><span class="line">            Thread th1 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(MyClass.StaticMethod));</span><br><span class="line">            Thread th2 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(obj.InstanceMethod));</span><br><span class="line"></span><br><span class="line">            <span class="comment">//简化写法</span></span><br><span class="line">            Thread th3 = <span class="keyword">new</span> Thread(MyClass.StaticMethod);</span><br><span class="line">            Thread th4 = <span class="keyword">new</span> Thread(obj.InstanceMethod);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Lambda表达式写法</span></span><br><span class="line">            Thread th5 = <span class="keyword">new</span> Thread(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">               Console.WriteLine(<span class="string">"线程&#123;0&#125;执行Lambda表达式"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//启动3个线程运行</span></span><br><span class="line">            th1.Start();</span><br><span class="line">            th2.Start();</span><br><span class="line">            th5.Start();</span><br><span class="line">            Console.WriteLine(<span class="string">"主线程&#123;0&#125;任务执行完毕，敲任意键退出"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadCreate</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">StaticMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"线程&#123;0&#125;执行MyClass.StaticMethod"</span>,Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">InstanceMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"线程&#123;0&#125;执行MyClass.InstanceMethod"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="线程暂停和终止"><a href="#线程暂停和终止" class="headerlink" title="线程暂停和终止"></a>线程暂停和终止</h2><p><img src="/2019/03/05/多线程开发技术基础/1546762067721.png" alt="1546762067721"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadSleep</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread thread = <span class="keyword">new</span> Thread(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//修眠0.3秒</span></span><br><span class="line">                    Thread.Sleep(<span class="number">300</span>);</span><br><span class="line">                    Console.WriteLine(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            thread.Start();</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/05/多线程开发技术基础/1546762090132.png" alt="1546762090132"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadAbort</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"主线程开始"</span>);</span><br><span class="line">            <span class="comment">//创建线程对象</span></span><br><span class="line">            MyThread obj = <span class="keyword">new</span> MyThread();</span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(obj.SomeLongTask);</span><br><span class="line">            th.IsBackground = <span class="literal">true</span>;</span><br><span class="line">            th.Start();<span class="comment">//启动线程</span></span><br><span class="line">            Thread.Sleep(<span class="number">300</span>);  <span class="comment">//主线程休眠0.3秒</span></span><br><span class="line">            System.Console.WriteLine(<span class="string">"主线程调用Abort方法提前中止辅助线程……"</span>);</span><br><span class="line">            th.Abort();  <span class="comment">//提前中止线程</span></span><br><span class="line">            System.Console.WriteLine(<span class="string">"主线程结束"</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyThread</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SomeLongTask</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"辅助线程开始..."</span>);</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    System.Console.WriteLine(i);</span><br><span class="line">                    Thread.Sleep(<span class="number">200</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (ThreadAbortException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"辅助线程被提前中断:&#123;0&#125;"</span>, e.Message);</span><br><span class="line">                Thread.ResetAbort();  <span class="comment">//不加此句，CLR会再次抛出ThreadAbortException，从而导致函数最后一句代码不会执行。</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"完成清理辅助线程占用的资源工作"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果前面没有Thread.ResetAbort()，则程序流程不会执行到此句。</span></span><br><span class="line">            System.Console.WriteLine(<span class="string">"辅助线程结束"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="背景线程"><a href="#背景线程" class="headerlink" title="背景线程"></a>背景线程</h2><p><img src="/2019/03/05/多线程开发技术基础/1546762373162.png" alt="1546762373162"></p>
+<h2 id="线程等待"><a href="#线程等待" class="headerlink" title="线程等待"></a>线程等待</h2><p><img src="/2019/03/05/多线程开发技术基础/1546762458278.png" alt="1546762458278"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadJoin</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"主线程开始运行"</span>);</span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(ThreadAMethod));</span><br><span class="line">            th.Start();</span><br><span class="line">            th.Join();</span><br><span class="line">            Console.WriteLine(<span class="string">"主线程退出"</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadAMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"辅助线程正在执行:"</span>+i.ToString());</span><br><span class="line">                Thread.Sleep(<span class="number">200</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(<span class="string">"辅助线程执行结束"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><p><img src="/2019/03/05/多线程开发技术基础/1546762572125.png" alt="1546762572125"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadState</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread thread = <span class="keyword">new</span> Thread(() =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(Thread.CurrentThread.ThreadState);</span><br><span class="line">            &#125;);</span><br><span class="line">            Console.WriteLine(thread.ThreadState);</span><br><span class="line">            thread.Start();</span><br><span class="line">            thread.Join();</span><br><span class="line">            Console.WriteLine(thread.ThreadState);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="多线程开发技术基础"><a href="#多线程开发技术基础" class="headerlink" title="多线程开发技术基础"></a>多线程开发技术基础</h1><h2 id="线程函数带参数"><a href="#线程函数带参数" class="headerlink" title="线程函数带参数"></a>线程函数带参数</h2><p><img src="/2019/03/05/多线程开发技术基础/1546763546017.png" alt="1546763546017"></p>
+<h2 id="外套函数"><a href="#外套函数" class="headerlink" title="外套函数"></a>外套函数</h2><p><img src="/2019/03/05/多线程开发技术基础/1546763566569.png" alt="1546763566569"></p>
+<h2 id="ParameterizedThreadStart委托"><a href="#ParameterizedThreadStart委托" class="headerlink" title="ParameterizedThreadStart委托"></a>ParameterizedThreadStart委托</h2><p><img src="/2019/03/05/多线程开发技术基础/1546763714312.png" alt="1546763714312"></p>
+<h3 id="单参数、无返回值"><a href="#单参数、无返回值" class="headerlink" title="单参数、无返回值"></a>单参数、无返回值</h3><p><img src="/2019/03/05/多线程开发技术基础/1546763976521.png" alt="1546763976521"></p>
+<h3 id="多参数、有返回值"><a href="#多参数、有返回值" class="headerlink" title="多参数、有返回值"></a>多参数、有返回值</h3><p><img src="/2019/03/05/多线程开发技术基础/1546763994403.png" alt="1546763994403"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546764010047.png" alt="1546764010047"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">InvokeMethodDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">           <span class="comment">// WrapperMethod();</span></span><br><span class="line">            <span class="comment">//ThreadArgumentObject();</span></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//外套方法</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">WrapperMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//设定参数值</span></span><br><span class="line">            MyThread obj = <span class="keyword">new</span> MyThread()</span><br><span class="line">            &#123;</span><br><span class="line">                x = <span class="number">100</span>,</span><br><span class="line">                y = <span class="number">200</span></span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="comment">//启动线程</span></span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(obj.ThreadMethod);</span><br><span class="line">            th.Start();</span><br><span class="line">            <span class="comment">//等待线程运行结束</span></span><br><span class="line">            th.Join();</span><br><span class="line">            <span class="comment">//获取函数返回值</span></span><br><span class="line">            Console.WriteLine(obj.returnVaule);</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">class</span> <span class="title">MyThread</span></span><br><span class="line">    	&#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">SomeFunc</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span></span><br><span class="line"><span class="function"></span>            &#123;</span><br><span class="line">                <span class="keyword">return</span> x + y;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//将SomeFunc参数和返回值外化为类的公有字段</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">int</span> x;</span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">int</span> y;</span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">long</span> returnVaule;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//供多线程调用的“外套”函数</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ThreadMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>            &#123;</span><br><span class="line">                returnVaule = SomeFunc(x, y);</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadArgumentObject</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            	<span class="comment">//创建 线程执行函数的对象</span></span><br><span class="line">            MyThread2 obj = <span class="keyword">new</span> MyThread2();</span><br><span class="line">            <span class="keyword">var</span> argu = <span class="keyword">new</span> ThreadMethodHelper();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//设定线程函数参数</span></span><br><span class="line">            argu.x = <span class="number">100</span>; argu.y = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//创建线程对象</span></span><br><span class="line">            Thread t = <span class="keyword">new</span> Thread(</span><br><span class="line">               <span class="keyword">new</span> ParameterizedThreadStart(obj.SomeFunc));</span><br><span class="line">            <span class="comment">//启动线程,向线程传送线程参数</span></span><br><span class="line">            t.Start(argu);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//主线程干其他事……</span></span><br><span class="line">            t.Join();<span class="comment">//等待辅助线程结束</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(argu.returnVaule); <span class="comment">//取回线程结果</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyThread2</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SomeFunc</span>(<span class="params"><span class="keyword">object</span> argu</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> x = (argu <span class="keyword">as</span> ThreadMethodHelper).x;</span><br><span class="line">            <span class="keyword">int</span> y = (argu <span class="keyword">as</span> ThreadMethodHelper).y;</span><br><span class="line">            <span class="comment">//使用x和y完成一些工作，结果保存在returnVaule中</span></span><br><span class="line">            (argu <span class="keyword">as</span> ThreadMethodHelper).returnVaule = x+y;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ThreadMethodHelper</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//线程输入参数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> x;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> y;</span><br><span class="line">        <span class="comment">//函数返回值</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">long</span> returnVaule;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="线程辅助参数对象示例"><a href="#线程辅助参数对象示例" class="headerlink" title="线程辅助参数对象示例"></a>线程辅助参数对象示例</h2><p><img src="/2019/03/05/多线程开发技术基础/1546764028467.png" alt="1546764028467"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseArray</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//创建线程   线程函数带参数（返回void  参数是object ）</span></span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(DoWithArray);</span><br><span class="line">            <span class="comment">//封装线程的输入输出参数</span></span><br><span class="line">            ThreadMethodHelper argu = <span class="keyword">new</span> ThreadMethodHelper();</span><br><span class="line"></span><br><span class="line">            argu.arr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">-1</span>, <span class="number">9</span>, <span class="number">100</span>, <span class="number">78</span>, <span class="number">23</span>, <span class="number">54</span>, <span class="number">-90</span> &#125;;</span><br><span class="line"></span><br><span class="line">            th.Start(argu);</span><br><span class="line">            th.Join();</span><br><span class="line">            Console.WriteLine(<span class="string">"数组元素清单"</span>);</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">int</span> i <span class="keyword">in</span> argu.arr)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.Write(i.ToString() + <span class="string">"  "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine();</span><br><span class="line">            Console.WriteLine(<span class="string">"最大值:&#123;0&#125;"</span>, argu.MaxValue);</span><br><span class="line">            Console.WriteLine(<span class="string">"最小值:&#123;0&#125;"</span>, argu.MinValue);</span><br><span class="line">            Console.WriteLine(<span class="string">"总和:&#123;0&#125;"</span>, argu.Sum );</span><br><span class="line">            Console.WriteLine(<span class="string">"平均值:&#123;0&#125;"</span>, argu.Average );</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoWithArray</span>(<span class="params"><span class="keyword">object</span>  obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ThreadMethodHelper argu = obj <span class="keyword">as</span> ThreadMethodHelper;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; argu.arr.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (argu.arr[i] &gt; argu.MaxValue)</span><br><span class="line">                    argu.MaxValue = argu.arr[i];</span><br><span class="line">                <span class="keyword">if</span> (argu.arr[i] &lt; argu.MinValue)</span><br><span class="line">                    argu.MinValue = argu.arr[i];</span><br><span class="line">                argu.Sum += argu.arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">            argu.Average = argu.Sum / argu.arr.Length;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//封装线程的输入和输出信息</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">ThreadMethodHelper</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//线程输入参数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span>[] arr;</span><br><span class="line">        <span class="comment">//函数返回值</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> MaxValue=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> MinValue=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">long</span> Sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Average=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多线程回调示例"><a href="#多线程回调示例" class="headerlink" title="多线程回调示例"></a>多线程回调示例</h2><p><img src="/2019/03/05/多线程开发技术基础/1546764043696.png" alt="1546764043696"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SortArray</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            MyThread obj = <span class="keyword">new</span> MyThread();</span><br><span class="line">            <span class="comment">//挂接回调函数</span></span><br><span class="line">            obj.createArr = CreateIntArray;</span><br><span class="line">            obj.showArr = ShowArray;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//启动线程</span></span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(obj.SortArray);</span><br><span class="line">            th.Start();</span><br><span class="line"></span><br><span class="line">            System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//供回调的方法，其功能为：创建数组，以随机数填充</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">int</span>[] <span class="title">CreateIntArray</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">            Random ran=<span class="keyword">new</span> Random();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">                arr[i]=ran.Next(<span class="number">1</span>,<span class="number">100</span>); <span class="comment">//生成1～100间的随机数</span></span><br><span class="line">            <span class="keyword">return</span> arr;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//供回调的方法，其功能为：显示所有数组元素</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ShowArray</span>(<span class="params"><span class="keyword">int</span>[] arr</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">int</span> elem <span class="keyword">in</span> arr)</span><br><span class="line">                System.Console.Write(elem.ToString() + <span class="string">"  "</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义两个用于回调的委托</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">int</span>[] <span class="title">CreateIntArrayDelegate</span>(<span class="params"></span>)</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">ShowArrayDelegate</span>(<span class="params"><span class="keyword">int</span>[] arr</span>)</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyThread</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//由外界负责提供的数组生成函数和显示数组内容的函数</span></span><br><span class="line">        <span class="keyword">public</span> CreateIntArrayDelegate createArr;</span><br><span class="line">        <span class="keyword">public</span> ShowArrayDelegate showArr;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SortArray</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//创建一个数组</span></span><br><span class="line">            <span class="keyword">int</span>[] arr=createArr();</span><br><span class="line">            System.Console.WriteLine(<span class="string">"原始数组："</span>);</span><br><span class="line">            <span class="comment">//回调：显示数组原先的元素内容</span></span><br><span class="line">            showArr(arr);</span><br><span class="line">            <span class="comment">//使用冒泡法对数组元素排序（升序）</span></span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.Length<span class="number">-1</span> ;i++)</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;arr.Length;j++)</span><br><span class="line">                    <span class="keyword">if</span> (arr[i] &gt; arr[j]) <span class="comment">//交换两个数组元素</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        temp = arr[i];</span><br><span class="line">                        arr[i] = arr[j];</span><br><span class="line">                        arr[j] = temp;</span><br><span class="line">                    &#125;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"\n排序之后："</span>);</span><br><span class="line">            <span class="comment">//回调：显示排序之后的数组元素</span></span><br><span class="line">            showArr(arr);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="跨线程更新UI界面"><a href="#跨线程更新UI界面" class="headerlink" title="跨线程更新UI界面"></a>跨线程更新UI界面</h1><p><img src="/2019/03/05/多线程开发技术基础/1546767851199.png" alt="1546767851199"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546768056256.png" alt="1546768056256"></p>
+<h2 id="UI线程-消息循环、消息队列）"><a href="#UI线程-消息循环、消息队列）" class="headerlink" title="UI线程(消息循环、消息队列）"></a>UI线程(消息循环、消息队列）</h2><p><img src="/2019/03/05/多线程开发技术基础/1546768072128.png" alt="1546768072128"></p>
+<h2 id="窗体过程-响应消息函数"><a href="#窗体过程-响应消息函数" class="headerlink" title="窗体过程(响应消息函数)"></a>窗体过程(响应消息函数)</h2><p><img src="/2019/03/05/多线程开发技术基础/1546768092131.png" alt="1546768092131"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546768112759.png" alt="1546768112759"></p>
+<h2 id="跨线程访问UI的方法"><a href="#跨线程访问UI的方法" class="headerlink" title="跨线程访问UI的方法"></a>跨线程访问UI的方法</h2><p><img src="/2019/03/05/多线程开发技术基础/1546768032180.png" alt="1546767870958"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546768137233.png" alt="1546768137233"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546768150748.png" alt="1546768150748"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">VisitVisualControl2</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmVisitControl</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmVisitControl</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ThreadMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Action del = <span class="keyword">delegate</span>()</span><br><span class="line">            &#123;</span><br><span class="line">                label1.Text = <span class="string">"Hello"</span>;</span><br><span class="line">            &#125;;</span><br><span class="line">            label1.Invoke(del);</span><br><span class="line">            <span class="comment">//或异步调用方法</span></span><br><span class="line">            <span class="comment">//label1.BeginInvoke(del);</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnVisitLabel_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">           Thread th = <span class="keyword">new</span> Thread(ThreadMethod);</span><br><span class="line">           th.Start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/05/多线程开发技术基础/1546768164773.png" alt="1546768164773"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">VisitVisualControl3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ThreadMethod</span>(<span class="params">Object info</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Action&lt;<span class="keyword">string</span>&gt; del = <span class="keyword">delegate</span>(<span class="keyword">string</span> infovalue)</span><br><span class="line">            &#123;</span><br><span class="line">                lblInfo.Text = infovalue;</span><br><span class="line">            &#125;;</span><br><span class="line">            	<span class="comment">//参数是由 th.start(arg)传入</span></span><br><span class="line">            lblInfo.Invoke(del, <span class="keyword">new</span> <span class="keyword">object</span>[] &#123; info &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnVisitLabel_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(ThreadMethod);</span><br><span class="line">            th.Start(txtUserInput.Text);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="BackGroundWork组件使用指南"><a href="#BackGroundWork组件使用指南" class="headerlink" title="BackGroundWork组件使用指南"></a>BackGroundWork组件使用指南</h1><h2 id="组件概述"><a href="#组件概述" class="headerlink" title="组件概述"></a>组件概述</h2><p><img src="/2019/03/05/多线程开发技术基础/1546772361059.png" alt="1546772361059"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546772376484.png" alt="1546772376484"></p>
+<h2 id="任务信息传送"><a href="#任务信息传送" class="headerlink" title="任务信息传送"></a>任务信息传送</h2><p><img src="/2019/03/05/多线程开发技术基础/1546772391820.png" alt="1546772391820"></p>
+<h2 id="任务结果取回"><a href="#任务结果取回" class="headerlink" title="任务结果取回"></a>任务结果取回</h2><p><img src="/2019/03/05/多线程开发技术基础/1546772407227.png" alt="1546772407227"></p>
+<h2 id="取消工作任务"><a href="#取消工作任务" class="headerlink" title="取消工作任务"></a>取消工作任务</h2><p><img src="/2019/03/05/多线程开发技术基础/1546772422015.png" alt="1546772422015"></p>
+<h2 id="向外界报告工作进度"><a href="#向外界报告工作进度" class="headerlink" title="向外界报告工作进度"></a>向外界报告工作进度</h2><p>ProgressChanged响应事件代码是运行再UI线程中的，不需要用Invoke方法。</p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546772436143.png" alt="1546772436143"></p>
+<h2 id="组件使用要点"><a href="#组件使用要点" class="headerlink" title="组件使用要点"></a>组件使用要点</h2><p><img src="/2019/03/05/多线程开发技术基础/1546772449814.png" alt="1546772449814"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseBackgroundWorker</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmShowPercentage</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmShowPercentage</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="comment">//线程干活代码  通过参数e 可以获取外界传入的参数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backgroundWorker1_DoWork</span>(<span class="params"><span class="keyword">object</span> sender, DoWorkEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//获取BackgroundWorker组件的引用</span></span><br><span class="line">           BackgroundWorker bw=sender <span class="keyword">as</span> BackgroundWorker;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//开始计算1＋2＋……＋100</span></span><br><span class="line">            <span class="keyword">int</span> result = <span class="number">0</span>; <span class="comment">//暂存结果</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;=<span class="number">100</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//如果用户取消了操作--外界调用组件的CancelAsync()方法时 这个标志会置位</span></span><br><span class="line">                <span class="keyword">if</span> (bw.CancellationPending)</span><br><span class="line">                &#123;</span><br><span class="line">                    e.Cancel = <span class="literal">true</span>;<span class="comment">//此结果将会被传送到RunWorkerCompleted事件中</span></span><br><span class="line">                    <span class="keyword">return</span> ; <span class="comment">//提前结束工作任务</span></span><br><span class="line">                &#125;</span><br><span class="line">                result += i; <span class="comment">//累加</span></span><br><span class="line"></span><br><span class="line">           <span class="comment">//报告进度--  触发ProgressChanged事件  参数： int  百分比  object  useState</span></span><br><span class="line">           <span class="comment">//当前工作完成的百分比和其他附加信息</span></span><br><span class="line">                bw.ReportProgress(i,<span class="string">"已完成了"</span>+(i).ToString()+<span class="string">"%"</span>);</span><br><span class="line">                Thread.Sleep((<span class="keyword">int</span>)e.Argument); <span class="comment">//外部传入的参数，休眠特定的时间</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            e.Result = result; <span class="comment">//向外界返回1＋2＋……＋100的值</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backgroundWorker1_ProgressChanged</span>(<span class="params"><span class="keyword">object</span> sender, ProgressChangedEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">        	<span class="comment">//进度改变事件参数对象  包括 进度值和附加信息 </span></span><br><span class="line">            progressBar1.Value = e.ProgressPercentage;<span class="comment">//显示百分比</span></span><br><span class="line">            lblInfo.Text = e.UserState.ToString(); <span class="comment">//显示文字信息</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//工作任务结束后BackgroundWorker组件激发RunWorkerCompleted事件，在</span></span><br><span class="line"><span class="comment">//此事件的参数e（RunWorkerCompletedEventArgs 类型的对象）中可以取回工</span></span><br><span class="line"><span class="comment">//作结果。</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backgroundWorker1_RunWorkerCompleted</span>(<span class="params"><span class="keyword">object</span> sender, RunWorkerCompletedEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (e.Cancelled)</span><br><span class="line">            &#123;</span><br><span class="line">                toolStripStatusLabel1.Text = <span class="string">"用户取消了操作"</span>;</span><br><span class="line">                btnStart.Enabled = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (e.Error != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                toolStripStatusLabel1.Text = e.Error.Message;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            lblResult.Text = e.Result.ToString();</span><br><span class="line">            btnStart.Enabled = <span class="literal">true</span>;</span><br><span class="line">            toolStripStatusLabel1.Text = <span class="string">"计算完成"</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnStart_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            lblResult.Text = <span class="string">"?"</span>;</span><br><span class="line">            lblResult.Refresh();</span><br><span class="line">            <span class="comment">//启动工作任务 触发DoWork事件  同时传入线程工作需要的参数  形参是 object类型   </span></span><br><span class="line">            backgroundWorker1.RunWorkerAsync(<span class="number">200</span>);</span><br><span class="line">            btnStart.Enabled = <span class="literal">false</span>;</span><br><span class="line">            toolStripStatusLabel1.Text = <span class="string">"正在工作……"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCancel_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            backgroundWorker1.CancelAsync();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClose_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/05/多线程开发技术基础/1546772463381.png" alt="1546772463381"></p>
+<h1 id="多线程文件搜索器开发"><a href="#多线程文件搜索器开发" class="headerlink" title="多线程文件搜索器开发"></a>多线程文件搜索器开发</h1><p><img src="/2019/03/05/多线程开发技术基础/1546774745903.png" alt="1546774745903"></p>
+<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p><img src="/2019/03/05/多线程开发技术基础/1546774763832.png" alt="1546774763832"></p>
+<h2 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h2><p><img src="/2019/03/05/多线程开发技术基础/1546774784660.png" alt="1546774784660"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546774823464.png" alt="1546774823464"></p>
+<h2 id="程序架构"><a href="#程序架构" class="headerlink" title="程序架构"></a>程序架构</h2><p><img src="/2019/03/05/多线程开发技术基础/1546774838183.png" alt="1546774838183"></p>
+<h2 id="系统设计结果"><a href="#系统设计结果" class="headerlink" title="系统设计结果"></a>系统设计结果</h2><p><img src="/2019/03/05/多线程开发技术基础/1546774850238.png" alt="1546774850238"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MyFileSearcher</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 实现文件搜索功能</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FileSearcher</span> : <span class="title">BackgroundWorker</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">FileSearcher</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">            : <span class="title">base</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.WorkerReportsProgress = <span class="literal">true</span>;  <span class="comment">//允许报告进度</span></span><br><span class="line">            <span class="keyword">this</span>.WorkerSupportsCancellation = <span class="literal">true</span>;　<span class="comment">//支持用户取消操作</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 外界传入的用于显示搜索信息的委托，有一个参数表示文件列表</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> Action&lt;FileInfo[]&gt; ShowSearchResult = <span class="literal">null</span>;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 代表一个将在UI线程中执行的异步操作</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">       <span class="keyword">private</span> AsyncOperation asyncOperation = AsyncOperationManager.CreateOperation(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 提供要搜索文件的相关信息</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> SearchInfo SearchInfoObj=<span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 一个保存有完整搜索结果的列表</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span>  List&lt;FileInfo&gt; FoundFiles = <span class="keyword">new</span> List&lt;FileInfo&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnDoWork</span>(<span class="params">DoWorkEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//在此完成异步搜索文件的工作</span></span><br><span class="line">            DoSearchAsync(SearchInfoObj.SearchFile, SearchInfoObj.BeginDirectory, e);</span><br><span class="line">            <span class="keyword">base</span>.OnDoWork(e);　 </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 完成递归搜索文件的功能</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="SearchFile"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="BeginDirectory"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="e"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">DoSearchAsync</span>(<span class="params"><span class="keyword">string</span> SearchFile, <span class="keyword">string</span> BeginDirectory, DoWorkEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Directory.Exists(BeginDirectory) == <span class="literal">false</span>)</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> DirectoryNotFoundException(<span class="string">"文件夹不存在"</span>);</span><br><span class="line">            DirectoryInfo RootDir = <span class="keyword">new</span> DirectoryInfo(BeginDirectory);</span><br><span class="line">            FileInfo[] files = <span class="literal">null</span>;</span><br><span class="line">            DirectoryInfo[] ChildDirs = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//注：有可能发生权限不足的异常，因为某些文件夹不允许检索文件和子文件夹</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//获取所有的子文件夹</span></span><br><span class="line">                ChildDirs = RootDir.GetDirectories();</span><br><span class="line">                <span class="comment">//获取当前文件夹中的所有符合条件的文件</span></span><br><span class="line">                files = RootDir.GetFiles(SearchInfoObj.SearchFile, SearchOption.TopDirectoryOnly);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> <span class="comment">//不处理可能发生的权限异常，继续搜索</span></span><br><span class="line">            &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果用户取消了操作</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.CancellationPending)</span><br><span class="line">            &#123;</span><br><span class="line">                e.Cancel = <span class="literal">true</span>;<span class="comment">//此结果将会被传送到RunWorkerCompleted事件中</span></span><br><span class="line">                <span class="keyword">return</span>;<span class="comment">//提前结束工作任务</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (files != <span class="literal">null</span> &amp;&amp; files.Length &gt; <span class="number">0</span> &amp;&amp; ShowSearchResult != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                FoundFiles.AddRange(files);  <span class="comment">//将找到的文件加入到结果集合中</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (ShowSearchResult != <span class="literal">null</span>)  <span class="comment">//外界挂接了要显示中间结果的函数</span></span><br><span class="line">                &#123;</span><br><span class="line">                    SendOrPostCallback UICallback = (result) =&gt; &#123; ShowSearchResult(result <span class="keyword">as</span> FileInfo[]); &#125;;</span><br><span class="line">                    asyncOperation.Post(UICallback, files);  <span class="comment">//在UI线程中执行它们</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">               <span class="comment">// ShowSearchResult(files);//调用外界传入的委托，向外界报告本次找到的文件</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//激发ProgressChanged事件，外界可显示工作处理情况</span></span><br><span class="line">                <span class="keyword">this</span>.ReportProgress(<span class="number">0</span>, <span class="string">"在文件夹 “"</span> + RootDir.Name+ <span class="string">" ”中找到了需要的文件，正在处理中..."</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (ChildDirs != <span class="literal">null</span>)  <span class="comment">//如果没有发生存取权限异常，则此变量不会为null</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//对每个子文件夹执行同样的查找过程</span></span><br><span class="line">                <span class="comment">//这是通过递归调用实现的</span></span><br><span class="line">                <span class="keyword">foreach</span> (DirectoryInfo dir <span class="keyword">in</span> ChildDirs)</span><br><span class="line">                &#123;</span><br><span class="line">                    DoSearchAsync(SearchFile, dir.FullName, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/05/多线程开发技术基础/1546774867531.png" alt="1546774867531"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546774895491.png" alt="1546774895491"></p>
+<p><img src="/2019/03/05/多线程开发技术基础/1546774920336.png" alt="1546774920336"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MyFileSearcher</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnChooseSearchDirectory_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (folderBrowserDialog1.ShowDialog() == DialogResult.OK)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.txtBeginDirectory.Text = folderBrowserDialog1.SelectedPath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnBeginSearch_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (txtSearchFileName.Text.Trim().Length == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">"请输入要查找的文件名："</span>, <span class="string">"提示信息"</span>, MessageBoxButtons.OK, MessageBoxIcon.Information);</span><br><span class="line">                txtSearchFileName.Focus();</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.txtBeginDirectory.Text.Trim().Length == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">"请选择查找起始目录："</span>, <span class="string">"提示信息"</span>, MessageBoxButtons.OK, MessageBoxIcon.Information);</span><br><span class="line">                btnChooseSearchDirectory.Focus();</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            SearchInfo info = <span class="keyword">new</span> SearchInfo &#123; BeginDirectory = <span class="keyword">this</span>.txtBeginDirectory.Text.Trim(), SearchFile = txtSearchFileName.Text.Trim() &#125;;</span><br><span class="line">            frmFileSearcher frm = <span class="keyword">new</span> frmFileSearcher(info);</span><br><span class="line">            frm.Show();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MyFileSearcher</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmFileSearcher</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "重载的构造函数"</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmFileSearcher</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmFileSearcher</span>(<span class="params">SearchInfo info</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line"></span><br><span class="line">            SearchInfoObj = info;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "变量区"</span></span><br><span class="line">        <span class="keyword">private</span> SearchInfo _SearchInfoObj = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">public</span> SearchInfo SearchInfoObj</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> _SearchInfoObj;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">set</span></span><br><span class="line">            &#123;</span><br><span class="line">                _SearchInfoObj = <span class="keyword">value</span>;</span><br><span class="line">                lblInfo.Text = <span class="keyword">string</span>.Format(<span class="string">"正在搜索：&#123;0&#125;，起始目录：&#123;1&#125;"</span>, <span class="keyword">value</span>.SearchFile, <span class="keyword">value</span>.BeginDirectory);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 文件搜索器</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">private</span> FileSearcher searcher = <span class="keyword">new</span> FileSearcher();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 显示当前已找到的文件</span></span><br><span class="line">           <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="files"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ShowSearchedFiles</span>(<span class="params">FileInfo[] files</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">             <span class="keyword">foreach</span> (FileInfo file <span class="keyword">in</span> files)</span><br><span class="line">                lstFiles.Items.Add(file.FullName);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnBeginSearch_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            lstFiles.Items.Clear();</span><br><span class="line">            BeginSearch();</span><br><span class="line">            btnCancel.Enabled= <span class="literal">true</span>;</span><br><span class="line">            btnBeginSearch.Enabled = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 启动搜索</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">BeginSearch</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//挂接显示函数，此函数将在搜索过程中不断地被fileSearcher组件所调用。</span></span><br><span class="line">            fileSearcher1.ShowSearchResult = <span class="keyword">this</span>.ShowSearchedFiles;</span><br><span class="line">            <span class="comment">//向fileSearcher组件提供要搜索文件的信息</span></span><br><span class="line">            fileSearcher1.SearchInfoObj = <span class="keyword">this</span>.SearchInfoObj;</span><br><span class="line">            <span class="comment">//启动搜索</span></span><br><span class="line">            fileSearcher1.RunWorkerAsync();  <span class="comment">//启动搜索</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">fileSearcher1_ProgressChanged</span>(<span class="params"><span class="keyword">object</span> sender, ProgressChangedEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">         lblInfo2.Text = e.UserState.ToString();</span><br><span class="line">         lblInfo2.Refresh();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">fileSearcher1_RunWorkerCompleted</span>(<span class="params"><span class="keyword">object</span> sender, RunWorkerCompletedEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (e.Cancelled == <span class="literal">true</span>)</span><br><span class="line">                lblInfo2.Text = <span class="keyword">string</span>.Format(<span class="string">"用户取消了操作，到目前为止，找到了&#123;0&#125;个文件"</span>,fileSearcher1.FoundFiles.Count);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                lblInfo2.Text = <span class="keyword">string</span>.Format(<span class="string">"搜索完成，共找到&#123;0&#125;个文件。"</span>,fileSearcher1.FoundFiles.Count);</span><br><span class="line"></span><br><span class="line">            btnBeginSearch.Enabled = <span class="literal">true</span>;</span><br><span class="line">            btnCancel.Enabled = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCancel_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            fileSearcher1.CancelAsync();</span><br><span class="line">            btnCancel.Enabled = <span class="literal">false</span>;</span><br><span class="line">            btnBeginSearch.Enabled = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClose_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            Close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmFileSearcher_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            BeginSearch();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">frmFileSearcher_FormClosing</span>(<span class="params"><span class="keyword">object</span> sender, FormClosingEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (fileSearcher1.IsBusy)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">"搜索正在进行中，请先取消搜索任务后再关闭程序"</span>,<span class="string">"提示信息"</span>,MessageBoxButtons.OK,MessageBoxIcon.Stop);</span><br><span class="line">                e.Cancel = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/03/05/多线程开发技术基础/" title="多线程开发技术基础">http://yoursite.com/2019/03/05/多线程开发技术基础/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/多线程/" rel="tag"># 多线程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/04/Winform数据绑定技术/" rel="next" title="Winform数据绑定技术">
+                <i class="fa fa-chevron-left"></i> Winform数据绑定技术
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/06/线程同步/" rel="prev" title="线程同步">
+                线程同步 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程与线程对象"><span class="nav-number">1.</span> <span class="nav-text">线程与线程对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程认识"><span class="nav-number">1.1.</span> <span class="nav-text">多线程认识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程与线程函数"><span class="nav-number">1.2.</span> <span class="nav-text">线程与线程函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的创建与运行"><span class="nav-number">1.3.</span> <span class="nav-text">线程的创建与运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主线程执行完毕点不定"><span class="nav-number">1.3.1.</span> <span class="nav-text">主线程执行完毕点不定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程暂停和终止"><span class="nav-number">1.4.</span> <span class="nav-text">线程暂停和终止</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景线程"><span class="nav-number">1.5.</span> <span class="nav-text">背景线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程等待"><span class="nav-number">1.6.</span> <span class="nav-text">线程等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程状态"><span class="nav-number">1.7.</span> <span class="nav-text">线程状态</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程开发技术基础"><span class="nav-number">2.</span> <span class="nav-text">多线程开发技术基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程函数带参数"><span class="nav-number">2.1.</span> <span class="nav-text">线程函数带参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外套函数"><span class="nav-number">2.2.</span> <span class="nav-text">外套函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ParameterizedThreadStart委托"><span class="nav-number">2.3.</span> <span class="nav-text">ParameterizedThreadStart委托</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单参数、无返回值"><span class="nav-number">2.3.1.</span> <span class="nav-text">单参数、无返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多参数、有返回值"><span class="nav-number">2.3.2.</span> <span class="nav-text">多参数、有返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程辅助参数对象示例"><span class="nav-number">2.4.</span> <span class="nav-text">线程辅助参数对象示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程回调示例"><span class="nav-number">2.5.</span> <span class="nav-text">多线程回调示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跨线程更新UI界面"><span class="nav-number">3.</span> <span class="nav-text">跨线程更新UI界面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UI线程-消息循环、消息队列）"><span class="nav-number">3.1.</span> <span class="nav-text">UI线程(消息循环、消息队列）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#窗体过程-响应消息函数"><span class="nav-number">3.2.</span> <span class="nav-text">窗体过程(响应消息函数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨线程访问UI的方法"><span class="nav-number">3.3.</span> <span class="nav-text">跨线程访问UI的方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BackGroundWork组件使用指南"><span class="nav-number">4.</span> <span class="nav-text">BackGroundWork组件使用指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件概述"><span class="nav-number">4.1.</span> <span class="nav-text">组件概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务信息传送"><span class="nav-number">4.2.</span> <span class="nav-text">任务信息传送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务结果取回"><span class="nav-number">4.3.</span> <span class="nav-text">任务结果取回</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取消工作任务"><span class="nav-number">4.4.</span> <span class="nav-text">取消工作任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向外界报告工作进度"><span class="nav-number">4.5.</span> <span class="nav-text">向外界报告工作进度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件使用要点"><span class="nav-number">4.6.</span> <span class="nav-text">组件使用要点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程文件搜索器开发"><span class="nav-number">5.</span> <span class="nav-text">多线程文件搜索器开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能简介"><span class="nav-number">5.1.</span> <span class="nav-text">功能简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术分析"><span class="nav-number">5.2.</span> <span class="nav-text">技术分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序架构"><span class="nav-number">5.3.</span> <span class="nav-text">程序架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统设计结果"><span class="nav-number">5.4.</span> <span class="nav-text">系统设计结果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>

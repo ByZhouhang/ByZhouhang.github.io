@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C#,多线程,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="遵守交通规则">
+<meta name="keywords" content="C#,多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线程同步">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/线程同步/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="遵守交通规则">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779380954.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779394869.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779411856.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779429347.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779447219.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546779462216.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780662891.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780677777.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780693770.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780709829.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780723805.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546782805999.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780735491.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546780748622.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783496498.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783515586.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783531434.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783545523.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783559604.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783573509.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783584983.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783596975.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783608686.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783622899.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783635519.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/线程同步/1546783667898.png">
+<meta property="og:updated_time" content="2019-02-25T00:34:30.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线程同步">
+<meta name="twitter:description" content="遵守交通规则">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/06/线程同步/1546779380954.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/线程同步/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>线程同步 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/线程同步/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">线程同步</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T15:34:31+08:00">
+                2019-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C#-学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/多线程、Socket、异步编程/" itemprop="url" rel="index">
+                    <span itemprop="name">多线程、Socket、异步编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/06/线程同步/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/06/线程同步/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/06/线程同步/" class="leancloud_visitors" data-flag-title="线程同步">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>遵守交通规则 </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="多线程开发困境"><a href="#多线程开发困境" class="headerlink" title="多线程开发困境"></a>多线程开发困境</h1><p><img src="/2019/03/06/线程同步/1546779380954.png" alt="1546779380954"></p>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p><img src="/2019/03/06/线程同步/1546779394869.png" alt="1546779394869"></p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><h3 id="线程交叉等待"><a href="#线程交叉等待" class="headerlink" title="线程交叉等待"></a>线程交叉等待</h3><p><img src="/2019/03/06/线程同步/1546779411856.png" alt="1546779411856"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">JoinLeadToDeadlock</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">static</span> Thread mainThread;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"主线程开始运行"</span>);</span><br><span class="line">            mainThread = Thread.CurrentThread;</span><br><span class="line"></span><br><span class="line">            Thread ta = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(ThreadAMethod));</span><br><span class="line">            ta.Start();</span><br><span class="line">             Console.WriteLine(<span class="string">"主线程等待线程A结束……"</span>);</span><br><span class="line">            ta.Join(); <span class="comment">//等待线程A结束</span></span><br><span class="line">            Console.WriteLine(<span class="string">"主线程退出"</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadAMethod</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(Convert.ToString(i) + <span class="string">": 线程A正在执行"</span>);</span><br><span class="line">                Thread.Sleep(<span class="number">1000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(<span class="string">"线程A等待主线程退出……"</span>);</span><br><span class="line">            <span class="comment">//等待主线程结束</span></span><br><span class="line">            mainThread.Join();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="共享资源造成死锁"><a href="#共享资源造成死锁" class="headerlink" title="共享资源造成死锁"></a>共享资源造成死锁</h3><p><img src="/2019/03/06/线程同步/1546779429347.png" alt="1546779429347"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SharedResourceLeadToDeadlock</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//共享资源</span></span><br><span class="line">        <span class="keyword">static</span> SharedResource R1 = <span class="keyword">new</span> SharedResource();</span><br><span class="line">        <span class="keyword">static</span> SharedResource R2 = <span class="keyword">new</span> SharedResource();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread th1 = <span class="keyword">new</span> Thread(UseSharedResource1);</span><br><span class="line">            Thread th2 = <span class="keyword">new</span> Thread(UseSharedResource2);</span><br><span class="line">            th1.Start();</span><br><span class="line">            th2.Start();</span><br><span class="line">            <span class="comment">//等待两线程运行结束</span></span><br><span class="line">            th1.Join();</span><br><span class="line">            th2.Join();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UseSharedResource1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;申请使用资源R1"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Enter(R1);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;独占使用资源R1"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Thread.Sleep(<span class="number">1000</span>);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;申请使用资源R2"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Enter(R2);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;独占使用资源R2"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Thread.Sleep(<span class="number">1000</span>);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;资源R2使用完毕，放弃"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Exit(R2);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;资源R1使用完毕，放弃"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Exit(R1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UseSharedResource2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;申请使用资源R2"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Enter(R2);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;独占使用资源R2"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Thread.Sleep(<span class="number">500</span>);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;申请使用资源R1"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Enter(R1);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;独占使用资源R1"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Thread.Sleep(<span class="number">500</span>);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;资源R1使用完毕，放弃"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Exit(R1);</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程&#123;0&#125;资源R2使用完毕，放弃"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            Monitor.Exit(R2);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">SharedResource</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多线程读写出错"><a href="#多线程读写出错" class="headerlink" title="多线程读写出错"></a>多线程读写出错</h2><p><img src="/2019/03/06/线程同步/1546779447219.png" alt="1546779447219"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">SharedResourceLeadToDataError</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"4个线程递增SharedResource.Count值，每个线程增加10000，最后结果应该为40000"</span>);</span><br><span class="line">            Thread[] ths = <span class="keyword">new</span> Thread[<span class="number">4</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ths[i]=<span class="keyword">new</span> Thread(increaseCount);</span><br><span class="line">                ths[i].Start();</span><br><span class="line">            &#125;</span><br><span class="line">            System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increaseCount</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">            Thread.Sleep(ran.Next(<span class="number">100</span>, <span class="number">5000</span>));</span><br><span class="line">            <span class="keyword">int</span> beginNum = SharedResource.Count;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 读到的起始值为 &#123;1&#125;  "</span>, Thread.CurrentThread.ManagedThreadId, beginNum );</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">               beginNum ++;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            SharedResource.Count = beginNum;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 结束，SharedResource.Count=&#123;1&#125;"</span>, Thread.CurrentThread.ManagedThreadId,SharedResource.Count);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">SharedResource</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> Count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/06/线程同步/1546779462216.png" alt="1546779462216"></p>
+<h1 id="线程同步方法-锁"><a href="#线程同步方法-锁" class="headerlink" title="线程同步方法-锁"></a>线程同步方法-锁</h1><p><img src="/2019/03/06/线程同步/1546780662891.png" alt="1546780662891"></p>
+<h2 id="NET的Monitor对象"><a href="#NET的Monitor对象" class="headerlink" title=".NET的Monitor对象"></a>.NET的Monitor对象</h2><p><img src="/2019/03/06/线程同步/1546780677777.png" alt="1546780677777"></p>
+<p><img src="/2019/03/06/线程同步/1546780693770.png" alt="1546780693770"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseMonitor1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            SharedResource obj = <span class="keyword">new</span> SharedResource();</span><br><span class="line"></span><br><span class="line">            Thread[] ths = <span class="keyword">new</span> Thread[<span class="number">4</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ths[i] = <span class="keyword">new</span> Thread(increaseCount);</span><br><span class="line">                ths[i].Start(obj);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">            Console.WriteLine(<span class="string">"最终结果：obj.DynamicCount=&#123;0&#125;,SharedResource.StaticCount=&#123;1&#125;"</span>,</span><br><span class="line">                obj.DynamicCount, SharedResource.StaticCount);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increaseCount</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//访问实例字段</span></span><br><span class="line">            VisitDynamicField(obj);</span><br><span class="line">            <span class="comment">//访问静态字段</span></span><br><span class="line">            VisitStaticField();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//访问静态字段</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">VisitStaticField</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//访问静态字段</span></span><br><span class="line">            Monitor.Enter(<span class="keyword">typeof</span>(SharedResource));</span><br><span class="line">            <span class="keyword">int</span> beginNumber = SharedResource.StaticCount;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 读到的StaticCount起始值为 &#123;1&#125;  "</span>, Thread.CurrentThread.ManagedThreadId, beginNumber);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                beginNumber++;</span><br><span class="line">            &#125;</span><br><span class="line">            SharedResource.StaticCount = beginNumber;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 结束， SharedResource.StaticCount=&#123;1&#125;"</span>,</span><br><span class="line">            Thread.CurrentThread.ManagedThreadId, SharedResource.StaticCount);</span><br><span class="line">            Monitor.Exit(<span class="keyword">typeof</span>(SharedResource));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//访问实例字段</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">VisitDynamicField</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            Monitor.Enter(obj);</span><br><span class="line">            <span class="comment">//lock (obj)</span></span><br><span class="line">            <span class="comment">//&#123;</span></span><br><span class="line">            <span class="keyword">int</span> beginNumber = (obj <span class="keyword">as</span> SharedResource).DynamicCount;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 读到的DynamicCount起始值为 &#123;1&#125;  "</span>, Thread.CurrentThread.ManagedThreadId, beginNumber);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                beginNumber++;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            (obj <span class="keyword">as</span> SharedResource).DynamicCount = beginNumber;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"线程 &#123;0&#125; 结束，Obj.DynamicCount=&#123;1&#125;"</span>,</span><br><span class="line">            Thread.CurrentThread.ManagedThreadId, (obj <span class="keyword">as</span> SharedResource).DynamicCount);</span><br><span class="line">            <span class="comment">//&#125;</span></span><br><span class="line">            Monitor.Exit(obj);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//共享资源类</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">SharedResource</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> DynamicCount = <span class="number">0</span>;        <span class="comment">//多线程共享的实例字段</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> StaticCount = <span class="number">0</span>;  <span class="comment">//多线程共享的静态字段</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lock关键字简化Monitor"><a href="#Lock关键字简化Monitor" class="headerlink" title="Lock关键字简化Monitor"></a>Lock关键字简化Monitor</h2><p>适用于互斥访问，尽量不要用于线程同步</p>
+<p><img src="/2019/03/06/线程同步/1546780709829.png" alt="1546780709829"></p>
+<p><img src="/2019/03/06/线程同步/1546780723805.png" alt="1546780723805"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseMonitor2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//创建共享资源</span></span><br><span class="line">            SharedResource obj = <span class="keyword">new</span> SharedResource();</span><br><span class="line">            <span class="comment">//创建线程对象并启动</span></span><br><span class="line">            Thread tha = <span class="keyword">new</span> Thread(ThreadMethodA);</span><br><span class="line">            Thread thb = <span class="keyword">new</span> Thread(ThreadMethodB);</span><br><span class="line">            tha.Start(obj);</span><br><span class="line">            thb.Start(obj);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//程序暂停</span></span><br><span class="line">            System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadMethodA</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">lock</span> (obj)</span><br><span class="line">            &#123;</span><br><span class="line">                (obj <span class="keyword">as</span> SharedResource).DynamicCount+=<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程A完成工作，obj.DynamicCount=&#123;0&#125;"</span>, (obj <span class="keyword">as</span> SharedResource).DynamicCount);</span><br><span class="line">                Monitor.Pulse(obj); <span class="comment">//通知B线程</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadMethodB</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">lock</span> (obj)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//如果注释掉此条件判断语句，则会发生死锁</span></span><br><span class="line">                <span class="keyword">if</span>((obj <span class="keyword">as</span> SharedResource).DynamicCount==<span class="number">0</span>)</span><br><span class="line">                   &#123;</span><br><span class="line">                       <span class="comment">//释放对象上的锁并阻止当前线程，直到它重新获取该锁。</span></span><br><span class="line">                        Monitor.Wait(obj);<span class="comment">//等待</span></span><br><span class="line">                   &#125;</span><br><span class="line">                (obj <span class="keyword">as</span> SharedResource).DynamicCount+=<span class="number">100</span>;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程B完成工作，obj.DynamicCount=&#123;0&#125;"</span>, (obj <span class="keyword">as</span> SharedResource).DynamicCount);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//共享资源类</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">SharedResource</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> DynamicCount = <span class="number">0</span>;        <span class="comment">//多线程共享的实例字段</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/06/线程同步/1546782805999.png" alt="1546782805999"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseMonitor3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//创建共享资源</span></span><br><span class="line">            SharedResource obj = <span class="keyword">new</span> SharedResource();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//创建线程对象并启动</span></span><br><span class="line">            Thread th = <span class="keyword">new</span> Thread(FirstThreadMethod);</span><br><span class="line">            th.Start(obj);</span><br><span class="line"></span><br><span class="line">            Thread[] ths = <span class="keyword">new</span> Thread[<span class="number">10</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ths[i] = <span class="keyword">new</span> Thread(NextThreadMethod);</span><br><span class="line">                ths[i].Start(obj);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//程序暂停</span></span><br><span class="line">            System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">FirstThreadMethod</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">lock</span> (obj)</span><br><span class="line">            &#123;</span><br><span class="line">                (obj <span class="keyword">as</span> SharedResource).DynamicCount += <span class="number">100</span>;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程&#123;0&#125;完成工作，obj.DynamicCount=&#123;1&#125;"</span>, Thread.CurrentThread.ManagedThreadId, (obj <span class="keyword">as</span> SharedResource).DynamicCount);</span><br><span class="line">                Monitor.Pulse(obj); <span class="comment">//通知下一线程</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">NextThreadMethod</span>(<span class="params">Object obj</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">lock</span> (obj)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//初始线程还未工作，因为字段保持初始值0</span></span><br><span class="line">                <span class="keyword">if</span> ((obj <span class="keyword">as</span> SharedResource).DynamicCount == <span class="number">0</span>)</span><br><span class="line">                    Monitor.Wait(obj);<span class="comment">//等待</span></span><br><span class="line">                (obj <span class="keyword">as</span> SharedResource).DynamicCount += <span class="number">100</span>;</span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程&#123;0&#125;完成工作，obj.DynamicCount=&#123;1&#125;"</span>, Thread.CurrentThread.ManagedThreadId, (obj <span class="keyword">as</span> SharedResource).DynamicCount);</span><br><span class="line">                Monitor.Pulse(obj);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//共享资源类</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">SharedResource</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> DynamicCount = <span class="number">0</span>;        <span class="comment">//多线程共享的实例字段</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">线程3完成工作，obj.DynamicCount=100</span><br><span class="line">线程4完成工作，obj.DynamicCount=200</span><br><span class="line">线程6完成工作，obj.DynamicCount=300</span><br><span class="line">线程7完成工作，obj.DynamicCount=400</span><br><span class="line">线程5完成工作，obj.DynamicCount=500</span><br><span class="line">线程8完成工作，obj.DynamicCount=600</span><br><span class="line">线程10完成工作，obj.DynamicCount=700</span><br><span class="line">线程9完成工作，obj.DynamicCount=800</span><br><span class="line">线程11完成工作，obj.DynamicCount=900</span><br><span class="line">线程12完成工作，obj.DynamicCount=1000</span><br><span class="line">线程13完成工作，obj.DynamicCount=1100</span><br></pre></td></tr></table></figure>
+<h2 id="不要将Monitor用于值类型"><a href="#不要将Monitor用于值类型" class="headerlink" title="不要将Monitor用于值类型"></a>不要将Monitor用于值类型</h2><p><img src="/2019/03/06/线程同步/1546780735491.png" alt="1546780735491"></p>
+<h2 id="编写“线程安全”的方法"><a href="#编写“线程安全”的方法" class="headerlink" title="编写“线程安全”的方法"></a>编写“线程安全”的方法</h2><p><img src="/2019/03/06/线程同步/1546780748622.png" alt="1546780748622"></p>
+<h1 id="线程同步方法–等待句柄"><a href="#线程同步方法–等待句柄" class="headerlink" title="线程同步方法–等待句柄"></a>线程同步方法–等待句柄</h1><h2 id="waitXXX系列方法"><a href="#waitXXX系列方法" class="headerlink" title="waitXXX系列方法"></a>waitXXX系列方法</h2><p><img src="/2019/03/06/线程同步/1546783496498.png" alt="1546783496498"></p>
+<h2 id="waitHandle抽象类"><a href="#waitHandle抽象类" class="headerlink" title="waitHandle抽象类"></a>waitHandle抽象类</h2><p><img src="/2019/03/06/线程同步/1546783515586.png" alt="1546783515586"></p>
+<h2 id="Mutex-适用于整个操作系统进程互斥访问"><a href="#Mutex-适用于整个操作系统进程互斥访问" class="headerlink" title="Mutex(适用于整个操作系统进程互斥访问)"></a>Mutex(适用于整个操作系统进程互斥访问)</h2><p><img src="/2019/03/06/线程同步/1546783531434.png" alt="1546783531434"></p>
+<h2 id="互斥访问共享资源"><a href="#互斥访问共享资源" class="headerlink" title="互斥访问共享资源"></a>互斥访问共享资源</h2><p><img src="/2019/03/06/线程同步/1546783545523.png" alt="1546783545523"></p>
+<h2 id="提款示例"><a href="#提款示例" class="headerlink" title="提款示例"></a>提款示例</h2><p><img src="/2019/03/06/线程同步/1546783559604.png" alt="1546783559604"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseATM</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">static</span> ATM OneATM=<span class="keyword">new</span> ATM(); <span class="comment">//共享资源</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//向公共帐号存款2万</span></span><br><span class="line"></span><br><span class="line">            Console.Write(<span class="string">"输入公司公共帐户的金额:"</span>);</span><br><span class="line">            <span class="keyword">int</span> PublicAcountMoney =Convert.ToInt32(Console.ReadLine());</span><br><span class="line">            OneATM.Deposit(PublicAcountMoney);</span><br><span class="line"></span><br><span class="line">            Console.Write(<span class="string">"输入ATM中的现金额:"</span>);</span><br><span class="line">            <span class="keyword">int</span> ATMLeftMoney = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">            OneATM.SetATMLeftMoney(ATMLeftMoney);</span><br><span class="line"></span><br><span class="line">            System.Console.WriteLine(<span class="string">"\n敲任意键从公共帐户中取钱，ESC键退出……\n"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (System.Console.ReadKey(<span class="literal">true</span>).Key !=ConsoleKey.Escape)</span><br><span class="line">            &#123;</span><br><span class="line">                System.Console.WriteLine(<span class="string">""</span>);</span><br><span class="line">                Thread One = <span class="keyword">new</span> Thread(WithDrawMoney);</span><br><span class="line">                Thread Two = <span class="keyword">new</span> Thread(WithDrawMoney);</span><br><span class="line">                Thread Three = <span class="keyword">new</span> Thread(WithDrawMoney);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//随机生成一个要提款的数额，最少100元，最高5000元</span></span><br><span class="line">                Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">                One.Start(ran.Next(<span class="number">100</span>, <span class="number">5000</span>));</span><br><span class="line">                Two.Start(ran.Next(<span class="number">100</span>, <span class="number">5000</span>));</span><br><span class="line">                Three.Start(ran.Next(<span class="number">100</span>, <span class="number">5000</span>));</span><br><span class="line"></span><br><span class="line">                <span class="comment">//等三人取完钱</span></span><br><span class="line">                One.Join();</span><br><span class="line">                Two.Join();</span><br><span class="line">                Three.Join();</span><br><span class="line"></span><br><span class="line">                System.Console.WriteLine(<span class="string">"公共账号剩余&#123;0&#125;元，ATM中可提现金：&#123;1&#125;"</span>, OneATM.QueryPublicAccount(),OneATM.QueryATMLeftAccount());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//线程函数</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">WithDrawMoney</span>(<span class="params"><span class="keyword">object</span> amount</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">switch</span>(OneATM.WithDraw((<span class="keyword">int</span>)amount))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> WithDrawState.Succeed:</span><br><span class="line">                    System.Console.WriteLine(<span class="string">"成功取出&#123;0&#125;元。"</span>,amount );</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> WithDrawState.ATMHasNotEnoughCash:</span><br><span class="line">                    System.Console.WriteLine(<span class="string">"ATM中现金不足，无法支取&#123;0&#125;元。"</span>, amount);</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">                <span class="keyword">case</span> WithDrawState.AccountHasNotEnoughMoney:</span><br><span class="line">                    System.Console.WriteLine(<span class="string">"帐户中没钱了！无法取出&#123;0&#125;元"</span>,amount);</span><br><span class="line">                    <span class="keyword">break</span> ;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//自助取款机</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">ATM</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> PublicAcountLeftMoney;<span class="comment">//帐户剩余的钱</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> ATMLeftMoney;<span class="comment">//提款机剩余的钱</span></span><br><span class="line">        <span class="comment">//同步信息号量</span></span><br><span class="line">        <span class="keyword">private</span> Mutex m = <span class="keyword">new</span> Mutex();</span><br><span class="line">        <span class="comment">//取钱</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> WithDrawState <span class="title">WithDraw</span>(<span class="params"><span class="keyword">int</span> amount</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            m.WaitOne();</span><br><span class="line">            <span class="comment">//公共帐号钱不够</span></span><br><span class="line">            <span class="keyword">if</span> (PublicAcountLeftMoney &lt; amount)</span><br><span class="line">            &#123;</span><br><span class="line">                m.ReleaseMutex();</span><br><span class="line">                <span class="keyword">return</span> WithDrawState.AccountHasNotEnoughMoney;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//ATM现金不够</span></span><br><span class="line">            <span class="keyword">if</span> (ATMLeftMoney &lt; amount)</span><br><span class="line">            &#123;</span><br><span class="line">                m.ReleaseMutex();</span><br><span class="line">                <span class="keyword">return</span> WithDrawState.ATMHasNotEnoughCash;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//用户可以提取现金</span></span><br><span class="line">            ATMLeftMoney -= amount;</span><br><span class="line">            PublicAcountLeftMoney -= amount;</span><br><span class="line">            m.ReleaseMutex();</span><br><span class="line">            <span class="keyword">return</span> WithDrawState.Succeed;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//存钱</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Deposit</span>(<span class="params"><span class="keyword">int</span> amount</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            m.WaitOne();</span><br><span class="line">            PublicAcountLeftMoney += amount;</span><br><span class="line">            m.ReleaseMutex();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 设置ATM的现金金额</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="amount"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetATMLeftMoney</span>(<span class="params"><span class="keyword">int</span> amount</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Interlocked.Exchange(<span class="keyword">ref</span> ATMLeftMoney, amount);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//获取还剩余多少钱</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">QueryPublicAccount</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> PublicAcountLeftMoney;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 查询ATM剩余多少钱</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">QueryATMLeftAccount</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> ATMLeftMoney;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//取款状态</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> WithDrawState</span><br><span class="line">    &#123;</span><br><span class="line">        Succeed,        <span class="comment">//取钱成功</span></span><br><span class="line">        AccountHasNotEnoughMoney, <span class="comment">//账号中没钱了</span></span><br><span class="line">        ATMHasNotEnoughCash  <span class="comment">//ATM中没有足够的现金</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Semaphore-多个资源同步访问"><a href="#Semaphore-多个资源同步访问" class="headerlink" title="Semaphore(多个资源同步访问)"></a>Semaphore(多个资源同步访问)</h2><p><img src="/2019/03/06/线程同步/1546783573509.png" alt="1546783573509"></p>
+<p><img src="/2019/03/06/线程同步/1546783584983.png" alt="1546783584983"></p>
+<p><img src="/2019/03/06/线程同步/1546783596975.png" alt="1546783596975"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseLibraryComputer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//图书馆拥有的公用计算机</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keyword">int</span> ComputerNum = <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Computer[] LibraryComputers;</span><br><span class="line">        <span class="comment">//同步信号量</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span>  Semaphore sp = <span class="keyword">new</span> Semaphore( ComputerNum, ComputerNum);</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//图书馆拥有ComputerNum台电脑</span></span><br><span class="line">            LibraryComputers = <span class="keyword">new</span> Computer[ComputerNum];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;ComputerNum; i++)</span><br><span class="line">                LibraryComputers[i] = <span class="keyword">new</span> Computer(<span class="string">"Computer"</span>+(i+<span class="number">1</span>).ToString());</span><br><span class="line">            <span class="keyword">int</span> peopleNum = <span class="number">0</span>;</span><br><span class="line">            Random ran=<span class="keyword">new</span> Random();</span><br><span class="line">            Thread user;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"敲任意键模拟一批批的人排队使用&#123;0&#125;台计算机，ESC键结束模拟……"</span> ,ComputerNum);</span><br><span class="line">            <span class="comment">//每次创建若干个线程，模拟人排队使用计算机</span></span><br><span class="line">            <span class="keyword">while</span> (System.Console.ReadKey().Key  != ConsoleKey.Escape)</span><br><span class="line">            &#123;</span><br><span class="line">                peopleNum = ran.Next(<span class="number">0</span>, <span class="number">10</span>);</span><br><span class="line">                System.Console.WriteLine(<span class="string">"\n有&#123;0&#125;人在等待使用计算机。"</span>,peopleNum );</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= peopleNum; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    user = <span class="keyword">new</span> Thread(UseComputer);</span><br><span class="line">                    user.Start(<span class="string">"User"</span> + i.ToString());</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//线程函数</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UseComputer</span>(<span class="params">Object UserName</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            sp.WaitOne();<span class="comment">//等待计算机可用</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//查找可用的计算机</span></span><br><span class="line">            Computer cp=<span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ComputerNum; i++)</span><br><span class="line">                <span class="keyword">if</span> (LibraryComputers[i].IsOccupied == <span class="literal">false</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    cp = LibraryComputers[i];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            <span class="comment">//使用计算机工作</span></span><br><span class="line">            cp.Use(UserName.ToString());</span><br><span class="line">            <span class="comment">//不再使用计算机，让出来给其他人使用</span></span><br><span class="line">            sp.Release();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Computer</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">readonly</span> <span class="keyword">string</span> ComputerName = <span class="string">""</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Computer</span>(<span class="params"><span class="keyword">string</span> Name</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ComputerName = Name;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//是否被占用</span></span><br><span class="line">        <span class="keyword">public</span>  <span class="keyword">bool</span> IsOccupied = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">//人在使用计算机</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">Use</span>(<span class="params">String userName</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            System.Console.WriteLine(<span class="string">"&#123;0&#125;开始使用计算机&#123;1&#125;"</span>, userName,ComputerName);</span><br><span class="line">            IsOccupied = <span class="literal">true</span>;</span><br><span class="line">            Thread.Sleep(<span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">2000</span>)); <span class="comment">//随机休眠，以模拟人使用计算机</span></span><br><span class="line">            System.Console.WriteLine(<span class="string">"&#123;0&#125;结束使用计算机&#123;1&#125;"</span>, userName,ComputerName);</span><br><span class="line">            IsOccupied = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="EventWaitHandle和红绿灯"><a href="#EventWaitHandle和红绿灯" class="headerlink" title="EventWaitHandle和红绿灯"></a>EventWaitHandle和红绿灯</h2><p><img src="/2019/03/06/线程同步/1546783608686.png" alt="1546783608686"></p>
+<p><img src="/2019/03/06/线程同步/1546783622899.png" alt="1546783622899"></p>
+<p><img src="/2019/03/06/线程同步/1546783635519.png" alt="1546783635519"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseManualResetEvent</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            CreateThread();</span><br><span class="line">            System.Console.WriteLine(<span class="string">"R:停止线程,G:运行线程,ESC:退出\n"</span>);</span><br><span class="line">           <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">               ConsoleKey  key = Console.ReadKey(<span class="literal">true</span>).Key;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (key == ConsoleKey.R) <span class="comment">//红灯停</span></span><br><span class="line">                    MyThread.Stop();</span><br><span class="line">                <span class="keyword">if</span> (key == ConsoleKey.G) <span class="comment">//绿灯行</span></span><br><span class="line">                    MyThread.Go();</span><br><span class="line">                <span class="keyword">if</span> (key == ConsoleKey.Escape) <span class="comment">//程序退出</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MyThread.Stop();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建3个线程并启动</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CreateThread</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread[] ths=<span class="keyword">new</span> Thread[<span class="number">3</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ths[i]=<span class="keyword">new</span> Thread((<span class="keyword">new</span> MyThread()).DoWork);</span><br><span class="line">                ths[i].IsBackground = <span class="literal">true</span>;<span class="comment">//不加这句,则程序不会结束</span></span><br><span class="line">                ths[i].Start();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyThread</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//多个对象共享"红绿灯"</span></span><br><span class="line">        <span class="keyword">static</span> ManualResetEvent mre = <span class="keyword">new</span> ManualResetEvent(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">static</span> Random ran = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//线程函数</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DoWork</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> Counter = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                mre.WaitOne(); <span class="comment">//等待绿灯</span></span><br><span class="line">                Counter++;</span><br><span class="line">                <span class="comment">//随机休眠</span></span><br><span class="line">                Thread.Sleep(ran.Next(<span class="number">100</span>,<span class="number">2000</span>));</span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程&#123;0&#125;:第&#123;1&#125;次执行"</span>,Thread.CurrentThread.ManagedThreadId, Counter );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//通知阻塞的线程可以继续运行</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Go</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            mre.Set();</span><br><span class="line">            System.Console.WriteLine(<span class="string">"\n绿灯,放行!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//让所有正在运行的线程停止运行</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Stop</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            mre.Reset();</span><br><span class="line">            Thread.Sleep(<span class="number">2000</span>); <span class="comment">//休眠2秒，等待当前工作线程完成当前工作</span></span><br><span class="line">            System.Console.WriteLine(<span class="string">"\n红灯,等待!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">UseAutoResetEvent</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">static</span> Thread th1, th2, th3;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            CreateThread();</span><br><span class="line"></span><br><span class="line">            System.Console.WriteLine(<span class="string">"G:放行,ESC:退出\n"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">               ConsoleKey key = Console.ReadKey(<span class="literal">true</span>).Key;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (key == ConsoleKey.G)</span><br><span class="line">                    MyThread.Go();</span><br><span class="line">                <span class="keyword">if</span> (key == ConsoleKey.Escape)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建3个线程</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CreateThread</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Thread[] ths = <span class="keyword">new</span> Thread[<span class="number">10</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ths[i] = <span class="keyword">new</span> Thread((<span class="keyword">new</span> MyThread()).DoWork);</span><br><span class="line">                ths[i].IsBackground = <span class="literal">true</span>;<span class="comment">//不加这句,则程序不会结束</span></span><br><span class="line">                ths[i].Start();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">MyThread</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//多个对象共享"红绿灯"</span></span><br><span class="line">        <span class="keyword">static</span> AutoResetEvent are = <span class="keyword">new</span> AutoResetEvent(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//线程函数,多个线程都拥有多个副本,彼此不相关</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DoWork</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> Counter = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                are.WaitOne();</span><br><span class="line">                Counter++;</span><br><span class="line">                Thread.Sleep(<span class="keyword">new</span> Random().Next(<span class="number">100</span>,<span class="number">1000</span>));</span><br><span class="line">                System.Console.WriteLine(<span class="string">"线程&#123;0&#125;:第&#123;1&#125;次执行"</span>, Thread.CurrentThread.ManagedThreadId, Counter);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//通知阻塞的线程可以继续运行</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Go</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            are.Set();</span><br><span class="line">            System.Console.WriteLine(<span class="string">"\n绿灯,放行!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/06/线程同步/1546783667898.png" alt="1546783667898"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/03/06/线程同步/" title="线程同步">http://yoursite.com/2019/03/06/线程同步/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/多线程/" rel="tag"># 多线程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/05/多线程开发技术基础/" rel="next" title="多线程开发技术基础">
+                <i class="fa fa-chevron-left"></i> 多线程开发技术基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/07/网络开发技术基础/" rel="prev" title="网络开发技术基础">
+                网络开发技术基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程开发困境"><span class="nav-number">1.</span> <span class="nav-text">多线程开发困境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程同步"><span class="nav-number">1.1.</span> <span class="nav-text">线程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">1.2.</span> <span class="nav-text">死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程交叉等待"><span class="nav-number">1.2.1.</span> <span class="nav-text">线程交叉等待</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享资源造成死锁"><span class="nav-number">1.2.2.</span> <span class="nav-text">共享资源造成死锁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程读写出错"><span class="nav-number">1.3.</span> <span class="nav-text">多线程读写出错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程同步方法-锁"><span class="nav-number">2.</span> <span class="nav-text">线程同步方法-锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NET的Monitor对象"><span class="nav-number">2.1.</span> <span class="nav-text">.NET的Monitor对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock关键字简化Monitor"><span class="nav-number">2.2.</span> <span class="nav-text">Lock关键字简化Monitor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不要将Monitor用于值类型"><span class="nav-number">2.3.</span> <span class="nav-text">不要将Monitor用于值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写“线程安全”的方法"><span class="nav-number">2.4.</span> <span class="nav-text">编写“线程安全”的方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程同步方法–等待句柄"><span class="nav-number">3.</span> <span class="nav-text">线程同步方法–等待句柄</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#waitXXX系列方法"><span class="nav-number">3.1.</span> <span class="nav-text">waitXXX系列方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#waitHandle抽象类"><span class="nav-number">3.2.</span> <span class="nav-text">waitHandle抽象类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mutex-适用于整个操作系统进程互斥访问"><span class="nav-number">3.3.</span> <span class="nav-text">Mutex(适用于整个操作系统进程互斥访问)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥访问共享资源"><span class="nav-number">3.4.</span> <span class="nav-text">互斥访问共享资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提款示例"><span class="nav-number">3.5.</span> <span class="nav-text">提款示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Semaphore-多个资源同步访问"><span class="nav-number">3.6.</span> <span class="nav-text">Semaphore(多个资源同步访问)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EventWaitHandle和红绿灯"><span class="nav-number">3.7.</span> <span class="nav-text">EventWaitHandle和红绿灯</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
