@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[分层架构设计实践]]></title>
+    <url>%2F2019%2F03%2F17%2F%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5%2F</url>
+    <content type="text"><![CDATA[干货 数据存取层主要职责 数据存储层的数据转换工作 解决数据不匹配问题的方法 Repository设计模式DDD分层架构中的仓储模式 Repository与聚合对象 DDD如何使用聚合对象 如何编写一个Repository 实际开发如何使用 常用技术手段 使用EntityFramework 是否应该返回IQueryable 定义一个“父接口”的诱惑 存在的问题 改善设计 设计指南 分布式环境如何跟踪实体状态 Unit Of Work设计模式典型场景 事务支持 构建跨多个Repository的事务 实现 解决并发冲突后来者居上 乐观策略 悲观策略 表示层与应用服务层 关于表示层 Web应用中国两种页面生成方式 基本编程模式 应用服务层 实际开发可以因地制宜 向外界提供服务 领域层 领域层的设计与开发要点 领域模型的好处 领域层的两大构成要素 领域模型的构建方法 领域对象 领域服务 DDD建议 不要使用“贫血”模型 领域对象的创建工厂 领域层中的限界上下文]]></content>
+      <categories>
+        <category>C#-学习</category>
+        <category>领域驱动</category>
+      </categories>
+      <tags>
+        <tag>软件设计</tag>
+        <tag>领域驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[领域模型的构建]]></title>
+    <url>%2F2019%2F03%2F16%2F%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%9E%84%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[新思想武装大脑 实体、值对象值对象职责 职责实现方式 为什么将数据封装为值类型 编程实现 判等规则 开发建议 实体DDD实体对象的特点 如何为实体建模 标识的确定方法 实体标识的生成策略 实体判等原则 值类型和实体类型的判等 实体的状态 实体vs值对象 聚合对象聚合对象概述 聚合对象之间的相互访问 何时“聚合对象” Aggregate可以简化对象之间的交互 “聚合跟”的职责 聚合设计指南 什么是Repository EF与“贫血模型” 处理“贫血模型” 聚合对象中属性的验证 领域服务和应用服务领域服务领域逻辑 领域逻辑的实现 领域服务与领域层 应用服务什么是应用服务 ApplicationService典型用法 领域事件 典型开发场景 直观做法 “领域事件驱动”解决方案 领域事件的典型开发模式 处理“重复事件” 跨越限界上下文的事件]]></content>
+      <categories>
+        <category>C#-学习</category>
+        <category>领域驱动</category>
+      </categories>
+      <tags>
+        <tag>软件设计</tag>
+        <tag>领域驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[分层架构软件系统设计]]></title>
+    <url>%2F2019%2F03%2F15%2F%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%2F</url>
+    <content type="text"><![CDATA[正确的做事 SmartUI型的Web应用 分层软件系统架构概述 分层架构相关设计模式Transaction Script TableModule ActiveRecord DDD设计模式 DDD中分层架构]]></content>
+      <categories>
+        <category>C#-学习</category>
+        <category>领域驱动</category>
+      </categories>
+      <tags>
+        <tag>软件设计</tag>
+        <tag>领域驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[领域驱动之程序猿视角]]></title>
+    <url>%2F2019%2F03%2F14%2F%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E4%B9%8B%E7%A8%8B%E5%BA%8F%E7%8C%BF%E8%A7%86%E8%A7%92%2F</url>
+    <content type="text"><![CDATA[认识这个世界不容易 DDD概述建模的重要性 以数据为中心的开发流程 数据/技术驱动还是业务驱动 DDD的总体想法 DDD是什么 DDD怎样开发软件？ DDD的两个阶段 DDD基本流程 DDD眼中的软件系统 DDD适合的领域 为什么关注DDD 开发中应用DDD的问题 DDD的核心要素 通用语言 通用语言的产生 什么是通用语言 如何建立通用语言 领域模型 什么叫“领域” 领域建模准备工作 领域模型的三种主要元素 领域模型的核心 使用“模块”进行管理 限界上下文 上下文映射展示信息 限界上下文之间的协作关系 典型的限界上下文之间关系 “反腐层” BoundedContext的技术实现 BoundedContext与分成架构 领域模型的重构软件开发中重构 为什么要重构领域模型 组合 抽象 DDD领域模型重构的经验法则 模型重构的价值]]></content>
+      <categories>
+        <category>C#-学习</category>
+        <category>领域驱动</category>
+      </categories>
+      <tags>
+        <tag>软件设计</tag>
+        <tag>领域驱动</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面向对象分析与设计方法]]></title>
     <url>%2F2019%2F03%2F13%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[软件系统开发流程 OOA、OOD和OOPOOA OOD OOP OOAD的建模语言 小结 面向对象软件开发过程详解软件方法学 开发模型 方法的优越性 建立系统需求分析模型需求分析建模要素什么叫需求分析 “需求分析”与“系统分析” 区分问题域与系统责任 系统边界 参与者 Actor可以相互继承 用例 用例的标准图符 三种典型用例之间关系 参与者和用例之间的关系 需求分析建模的具体步骤基本步骤 确定系统边界 确定参与者 定义用例 确定参与者与用例间关系 绘制用例图 对象与类的抽取 发现对象和类的抽取对象和类 系统分析的关键 如何发现对象 定义属性和操作概念 具体方法 注意 需求分析建模指导抽象与封装“抽象”原则 应用“分类” “封装”原则 “粒度控制”原则 “消息”为对象之间协作建模 对象的行为 建模场景“一般”与“特殊” 建模场景：整体与部分 一个问题多个解决方案 建模场景：对象之间的关联 从分析到设计OOD基础 OOD和OOA之间的关系 OOD的出发点 具体设计指导 类的重构 UML类图与包图表达静态结构 OOD实施指南]]></content>
