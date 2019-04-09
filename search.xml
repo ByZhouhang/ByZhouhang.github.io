@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[管理员方式开机自启动+数据绑定产线小demo]]></title>
+    <url>%2F2019%2F04%2F09%2F%E7%AE%A1%E7%90%86%E5%91%98%E6%96%B9%E5%BC%8F%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E4%BA%A7%E7%BA%BF%E5%B0%8Fdemo%2F</url>
+    <content type="text"><![CDATA[windows 开机自启动任务，数据绑定技术练手 需求 记录于2019.4.8 号 为了规范产线操作人员行为，防止操作人员忘记比对台位就开始生产模块测试，或者比对了，但是没记录在表，后期瞎填。需要软件进行提醒，然后在测试过程中，如果检测到没有填写，就弹出界面，不允许关闭，除非核对通过。 分析一、数据准备 1.软件初始化时，确保运行需要的配置文件存在 二、类的设计 1.设计一个数据类 用于界面数据绑定 涉及到的基本知识点1.Binding对象的使用 数据到界面的单向更新 2.INotifyPropertyChanged接口的实现 事件的使用 3.windows权限的获取 设置(操作注册表) 4.基本IO操作 5.nameof() 新语法的使用 很赞 防止写错 6.管理员权限获取可参考博客 具体实现软件界面设计 注册表最终图 权限图标 实体类的设计12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061//为了数据对象属性变更 不用人为的更新界面 需要实现INotifyPropertyChanged 接口namespace ModuleComparison&#123; public class RecordData : INotifyPropertyChanged &#123; //配置的需要检测的文件个数 private int _filecount = 0; public int Filecount &#123; get &#123; return _filecount; &#125; set &#123; _filecount = value; OnPropertyChanged("Filecount"); &#125; &#125; //配置的路径存在的个数 private int _existsCount = 0; public int ExistsCount &#123; get &#123; return _existsCount; &#125; set &#123; _existsCount = value; OnPropertyChanged("ExistsCount"); &#125; &#125; //配置的路径文件进行了更改的个数 private int _editCount = 0; public int EditCount &#123; get &#123; return _editCount; &#125; set &#123; _editCount = value; OnPropertyChanged("EditCount"); &#125; &#125; public event PropertyChangedEventHandler PropertyChanged; private void OnPropertyChanged(string name) &#123; //多了一次赋值 其实没必要 PropertyChangedEventHandler handler = PropertyChanged; //事件不为空(有挂接方法) if (handler != null) &#123; handler(this, new PropertyChangedEventArgs(name)); &#125; &#125; public bool IsCheckOk() &#123; return _filecount == _editCount; &#125; &#125;&#125; 软件初始化工作1234567891011121314151617181920212223242526272829303132 // 数据对象准备 软件路径准备 private RecordData recordDataObj=new RecordData(); private static string softDir = @"D:\比对表软件配置文件夹"; private static string configName = "比对表路径配置.ini"; private string configFilePath = Path.Combine(softDir, configName);// 如果不存在 首先创建软件配置文件夹和文件 private void SoftwarePathInit() &#123; if (!Directory.Exists(softDir)) &#123; Directory.CreateDirectory(softDir); &#125; if (!File.Exists(configFilePath)) &#123; using (FileStream fs = new FileStream(configFilePath, FileMode.Create)) &#123; StreamWriter sw = new StreamWriter(fs, Encoding.Default); sw.WriteLine("请从下一行开始按照示例规范填写记录表路径信息(此行不要删除，从下一行开始替换)"); sw.WriteLine(@"C:\Software\记录表1.xls"); sw.WriteLine(@"C:\Software\记录表2.xls"); sw.WriteLine(@"C:\Software\记录表3.xls"); sw.Flush(); sw.Close(); &#125; &#125; &#125; 配置文件读取12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152//读取配置文件 获取 记录表路径个数 路径存在个数 修改个数 private void ReadConfigFile() &#123; //读取配置文件前先清0 recordDataObj.Filecount = 0; recordDataObj.EditCount = 0; recordDataObj.ExistsCount = 0; using (FileStream fs = new FileStream(configFilePath, FileMode.Open)) &#123; //设置编码 否则乱码 StreamReader sr = new StreamReader(fs, Encoding.Default); //第一行没用 string strtemp = sr.ReadLine(); //不为NUll 一直读 while ((strtemp = sr.ReadLine()) != null) &#123; //这里一定要检测是否为空字符串 否则计数不准 if (strtemp.Trim() != string.Empty) &#123; recordDataObj.Filecount++; if (File.Exists(strtemp.Trim())) &#123; recordDataObj.ExistsCount++; &#125; FileInfo fileInfo = new FileInfo(strtemp.Trim()); //上午 下午计数方式不同 if (DateTime.Now.Hour &lt; 12) &#123; if (fileInfo.LastWriteTime.Date == DateTime.Now.Date) &#123; recordDataObj.EditCount++; &#125; &#125; else &#123; if (fileInfo.LastWriteTime.Hour &gt; 12) &#123; recordDataObj.EditCount++; &#125; &#125; &#125; &#125; &#125; &#125; 界面数据绑定12345678910111213141516171819//设定数据绑定 private void SetUIBinding() &#123; //创建绑定对象 //绑定的控件属性 //数据源 //数据源的属性 Binding bindingConfigCount = new Binding(nameof(this.lbCount.Text), recordDataObj, nameof(recordDataObj.Filecount)); //设置 数据源变更 控件更新模式 bindingConfigCount.ControlUpdateMode = ControlUpdateMode.OnPropertyChanged; //添加到控件绑定属性集合中 this.lbCount.DataBindings.Add(bindingConfigCount); Binding bindingExistCount = new Binding(nameof(this.lbExist.Text), recordDataObj, nameof(recordDataObj.ExistsCount)); bindingExistCount.ControlUpdateMode = ControlUpdateMode.OnPropertyChanged; this.lbExist.DataBindings.Add(bindingExistCount); Binding bindingEditCount = new Binding(nameof(this.lbEditCount.Text), recordDataObj, nameof(recordDataObj.EditCount)); bindingEditCount.ControlUpdateMode = ControlUpdateMode.OnPropertyChanged; this.lbEditCount.DataBindings.Add(bindingEditCount); &#125; 开机启动配置12345678910111213141516171819202122232425262728293031323334353637383940/// 修改程序在注册表中的键值 /// &lt;/summary&gt; /// &lt;param name="isAuto"&gt;true:开机启动,false:不开机自启&lt;/param&gt; public static void AutoStart(bool isAuto) &#123; try &#123; if (isAuto == true) &#123; RegistryKey R_local = Registry.LocalMachine;//RegistryKey R_local = Registry.CurrentUser; RegistryKey R_run = R_local.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", RegistryKeyPermissionCheck.ReadWriteSubTree); R_run.SetValue("stageComparison", Application.ExecutablePath); R_run.Close(); R_local.Close(); &#125; else &#123; RegistryKey R_local = Registry.LocalMachine;//RegistryKey R_local = Registry.CurrentUser; RegistryKey R_run = R_local.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", RegistryKeyPermissionCheck.ReadWriteSubTree); R_run.DeleteValue("stageComparison", false); R_run.Close(); R_local.Close(); &#125; //GlobalVariant.Instance.UserConfig.AutoStart = isAuto; &#125; catch (UnauthorizedAccessException e) &#123; MessageBox.Show("您需要管理员权限才能设置开机启动!" +e.Message, "提示"); &#125; catch (Exception ex) &#123; //MessageBoxDlg dlg = new MessageBoxDlg(); //dlg.InitialData("您需要管理员权限修改", "提示", MessageBoxButtons.OK, MessageBoxDlgIcon.Error); //dlg.ShowDialog(); MessageBox.Show("程序在操作注册表出现异常，联系工程师！" +ex.Message, "提示"); &#125; &#125; 窗体启动执行流程1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162private void name_Load(object sender, EventArgs e) &#123; //开机启动注册表 AutoStart(true); //设置绑定 SetUIBinding(); //保证配置文件夹和文件存在 SoftwarePathInit(); //读取配置文件 ReadConfigFile(); //刷新界面提醒消息 RefreshUI(); this.timer1.Enabled = true; &#125;private void RefreshUI() &#123; if (recordDataObj.Filecount == 0) &#123; MessageBox.Show("记录表个数为0，请先配置路径！"); return; &#125; if (recordDataObj.Filecount != recordDataObj.ExistsCount) &#123; this.lbinfo.Text = "请填写正确的文件路径!"; this.lbinfo.BackColor = Color.Red; return; &#125; if (!recordDataObj.IsCheckOk()) &#123; this.lbinfo.Text = "请填写比对表！"; this.lbinfo.BackColor = Color.Red; &#125; else &#123; //下午才退出程序 if (DateTime.Now.Hour &gt; 13) &#123; Application.Exit(); &#125; else &#123; //上午先隐藏程序 this.lbinfo.Text = "填写完成！"; this.lbinfo.BackColor = Color.LimeGreen; this.Hide(); &#125; &#125; &#125; 定时器配置1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//定时器1用于 一直弹出提醒 30s间隔private void timer1_Tick(object sender, EventArgs e)&#123; //如果比对表没有填写 弹出界面 if (!recordDataObj.IsCheckOk()) &#123; this.Visible = true; this.WindowState = FormWindowState.Normal; this.TopMost = true; //this.timer1.Interval = 30000; //30s后会弹出来 ReadConfigFile(); RefreshUI(); &#125; else //都填写了 &#123; if (DateTime.Now.Hour &lt; 12)//上午填写ok &#123; this.Hide(); this.timer1.Enabled = false; //窗体隐藏 定时器1关闭 this.timer2.Interval = 1800000; //半小时 开启定时器2 检测是否到达下午 this.timer2.Enabled = true; &#125; else &#123; this.Close(); &#125; &#125;&#125;//定时器2 用于半小时检测一次 是否到达下午private void timer2_Tick(object sender, EventArgs e)&#123; if (DateTime.Now.Hour &gt;= 13) &#123; this.timer1.Enabled = true; this.timer2.Enabled = false; &#125;&#125; 其余事件响应1234567891011121314151617181920212223242526272829303132333435363738394041//填写完毕判断 private void btnOK_Click(object sender, EventArgs e) &#123; //读取配置文件 ReadConfigFile(); //界面提醒 RefreshUI(); &#125;//窗体关闭前判断 private void name_FormClosing(object sender, FormClosingEventArgs e) &#123; if (!recordDataObj.IsCheckOk()) &#123; MessageBox.Show("请填写记录表，核对成功才能关闭！"); e.Cancel = true; &#125; else &#123; btnOK_Click(null, null); &#125; &#125; //开机自启动 关闭 private void btnStartCancel_Click(object sender, EventArgs e) &#123; AutoStart(false); &#125; //配置比对表路径 private void btnConfigPath_Click(object sender, EventArgs e) &#123; System.Diagnostics.Process.Start(configFilePath); &#125;]]></content>
+      <categories>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>工作小软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[github仓库和博文收录]]></title>
     <url>%2F2019%2F04%2F02%2Fgithub%E4%BB%93%E5%BA%93%E5%92%8C%E5%8D%9A%E6%96%87%E6%94%B6%E5%BD%95%2F</url>
     <content type="text"><![CDATA[在此记录好的github学习项目 以及不错的博客文章 防丢失 现代 Javascript 教程 github外国大佬的项目 多种语言翻译]]></content>
@@ -300,8 +312,8 @@
         <category>基础入门到进阶-金旭亮</category>
       </categories>
       <tags>
-        <tag>面向对象</tag>
         <tag>C#</tag>
+        <tag>面向对象</tag>
       </tags>
   </entry>
   <entry>
@@ -313,8 +325,8 @@
         <category>基础入门到进阶-金旭亮</category>
       </categories>
       <tags>
-        <tag>面向对象</tag>
         <tag>C#</tag>
+        <tag>面向对象</tag>
       </tags>
   </entry>
   <entry>
@@ -326,8 +338,8 @@
         <category>基础入门到进阶-金旭亮</category>
       </categories>
       <tags>
-        <tag>面向对象</tag>
         <tag>C#</tag>
+        <tag>面向对象</tag>
       </tags>
   </entry>
   <entry>
