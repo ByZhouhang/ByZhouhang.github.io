@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C#,Async await,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Async await 异步编程">
+<meta name="keywords" content="C#,Async await">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异步编程指南">
+<meta property="og:url" content="http://yoursite.com/2019/05/05/异步编程指南/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="Async await 异步编程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089669506.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089691111.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089713673.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089754532.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089768195.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089808696.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089819330.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089829628.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089841414.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089861253.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089919941.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089934339.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089945861.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089955747.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089969236.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089981051.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089991652.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090001492.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090010548.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090018868.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090028378.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090039219.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090049220.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090071523.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090083829.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090095268.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090106723.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090127075.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090138675.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090147906.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090157588.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090174739.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090183589.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090192212.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090202470.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090212645.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090222373.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090243125.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090254921.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090264852.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090273402.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090282274.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090291489.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090314521.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090324914.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090350291.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090367539.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090378612.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090389235.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006402636.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006412002.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006424868.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006441114.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006449906.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006460115.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547006471316.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090422291.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547090430690.png">
+<meta property="og:updated_time" content="2019-06-03T08:12:26.029Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="异步编程指南">
+<meta name="twitter:description" content="Async await 异步编程">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/05/异步编程指南/1547089669506.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/05/异步编程指南/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>异步编程指南 | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/异步编程指南/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">异步编程指南</h1>
+        
+
+        <div class="post-meta">
+
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T15:34:32+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C#-学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-学习/多线程、Socket、异步编程/" itemprop="url" rel="index">
+                    <span itemprop="name">多线程、Socket、异步编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/05/异步编程指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/05/异步编程指南/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/05/05/异步编程指南/" class="leancloud_visitors" data-flag-title="异步编程指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.9k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>Async await 异步编程 </p>
+</blockquote>
+<a id="more"></a>
+<h2 id="方法的异步调用"><a href="#方法的异步调用" class="headerlink" title="方法的异步调用"></a>方法的异步调用</h2><p><img src="/2019/05/05/异步编程指南/1547089669506.png" alt="1547089669506"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089691111.png" alt="1547089691111"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089713673.png" alt="1547089713673"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089754532.png" alt="1547089754532"></p>
+<h3 id="理解await"><a href="#理解await" class="headerlink" title="理解await"></a>理解await</h3><p><img src="/2019/05/05/异步编程指南/1547089768195.png" alt="1547089768195"></p>
+<h3 id="异步方法与线程"><a href="#异步方法与线程" class="headerlink" title="异步方法与线程"></a>异步方法与线程</h3><p><img src="/2019/05/05/异步编程指南/1547089808696.png" alt="1547089808696"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">AsyncAndThread</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"进入Main()方法，执行线程ID:&#123;0&#125;,来自线程池?&#123;1&#125;,是背景线程?&#123;2&#125;"</span>,</span><br><span class="line">                Thread.CurrentThread.ManagedThreadId, </span><br><span class="line">                Thread.CurrentThread.IsThreadPoolThread, </span><br><span class="line">                Thread.CurrentThread.IsBackground);</span><br><span class="line">            TestDoWorkAsync();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n返回Main()方法，等待用户敲任意键退出。执行线程ID:&#123;0&#125;,来自线程池?&#123;1&#125;,是背景线程?&#123;2&#125;"</span>,</span><br><span class="line">                Thread.CurrentThread.ManagedThreadId,</span><br><span class="line">                Thread.CurrentThread.IsThreadPoolThread,</span><br><span class="line">                Thread.CurrentThread.IsBackground);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">static</span> Task <span class="title">TestDoWorkAsync</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"\n进入TestDoWorkAsync()方法，await语句之前的代码执行线程ID:&#123;0&#125;，来自线程池?&#123;1&#125;,是背景线程?&#123;2&#125;"</span>,</span><br><span class="line">                Thread.CurrentThread.ManagedThreadId,</span><br><span class="line">                Thread.CurrentThread.IsThreadPoolThread,</span><br><span class="line">                Thread.CurrentThread.IsBackground);</span><br><span class="line">            <span class="keyword">await</span> DoWork();</span><br><span class="line">            Console.WriteLine(<span class="string">"\n退出TestDoWorkAsync()方法，await语句之后的代码执行线程ID:&#123;0&#125;，来自线程池?&#123;1&#125;,是背景线程?&#123;2&#125;"</span>, </span><br><span class="line">                Thread.CurrentThread.ManagedThreadId, </span><br><span class="line">                Thread.CurrentThread.IsThreadPoolThread, </span><br><span class="line">                Thread.CurrentThread.IsBackground);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> Task <span class="title">DoWork</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> Task.Run( () =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"\n使用TPL运行DoWork方法，负责执行的线程ID:&#123;0&#125;，来自线程池？&#123;1&#125;,是背景线程？&#123;2&#125;"</span>,</span><br><span class="line">                    Thread.CurrentThread.ManagedThreadId, </span><br><span class="line">                    Thread.CurrentThread.IsThreadPoolThread, </span><br><span class="line">                    Thread.CurrentThread.IsBackground);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/05/异步编程指南/1547089819330.png" alt="1547089819330"></p>
+<h3 id="异步方法与UI线程"><a href="#异步方法与UI线程" class="headerlink" title="异步方法与UI线程"></a>异步方法与UI线程</h3><p><img src="/2019/05/05/异步编程指南/1547089829628.png" alt="1547089829628"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089841414.png" alt="1547089841414"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089861253.png" alt="1547089861253"></p>
+<h2 id="异步方法编写指南"><a href="#异步方法编写指南" class="headerlink" title="异步方法编写指南"></a>异步方法编写指南</h2><p><img src="/2019/05/05/异步编程指南/1547089919941.png" alt="1547089919941"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089934339.png" alt="1547089934339"></p>
+<h3 id="编写支持await的方法"><a href="#编写支持await的方法" class="headerlink" title="编写支持await的方法"></a>编写支持await的方法</h3><p><img src="/2019/05/05/异步编程指南/1547089945861.png" alt="1547089945861"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089955747.png" alt="1547089955747"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089969236.png" alt="1547089969236"></p>
+<p><img src="/2019/05/05/异步编程指南/1547089981051.png" alt="1547089981051"></p>
+<h3 id="await表达式的返回值"><a href="#await表达式的返回值" class="headerlink" title="await表达式的返回值"></a>await表达式的返回值</h3><p><img src="/2019/05/05/异步编程指南/1547089991652.png" alt="1547089991652"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090001492.png" alt="1547090001492"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090010548.png" alt="1547090010548"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090018868.png" alt="1547090018868"></p>
+<h3 id="异步lambda表达式"><a href="#异步lambda表达式" class="headerlink" title="异步lambda表达式"></a>异步lambda表达式</h3><p><img src="/2019/05/05/异步编程指南/1547090028378.png" alt="1547090028378"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090039219.png" alt="1547090039219"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090049220.png" alt="1547090049220"></p>
+<h2 id="任务的取消"><a href="#任务的取消" class="headerlink" title="任务的取消"></a>任务的取消</h2><p><img src="/2019/05/05/异步编程指南/1547090071523.png" alt="1547090071523"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090083829.png" alt="1547090083829"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090095268.png" alt="1547090095268"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090106723.png" alt="1547090106723"></p>
+<h2 id="进度的提示"><a href="#进度的提示" class="headerlink" title="进度的提示"></a>进度的提示</h2><p><img src="/2019/05/05/异步编程指南/1547090127075.png" alt="1547090127075"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090138675.png" alt="1547090138675"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090147906.png" alt="1547090147906"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090157588.png" alt="1547090157588"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ShowProgressAndCancel</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 用于显示工作进度的组件</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        Progress&lt;<span class="keyword">int</span>&gt; progressReport = <span class="literal">null</span>;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 用于设定要查找数的范围上限</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> limit = <span class="number">0</span>;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 用于提前取消操作</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        CancellationTokenSource cts = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//以下两个初始化Progress组件的方式，可以任选一种</span></span><br><span class="line">            InitProgressUseEvent();</span><br><span class="line">            <span class="comment">//InitProgressWithDelegate();</span></span><br><span class="line"></span><br><span class="line">            limit = <span class="keyword">new</span> Random().Next(Int32.MaxValue);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "初始化Progresss组件"</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 在构建Progress组件时直接指定ProgressChanged事件的回调方法</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitProgressWithDelegate</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//显示进度的代码会自动推送到UI线程中执行</span></span><br><span class="line">            progressReport = <span class="keyword">new</span> Progress&lt;<span class="keyword">int</span>&gt;((status) =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//在此可以直接地编写代码访问UI控件</span></span><br><span class="line">                lblInfo.Text = <span class="string">"己完成："</span> + status + <span class="string">"%"</span>;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 基于事件响应的方式报告进度</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitProgressUseEvent</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            progressReport = <span class="keyword">new</span> Progress&lt;<span class="keyword">int</span>&gt;();</span><br><span class="line">            progressReport.ProgressChanged += progressReport_ProgressChanged;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">progressReport_ProgressChanged</span>(<span class="params"><span class="keyword">object</span> sender, <span class="keyword">int</span> e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//在此可以直接地编写代码访问UI控件</span></span><br><span class="line">            lblInfo.Text = <span class="string">"己完成："</span> + e + <span class="string">"%"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 计算指定范围内的偶数数量</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="limit"&gt;</span>要计算的区间上限<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="onProgressChanged"&gt;</span>用于报告进度的组件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="cancelToken"&gt;</span>用于检测外界是否请求取消的取消令牌<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">ShowEvenNumbers</span>(<span class="params"><span class="keyword">int</span> limit, IProgress&lt;<span class="keyword">int</span>&gt; onProgressChanged, </span></span></span><br><span class="line"><span class="function"><span class="params">            CancellationToken cancelToken</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Func&lt;<span class="keyword">int</span>&gt; calculateTask = () =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> lastProgressValue = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">int</span> currentProgressValue = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; limit; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        count++;</span><br><span class="line">                        currentProgressValue = (<span class="keyword">int</span>)(((<span class="keyword">double</span>)i / limit) * <span class="number">100</span>);</span><br><span class="line">                        <span class="keyword">if</span> (lastProgressValue != currentProgressValue)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="comment">//报造进度</span></span><br><span class="line">                            onProgressChanged.Report(currentProgressValue);</span><br><span class="line">                            lastProgressValue = currentProgressValue;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//检测外界是否发出了取消请求，如果发出了此请求，</span></span><br><span class="line">                    <span class="comment">//抛出OperationCanceledException</span></span><br><span class="line">                    cancelToken.ThrowIfCancellationRequested();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> count;</span><br><span class="line"></span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="comment">//允许被取消的计算任务</span></span><br><span class="line">            Task&lt;<span class="keyword">int</span>&gt; evenNumbersTask = Task.Run(calculateTask, cancelToken); </span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//异步等待任务完成</span></span><br><span class="line">                <span class="keyword">int</span> evenNumberCount = <span class="keyword">await</span> evenNumbersTask;</span><br><span class="line">                <span class="comment">//可以直接访问UI控件，这是异步调用带给我们的方便</span></span><br><span class="line">                lblInfo.Text = <span class="keyword">string</span>.Format(<span class="string">"计算结果：从&#123;0&#125;到&#123;1&#125;中共有偶数&#123;2&#125;个。"</span>, </span><br><span class="line">                    <span class="number">1</span>, limit, evenNumberCount);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (OperationCanceledException)</span><br><span class="line">            &#123;</span><br><span class="line">                lblInfo.Text = <span class="string">"计算任务己被取消。"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//允许重新启动一个新任务</span></span><br><span class="line">            btnCancel.Enabled = <span class="literal">false</span>;</span><br><span class="line">            btnStart.Enabled = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnStart_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Start();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCancel_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Cancel();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 启动任务</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            cts = <span class="keyword">new</span> CancellationTokenSource();</span><br><span class="line">            ShowEvenNumbers(limit, progressReport, cts.Token);</span><br><span class="line">            btnCancel.Enabled = <span class="literal">true</span>;</span><br><span class="line">            lblInfo.Text = <span class="string">"计算任务己经启动并在后台运行，等其工作完成，结果会自动显示"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 取消任务</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Cancel</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (cts != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cts.Cancel();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p><img src="/2019/05/05/异步编程指南/1547090174739.png" alt="1547090174739"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">CatchException</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            TestExceptionThrowViaTaskResult();</span><br><span class="line">            <span class="comment">//TestExceptionThrowViaAwait();</span></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">TestExceptionThrowViaAwait</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"使用await等待异步方法执行结束"</span>);</span><br><span class="line">            Task&lt;<span class="keyword">string</span>&gt; task = <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//当传入空串时，myAsyncMethod将抛出ArgumentNullException</span></span><br><span class="line">                task = myAsyncMethod(<span class="string">""</span>);</span><br><span class="line">                <span class="keyword">string</span> result = <span class="keyword">await</span> task;</span><br><span class="line">                Console.WriteLine(result);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"\n捕获到的异常，类型:&#123;0&#125;，信息：&#123;1&#125;"</span>,</span><br><span class="line">                    ex.GetType(), ex.Message);</span><br><span class="line">                Console.WriteLine(<span class="string">"\nTask.Status:&#123;0&#125;, \nTask.Exception:&#123;1&#125;"</span>, </span><br><span class="line">                    task.Status, task.Exception.GetType());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestExceptionThrowViaTaskResult</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"使用Task&lt;T&gt;.Result等待异步方法执行结束"</span>);</span><br><span class="line">            Task&lt;String&gt; task = <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">               </span><br><span class="line">                <span class="comment">//当传入空串时，myAsyncMethod将抛出ArgumentNullException</span></span><br><span class="line">                task = myAsyncMethod(<span class="string">""</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//这里的异常捕获代码是不会被执行的，myAsyncMethod抛出的异常，</span></span><br><span class="line">                <span class="comment">//将会延迟到访问Task.Result时</span></span><br><span class="line">                Console.WriteLine(<span class="string">"立即捕获的异常:&#123;0&#125;"</span>, ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//因为访问了Task.Result,所以在这里才抛出ArgumentNullException异常</span></span><br><span class="line">                Console.WriteLine(task.Result);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"\n捕获到的异常，类型:&#123;0&#125;，信息：&#123;1&#125;"</span>,</span><br><span class="line">                    ex.GetType(), ex.Message);</span><br><span class="line">                Console.WriteLine(<span class="string">"\nTask.Status:&#123;0&#125;, \nTask.Exception:&#123;1&#125;"</span>, </span><br><span class="line">                    task.Status, task.Exception.GetType());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task&lt;<span class="keyword">string</span>&gt; <span class="title">myAsyncMethod</span>(<span class="params"><span class="keyword">string</span> info</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrEmpty(info))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">await</span> Task.Run&lt;<span class="keyword">string</span>&gt;(() =&gt; info.ToUpper());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/05/异步编程指南/1547090183589.png" alt="1547090183589"></p>
+<h3 id="异常后task的状态"><a href="#异常后task的状态" class="headerlink" title="异常后task的状态"></a>异常后task的状态</h3><p><img src="/2019/05/05/异步编程指南/1547090192212.png" alt="1547090192212"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090202470.png" alt="1547090202470"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090212645.png" alt="1547090212645"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090222373.png" alt="1547090222373"></p>
+<h2 id="遵循通用的异步编程规范"><a href="#遵循通用的异步编程规范" class="headerlink" title="遵循通用的异步编程规范"></a>遵循通用的异步编程规范</h2><p><img src="/2019/05/05/异步编程指南/1547090243125.png" alt="1547090243125"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090254921.png" alt="1547090254921"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090264852.png" alt="1547090264852"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090273402.png" alt="1547090273402"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090282274.png" alt="1547090282274"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">AsyncVoidDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">frmMain</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">frmMain</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            ResetLabel();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> Random ran = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnRun_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"UI Thread:&#123;0&#125;"</span>, Thread.CurrentThread.ManagedThreadId);</span><br><span class="line">            ResetLabel();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (rdoAsyncVoid.Checked)</span><br><span class="line">            &#123;</span><br><span class="line">                TestAsyncVoid();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                TestAsyncTask();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ResetLabel</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            lblResult.Text = <span class="string">"？"</span>;</span><br><span class="line">            lblLeft.Text = <span class="string">"？"</span>;</span><br><span class="line">            lblRight.Text = <span class="string">"？"</span>;</span><br><span class="line">            <span class="comment">//立即刷新</span></span><br><span class="line">            lblResult.Refresh();</span><br><span class="line">            lblLeft.Refresh();</span><br><span class="line">            lblResult.Refresh();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "测试async void的异步方法"</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//生成第一个数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">GeneratorLeftOperand</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">await</span> Task.Delay(<span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">1000</span>));</span><br><span class="line">            left = <span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//生成第二个数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">GeneratorRightOperand</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">await</span> Task.Delay(<span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">1000</span>));</span><br><span class="line">            right = <span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//完成计算功能</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">Calculate</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">await</span> Task.Delay(<span class="keyword">new</span> Random().Next(<span class="number">1</span>, <span class="number">1000</span>));</span><br><span class="line">            result = left + right;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//当异步方法返回async void时，由于它在独立的线程中执行，所以不但结果不对</span></span><br><span class="line">        <span class="comment">//就连显示都不一定正常</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">TestAsyncVoid</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//(1)生成第一个数</span></span><br><span class="line">            GeneratorLeftOperand();</span><br><span class="line">            lblLeft.Text = left.ToString();</span><br><span class="line">            <span class="comment">//(2)生成第二个数</span></span><br><span class="line">            GeneratorRightOperand();</span><br><span class="line">            lblRight.Text = right.ToString();</span><br><span class="line">            <span class="comment">//(3)完成计算功能</span></span><br><span class="line">            Calculate();</span><br><span class="line">            lblResult.Text = result.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">region</span> "使用async Task"</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//生成第一个数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> Task <span class="title">GeneratorLeftOperandTask</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">await</span> Task.Run(<span class="keyword">async</span> () =&gt;</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">await</span> Task.Delay(ran.Next(<span class="number">1</span>, <span class="number">1000</span>));</span><br><span class="line">                left = ran.Next(<span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">            lblLeft.Text = left.ToString();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//生成第二个数</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> Task <span class="title">GeneratorRightOperandTask</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">await</span> Task.Run(<span class="keyword">async</span> () =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">await</span> Task.Delay(ran.Next(<span class="number">1</span>, <span class="number">1000</span>));</span><br><span class="line">                right = ran.Next(<span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">            lblRight.Text = right.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//完成计算</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> Task <span class="title">CalculateTask</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//并行执行两个异步方法，生成两个数</span></span><br><span class="line">            <span class="keyword">await</span> Task.WhenAll(GeneratorLeftOperandTask(), GeneratorRightOperandTask());</span><br><span class="line">            <span class="comment">//执行计算</span></span><br><span class="line">            result = left + right;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//对于不需要返回值的异步方法，让其返回async Task</span></span><br><span class="line">        <span class="comment">//在调用它的地方使用await，就能保证工作正常</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">TestAsyncTask</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">await</span> CalculateTask();</span><br><span class="line">            lblResult.Text = result.ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/05/异步编程指南/1547090291489.png" alt="1547090291489"></p>
+<h2 id="理解线程与Async的关系"><a href="#理解线程与Async的关系" class="headerlink" title="理解线程与Async的关系"></a>理解线程与Async的关系</h2><p><img src="/2019/05/05/异步编程指南/1547090314521.png" alt="1547090314521"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ThreadOverheadDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ThreadOverhead();</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ThreadOverhead</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">const</span> <span class="keyword">int</span> OneMB = <span class="number">1024</span> * <span class="number">1024</span>;</span><br><span class="line">            <span class="keyword">using</span> (ManualResetEvent mre = <span class="keyword">new</span> ManualResetEvent(<span class="literal">false</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> threadNum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">long</span> MemorySize = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ParameterizedThreadStart ts = (mreWake) =&gt; (mreWake <span class="keyword">as</span> ManualResetEvent).WaitOne();</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">                    &#123;</span><br><span class="line"></span><br><span class="line">                        Thread t = <span class="keyword">new</span> Thread(ts);</span><br><span class="line">                        t.Start(mre);</span><br><span class="line">                        MemorySize=Process.GetCurrentProcess().VirtualMemorySize64;</span><br><span class="line">                        Console.WriteLine(<span class="string">"线程编号&#123;0&#125;:占用本进程的虚拟内存&#123;1&#125;字节,&#123;2&#125;MB"</span>,++threadNum,</span><br><span class="line">                            MemorySize,MemorySize/OneMB</span><br><span class="line">                            );</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span> (OutOfMemoryException)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"\n内存不足。己创建线程：&#123;0&#125;个"</span>, threadNum);</span><br><span class="line">                    mre.Set();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/05/异步编程指南/1547090324914.png" alt="1547090324914"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090350291.png" alt="1547090350291"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090367539.png" alt="1547090367539"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090378612.png" alt="1547090378612"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090389235.png" alt="1547090389235"></p>
+<h2 id="在合适的场景使用异步方法"><a href="#在合适的场景使用异步方法" class="headerlink" title="在合适的场景使用异步方法"></a>在合适的场景使用异步方法</h2><p><img src="/2019/05/05/异步编程指南/1547006402636.png" alt="1547006402636"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006412002.png" alt="1547006412002"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006424868.png" alt="1547006424868"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006441114.png" alt="1547006441114"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006449906.png" alt="1547006449906"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006460115.png" alt="1547006460115"></p>
+<p><img src="/2019/05/05/异步编程指南/1547006471316.png" alt="1547006471316"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090422291.png" alt="1547090422291"></p>
+<p><img src="/2019/05/05/异步编程指南/1547090430690.png" alt="1547090430690"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/05/05/异步编程指南/" title="异步编程指南">http://yoursite.com/2019/05/05/异步编程指南/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/Async-await/" rel="tag"># Async await</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/30/并行技术基础/" rel="next" title="并行技术基础">
+                <i class="fa fa-chevron-left"></i> 并行技术基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的异步调用"><span class="nav-number">1.</span> <span class="nav-text">方法的异步调用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解await"><span class="nav-number">1.1.</span> <span class="nav-text">理解await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步方法与线程"><span class="nav-number">1.2.</span> <span class="nav-text">异步方法与线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步方法与UI线程"><span class="nav-number">1.3.</span> <span class="nav-text">异步方法与UI线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步方法编写指南"><span class="nav-number">2.</span> <span class="nav-text">异步方法编写指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编写支持await的方法"><span class="nav-number">2.1.</span> <span class="nav-text">编写支持await的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#await表达式的返回值"><span class="nav-number">2.2.</span> <span class="nav-text">await表达式的返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步lambda表达式"><span class="nav-number">2.3.</span> <span class="nav-text">异步lambda表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务的取消"><span class="nav-number">3.</span> <span class="nav-text">任务的取消</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进度的提示"><span class="nav-number">4.</span> <span class="nav-text">进度的提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">5.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异常后task的状态"><span class="nav-number">5.1.</span> <span class="nav-text">异常后task的状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遵循通用的异步编程规范"><span class="nav-number">6.</span> <span class="nav-text">遵循通用的异步编程规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理解线程与Async的关系"><span class="nav-number">7.</span> <span class="nav-text">理解线程与Async的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在合适的场景使用异步方法"><span class="nav-number">8.</span> <span class="nav-text">在合适的场景使用异步方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
