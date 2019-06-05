@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="jquery,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="认识jquery">
+<meta name="keywords" content="jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/jquery/index.html">
+<meta property="og:site_name" content="Hang&#39; Blog">
+<meta property="og:description" content="认识jquery">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695309294.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695382128.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695409753.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695445962.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695502104.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695552568.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695585418.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695638060.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695658058.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695670861.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695726469.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695817994.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695845754.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695940633.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559695961946.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696083499.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696152393.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696257719.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696326745.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696531641.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696565494.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696656626.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696708888.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696730751.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696747804.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696808249.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696903686.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696940009.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559696981441.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559697105592.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559697146071.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559697227927.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698104775.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698253130.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698499511.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698516409.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698545626.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698590954.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698642982.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698682026.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/03/jquery/1559698696011.png">
+<meta property="og:updated_time" content="2019-06-05T02:53:38.132Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery">
+<meta name="twitter:description" content="认识jquery">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/03/jquery/1559695309294.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/03/jquery/">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2cac470a"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>jquery | Hang' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record work and life.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/jquery/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/picture.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jquery</h1>
+        
+
+        <div class="post-meta">
+
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T10:15:19+08:00">
+                2019-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/03/jquery/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/jquery/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/03/jquery/" class="leancloud_visitors" data-flag-title="jquery">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.9k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>认识jquery </p>
+</blockquote>
+<a id="more"></a>
+<h2 id="jquery概述"><a href="#jquery概述" class="headerlink" title="jquery概述"></a>jquery概述</h2><p><img src="/2019/04/03/jquery/1559695309294.png" alt="1559695309294"></p>
+<h3 id="怎么使用jquery"><a href="#怎么使用jquery" class="headerlink" title="怎么使用jquery"></a>怎么使用jquery</h3><p><img src="/2019/04/03/jquery/1559695382128.png" alt="1559695382128"></p>
+<p><img src="/2019/04/03/jquery/1559695409753.png" alt="1559695409753"></p>
+<p><img src="/2019/04/03/jquery/1559695445962.png" alt="1559695445962"></p>
+<h3 id="神奇的"><a href="#神奇的" class="headerlink" title="神奇的$"></a>神奇的$</h3><p><img src="/2019/04/03/jquery/1559695502104.png" alt="1559695502104"></p>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p><img src="/2019/04/03/jquery/1559695552568.png" alt="1559695552568"></p>
+<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p><img src="/2019/04/03/jquery/1559695585418.png" alt="1559695585418"></p>
+<h3 id="命令链"><a href="#命令链" class="headerlink" title="命令链"></a>命令链</h3><p><img src="/2019/04/03/jquery/1559695638060.png" alt="1559695638060"></p>
+<h3 id="学习要点"><a href="#学习要点" class="headerlink" title="学习要点"></a>学习要点</h3><p><img src="/2019/04/03/jquery/1559695658058.png" alt="1559695658058"></p>
+<p><img src="/2019/04/03/jquery/1559695670861.png" alt="1559695670861"></p>
+<h2 id="访问DOM"><a href="#访问DOM" class="headerlink" title="访问DOM"></a>访问DOM</h2><h3 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h3><p><img src="/2019/04/03/jquery/1559695726469.png" alt="1559695726469"></p>
+<p><img src="/2019/04/03/jquery/1559695817994.png" alt="1559695817994"></p>
+<p><img src="/2019/04/03/jquery/1559695845754.png" alt="1559695845754"></p>
+<p><img src="/2019/04/03/jquery/1559695940633.png" alt="1559695940633"></p>
+<h3 id="三种节点"><a href="#三种节点" class="headerlink" title="三种节点"></a>三种节点</h3><p><img src="/2019/04/03/jquery/1559695961946.png" alt="1559695961946"></p>
+<h3 id="编程访问"><a href="#编程访问" class="headerlink" title="编程访问"></a>编程访问</h3><h4 id="操作思路"><a href="#操作思路" class="headerlink" title="操作思路"></a>操作思路</h4><p><img src="/2019/04/03/jquery/1559696083499.png" alt="1559696083499"></p>
+<h4 id="对DOM元素的操作"><a href="#对DOM元素的操作" class="headerlink" title="对DOM元素的操作"></a>对DOM元素的操作</h4><p><img src="/2019/04/03/jquery/1559696152393.png" alt="1559696152393"></p>
+<h4 id="DOM树的遍历"><a href="#DOM树的遍历" class="headerlink" title="DOM树的遍历"></a>DOM树的遍历</h4><p><img src="/2019/04/03/jquery/1559696257719.png" alt="1559696257719"></p>
+<h4 id="DOM树的修改"><a href="#DOM树的修改" class="headerlink" title="DOM树的修改"></a>DOM树的修改</h4><p><img src="/2019/04/03/jquery/1559696326745.png" alt="1559696326745"></p>
+<h4 id="DOM访问元素示例"><a href="#DOM访问元素示例" class="headerlink" title="DOM访问元素示例"></a>DOM访问元素示例</h4><p><img src="/2019/04/03/jquery/1559696531641.png" alt="1559696531641"></p>
+<p><img src="/2019/04/03/jquery/1559696565494.png" alt="1559696565494"></p>
+<h2 id="jQuery访问DOM树"><a href="#jQuery访问DOM树" class="headerlink" title="jQuery访问DOM树"></a>jQuery访问DOM树</h2><p><img src="/2019/04/03/jquery/1559696656626.png" alt="1559696656626"></p>
+<h3 id="灵活的元素选择"><a href="#灵活的元素选择" class="headerlink" title="灵活的元素选择"></a>灵活的元素选择</h3><p><img src="/2019/04/03/jquery/1559696708888.png" alt="1559696708888"></p>
+<h3 id="强大的css操控"><a href="#强大的css操控" class="headerlink" title="强大的css操控"></a>强大的css操控</h3><p><img src="/2019/04/03/jquery/1559696730751.png" alt="1559696730751"></p>
+<h3 id="对DOM树的增删功能强大"><a href="#对DOM树的增删功能强大" class="headerlink" title="对DOM树的增删功能强大"></a>对DOM树的增删功能强大</h3><p><img src="/2019/04/03/jquery/1559696747804.png" alt="1559696747804"></p>
+<h3 id="API小结"><a href="#API小结" class="headerlink" title="API小结"></a>API小结</h3><p><img src="/2019/04/03/jquery/1559696808249.png" alt="1559696808249"></p>
+<h2 id="事件与事件响应"><a href="#事件与事件响应" class="headerlink" title="事件与事件响应"></a>事件与事件响应</h2><p><img src="/2019/04/03/jquery/1559696903686.png" alt="1559696903686"></p>
+<h3 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h3><p><img src="/2019/04/03/jquery/1559696940009.png" alt="1559696940009"></p>
+<h3 id="添加事件相应的四种方式"><a href="#添加事件相应的四种方式" class="headerlink" title="添加事件相应的四种方式"></a>添加事件相应的四种方式</h3><p><img src="/2019/04/03/jquery/1559696981441.png" alt="1559696981441"></p>
+<h3 id="DOM-API中的事件响应挂接函数"><a href="#DOM-API中的事件响应挂接函数" class="headerlink" title="DOM API中的事件响应挂接函数"></a>DOM API中的事件响应挂接函数</h3><p><img src="/2019/04/03/jquery/1559697105592.png" alt="1559697105592"></p>
+<h3 id="常见DOM事件"><a href="#常见DOM事件" class="headerlink" title="常见DOM事件"></a>常见DOM事件</h3><p><img src="/2019/04/03/jquery/1559697146071.png" alt="1559697146071"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"text-align:center"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>JavaScript事件模型与DOM<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"/images/list_3.jpg"</span> <span class="attr">alt</span>=<span class="string">"风景图片"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        </span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">prepareEventHandlers</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> imageElement = <span class="built_in">document</span>.getElementById(<span class="string">"image"</span>);</span></span><br><span class="line"><span class="javascript">            imageElement.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="string">"你单击了图片元素"</span>);</span></span><br><span class="line"><span class="javascript">                <span class="comment">//如果取消以下这句的注释，则document的Click事件不会被触发</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//event.stopPropagation();</span></span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="string">"body元素响应单击操作"</span>);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="string">"document元素响应单击操作"</span>);</span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            prepareEventHandlers();</span></span><br><span class="line"><span class="undefined">        &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"text-align:center;"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>响应下拉列表的onchange事件<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"form1"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"textfield"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"这是一段文字"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"menu1"</span> <span class="attr">onchange</span>=<span class="string">"Fcolor( this.value )"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"black"</span>&gt;</span>黑<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"green"</span>&gt;</span>绿<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"blue"</span>&gt;</span>蓝<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Fcolor</span>(<span class="params">v</span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            form1.textfield.style.color = v;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>自动更换图片<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        img&#123;</span></span><br><span class="line"><span class="undefined">            width:200px;</span></span><br><span class="line"><span class="undefined">            height:150px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">changeImage</span>(<span class="params">img, i</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (i == <span class="number">0</span>)</span></span><br><span class="line"><span class="javascript">                img.src = <span class="string">"/images/img02.jpg"</span>;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">else</span></span></span><br><span class="line"><span class="javascript">                img.src = <span class="string">"/images/img03.jpg"</span>;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"text-align:center"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>鼠标移入移出图片元素，自动更换图片<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/images/img01.jpg"</span> <span class="attr">border</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">onmouseover</span>=<span class="string">"changeImage(this,1)"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">onmouseout</span>=<span class="string">"changeImage(this,0)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="jQuery的事件响应"><a href="#jQuery的事件响应" class="headerlink" title="jQuery的事件响应"></a>jQuery的事件响应</h2><h3 id="jQuery事件响应机制"><a href="#jQuery事件响应机制" class="headerlink" title="jQuery事件响应机制"></a>jQuery事件响应机制</h3><p><img src="/2019/04/03/jquery/1559697227927.png" alt="1559697227927"></p>
+<p><img src="/2019/04/03/jquery/1559698104775.png" alt="1559698104775"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>事件中的冒泡现象<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap-theme.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        body &#123;</span></span><br><span class="line"><span class="undefined">            font-size: 13px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .clsShow &#123;</span></span><br><span class="line"><span class="undefined">            border: #ccc 1px solid;</span></span><br><span class="line"><span class="undefined">            background-color: #eee;</span></span><br><span class="line"><span class="undefined">            margin: 15px auto;</span></span><br><span class="line"><span class="undefined">            padding: 5px;</span></span><br><span class="line"><span class="undefined">            width: 220px;</span></span><br><span class="line"><span class="undefined">            line-height: 1.8em;</span></span><br><span class="line"><span class="undefined">            display: none;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .btn &#123;</span></span><br><span class="line"><span class="undefined">            border: #666 1px solid;</span></span><br><span class="line"><span class="undefined">            padding: 2px;</span></span><br><span class="line"><span class="undefined">            width: 50px;</span></span><br><span class="line"><span class="undefined">            filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"container text-center"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>响应一组元素的冒泡事件<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnShow"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"点击"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clsShow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../Scripts/jquery-2.1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> intI = <span class="number">0</span>; <span class="comment">//记录执行次数</span></span></span><br><span class="line"><span class="javascript">            $(<span class="string">"body,div,#btnShow"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//点击事件</span></span></span><br><span class="line"><span class="javascript">                intI++; <span class="comment">//次数累加</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">".clsShow"</span>)</span></span><br><span class="line"><span class="javascript">                .show()<span class="comment">//显示</span></span></span><br><span class="line"><span class="javascript">                .html(<span class="string">"您好，欢迎来到jQuery世界!"</span>)<span class="comment">//设置内容</span></span></span><br><span class="line"><span class="xml">                .append("<span class="tag">&lt;<span class="name">div</span>&gt;</span>执行次数 <span class="tag">&lt;<span class="name">b</span>&gt;</span>" + intI + "<span class="tag">&lt;/<span class="name">b</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span>"); //追加文本</span></span><br><span class="line"><span class="javascript">                <span class="comment">// event.stopPropagation();//阻止冒泡过程</span></span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>移除事件unbind<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        body &#123;</span></span><br><span class="line"><span class="undefined">            font-size: 13px;</span></span><br><span class="line"><span class="undefined">            text-align: center;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .btn &#123;</span></span><br><span class="line"><span class="undefined">            border: #666 1px solid;</span></span><br><span class="line"><span class="undefined">            padding: 2px;</span></span><br><span class="line"><span class="undefined">            width: 80px;</span></span><br><span class="line"><span class="undefined">            filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        div &#123;</span></span><br><span class="line"><span class="undefined">            line-height: 1.8em;</span></span><br><span class="line"><span class="undefined">            width: 300px;</span></span><br><span class="line"><span class="undefined">            margin: 10px auto;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>事件的动态挂接与移除<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"Button1"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮一"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"Button2"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮二"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"Button3"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"删除事件"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"divTip"</span> <span class="attr">style</span>=<span class="string">"padding-top:10px"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../Scripts/jquery-2.1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">          </span></span><br><span class="line"><span class="javascript">            $(<span class="string">"input:eq(0)"</span>).bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//绑定单击事件</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#divTip"</span>).append(<span class="string">"&lt;div&gt;按钮一的单击事件&lt;/div&gt;"</span>);</span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">oClick</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//自定义事件</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#divTip"</span>).append(<span class="string">"&lt;div&gt;按钮二的单击事件&lt;/div&gt;"</span>);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">"input:eq(1)"</span>).bind(<span class="string">"click"</span>, oClick);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            $(<span class="string">"input:eq(2)"</span>).bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//移除全部绑定的事件</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//$("input").unbind();</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//$("#divTip").html('按钮的事件响应代码被全部移除。');</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//利用第二个参数，指定仅移除按钮二的单击事件</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"input"</span>).unbind(<span class="string">"click"</span>, oClick);</span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#divTip"</span>).html(<span class="string">'第二个按钮的事件响应代码被移除。'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/04/03/jquery/1559698253130.png" alt="1559698253130"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>切换事件hover<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap-theme.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">       </span></span><br><span class="line"><span class="undefined">        .clsFrame &#123;</span></span><br><span class="line"><span class="undefined">            border: solid 1px #666;</span></span><br><span class="line"><span class="undefined">            width: 320px;</span></span><br><span class="line"><span class="undefined">            margin:0 auto;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">            .clsFrame .clsTitle &#123;</span></span><br><span class="line"><span class="undefined">                background-color: #eee;</span></span><br><span class="line"><span class="undefined">                padding: 5px;</span></span><br><span class="line"><span class="undefined">                font-weight: bold;</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">            .clsFrame .clsContent &#123;</span></span><br><span class="line"><span class="undefined">                padding: 5px;</span></span><br><span class="line"><span class="undefined">                display: none;</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">   </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"text-center"</span>&gt;</span>响应hover事件，动态显示和隐藏元素<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clsFrame"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clsTitle"</span>&gt;</span>jQuery简介<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clsContent"</span>&gt;</span>jQuery是由美国人John Resig于2006年创建的一个开源项目，它的主旨是：以更少的代码，实现更多的功能（Write less，do more）。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../Scripts/jquery-2.1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">".clsTitle"</span>).hover(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">".clsContent"</span>).show();</span></span><br><span class="line"><span class="javascript">        &#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">".clsContent"</span>).hide();</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>其他事件trigger<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../Content/bootstrap-theme.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        body &#123;</span></span><br><span class="line"><span class="undefined">            font-size: 13px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .txt &#123;</span></span><br><span class="line"><span class="undefined">            border: #666 1px solid;</span></span><br><span class="line"><span class="undefined">            padding: 3px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">   </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"container text-center"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>自定义事件的动态挂接与触发<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-8 col-xs-offset-2"</span>&gt;</span></span><br><span class="line">            姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"Text1"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"txt"</span> <span class="attr">value</span>=<span class="string">"原始文本"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>触发自定义事件btn_click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"divTip"</span> <span class="attr">style</span>=<span class="string">"padding-top:5px"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../Scripts/jquery-2.1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> oTxt = $(<span class="string">"input"</span>); <span class="comment">//获取文本框</span></span></span><br><span class="line"><span class="javascript">        oTxt.trigger(<span class="string">"select"</span>); <span class="comment">//自动选中文本框</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//编写文本框自定义事件</span></span></span><br><span class="line"><span class="javascript">        oTxt.bind(<span class="string">"btn_click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> txt = $(<span class="keyword">this</span>).val(); <span class="comment">//获取自身内容</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//显示在页面中</span></span></span><br><span class="line"><span class="javascript">            $(<span class="string">"#divTip"</span>).html(<span class="string">"从文本框中提取的文本：&lt;strong&gt;"</span> + txt + <span class="string">"&lt;/strong&gt;"</span>);</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn = $(<span class="string">'#btn'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            oTxt.trigger(<span class="string">'btn_click'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="/2019/04/03/jquery/1559698499511.png" alt="1559698499511"></p>
+<h3 id="请求过程"><a href="#请求过程" class="headerlink" title="请求过程"></a>请求过程</h3><p><img src="/2019/04/03/jquery/1559698516409.png" alt="1559698516409"></p>
+<p><img src="/2019/04/03/jquery/1559698545626.png" alt="1559698545626"></p>
+<p><img src="/2019/04/03/jquery/1559698590954.png" alt="1559698590954"></p>
+<h2 id="jQuery中的AJAX"><a href="#jQuery中的AJAX" class="headerlink" title="jQuery中的AJAX"></a>jQuery中的AJAX</h2><p><img src="/2019/04/03/jquery/1559698642982.png" alt="1559698642982"></p>
+<p><img src="/2019/04/03/jquery/1559698682026.png" alt="1559698682026"></p>
+<p><img src="/2019/04/03/jquery/1559698696011.png" alt="1559698696011"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>.ajax方法示例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        #content &#123;</span></span><br><span class="line"><span class="undefined">            padding: 5pt;</span></span><br><span class="line"><span class="undefined">            border: 2px dashed lightgray;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"info"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../Scripts/jquery-2.1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">'#info'</span>).empty();</span></span><br><span class="line"><span class="undefined">            getData();</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params">message</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                $(<span class="string">'#info'</span>).append(message);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="xml">               showInfo('<span class="tag">&lt;<span class="name">li</span>&gt;</span>向服务器请求数据<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</span></span><br><span class="line"><span class="javascript">                $.ajax(&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 要提取数据的URL</span></span></span><br><span class="line"><span class="javascript">                    url: <span class="string">"/data/UserInfo.txt"</span>,</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 发送请求的方式：GET或POST</span></span></span><br><span class="line"><span class="javascript">                    type: <span class="string">"GET"</span>,</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 返回的数据类型</span></span></span><br><span class="line"><span class="javascript">                    dataType: <span class="string">"json"</span>,</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 如果成功，调用这个函数</span></span></span><br><span class="line"><span class="undefined">                    success: successFn,</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 如果失败，调用这个函数</span></span></span><br><span class="line"><span class="undefined">                    error: errorFn,</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 处理结束，调用这个函数</span></span></span><br><span class="line"><span class="javascript">                    complete: <span class="function"><span class="keyword">function</span> (<span class="params">xhr, status</span>) </span>&#123;</span></span><br><span class="line"><span class="xml">                        showInfo('<span class="tag">&lt;<span class="name">li</span>&gt;</span>请求处理结束<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</span></span><br><span class="line"><span class="undefined">                    &#125;</span></span><br><span class="line"><span class="undefined">                &#125;);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">successFn</span>(<span class="params">result</span>) </span>&#123;</span></span><br><span class="line"><span class="xml">                showInfo('<span class="tag">&lt;<span class="name">li</span>&gt;</span>收到服务器的数据<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#content"</span>).empty(); <span class="comment">//先清空标记中的内容</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> strHTML = <span class="string">""</span>; <span class="comment">//初始化保存内容变量</span></span></span><br><span class="line"><span class="javascript">                $.each(result, <span class="function"><span class="keyword">function</span> (<span class="params">InfoIndex, Info</span>) </span>&#123; <span class="comment">//遍历获取的数据</span></span></span><br><span class="line"><span class="javascript">                    strHTML += <span class="string">"姓名："</span> + Info[<span class="string">"name"</span>] + <span class="string">"&lt;br&gt;"</span>;</span></span><br><span class="line"><span class="javascript">                    strHTML += <span class="string">"性别："</span> + Info[<span class="string">"sex"</span>] + <span class="string">"&lt;br&gt;"</span>;</span></span><br><span class="line"><span class="javascript">                    strHTML += <span class="string">"邮箱："</span> + Info[<span class="string">"email"</span>] + <span class="string">"&lt;hr&gt;"</span>;</span></span><br><span class="line"><span class="undefined">                &#125;)</span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#content"</span>).html(strHTML); <span class="comment">//显示处理后的数据</span></span></span><br><span class="line"><span class="xml">                showInfo('<span class="tag">&lt;<span class="name">li</span>&gt;</span>服务器发回的数据处理结束，页面己更新<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">errorFn</span>(<span class="params">xhr, status, strErr</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                showInfo(<span class="string">"&lt;li&gt;出现错误，服务器返回："</span> + status + <span class="string">" "</span> + strErr + <span class="string">"&lt;/li&gt;"</span>);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        );</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>一分也是爱 (*^__^*)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="hang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/04/03/jquery/" title="jquery">http://yoursite.com/2019/04/03/jquery/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/02/github仓库和博文收录/" rel="next" title="github仓库和博文收录">
+                <i class="fa fa-chevron-left"></i> github仓库和博文收录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/09/管理员方式开机自启动-数据绑定产线小demo/" rel="prev" title="管理员方式开机自启动+数据绑定产线小demo">
+                管理员方式开机自启动+数据绑定产线小demo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/picture.png" alt="hang">
+            
+              <p class="site-author-name" itemprop="name">hang</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ByZhouhang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:872297557@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery概述"><span class="nav-number">1.</span> <span class="nav-text">jquery概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么使用jquery"><span class="nav-number">1.1.</span> <span class="nav-text">怎么使用jquery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#神奇的"><span class="nav-number">1.2.</span> <span class="nav-text">神奇的$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件处理"><span class="nav-number">1.3.</span> <span class="nav-text">事件处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax"><span class="nav-number">1.4.</span> <span class="nav-text">Ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令链"><span class="nav-number">1.5.</span> <span class="nav-text">命令链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习要点"><span class="nav-number">1.6.</span> <span class="nav-text">学习要点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问DOM"><span class="nav-number">2.</span> <span class="nav-text">访问DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#认识DOM"><span class="nav-number">2.1.</span> <span class="nav-text">认识DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种节点"><span class="nav-number">2.2.</span> <span class="nav-text">三种节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编程访问"><span class="nav-number">2.3.</span> <span class="nav-text">编程访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#操作思路"><span class="nav-number">2.3.1.</span> <span class="nav-text">操作思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对DOM元素的操作"><span class="nav-number">2.3.2.</span> <span class="nav-text">对DOM元素的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM树的遍历"><span class="nav-number">2.3.3.</span> <span class="nav-text">DOM树的遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM树的修改"><span class="nav-number">2.3.4.</span> <span class="nav-text">DOM树的修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM访问元素示例"><span class="nav-number">2.3.5.</span> <span class="nav-text">DOM访问元素示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery访问DOM树"><span class="nav-number">3.</span> <span class="nav-text">jQuery访问DOM树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#灵活的元素选择"><span class="nav-number">3.1.</span> <span class="nav-text">灵活的元素选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强大的css操控"><span class="nav-number">3.2.</span> <span class="nav-text">强大的css操控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对DOM树的增删功能强大"><span class="nav-number">3.3.</span> <span class="nav-text">对DOM树的增删功能强大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API小结"><span class="nav-number">3.4.</span> <span class="nav-text">API小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件与事件响应"><span class="nav-number">4.</span> <span class="nav-text">事件与事件响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件类型"><span class="nav-number">4.1.</span> <span class="nav-text">事件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加事件相应的四种方式"><span class="nav-number">4.2.</span> <span class="nav-text">添加事件相应的四种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-API中的事件响应挂接函数"><span class="nav-number">4.3.</span> <span class="nav-text">DOM API中的事件响应挂接函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见DOM事件"><span class="nav-number">4.4.</span> <span class="nav-text">常见DOM事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery的事件响应"><span class="nav-number">5.</span> <span class="nav-text">jQuery的事件响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery事件响应机制"><span class="nav-number">5.1.</span> <span class="nav-text">jQuery事件响应机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX"><span class="nav-number">6.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">6.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求过程"><span class="nav-number">6.2.</span> <span class="nav-text">请求过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery中的AJAX"><span class="nav-number">7.</span> <span class="nav-text">jQuery中的AJAX</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5xmLDDCBEQqnWVCpOE1cykry-gzGzoHsz',
+        appKey: 'a9pbYNcKIorl8pKT2nGWPxJP',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sL44IivUKAhFO0lfJyrC8nOK-gzGzoHsz", "3sM2mbuM2K8hFScVC815vTee");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+ <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
